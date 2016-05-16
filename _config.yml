@@ -3,7 +3,7 @@ title:       Blog Irkwan
 email:       13513056@std.stei.itb.ac.id
 author:      IRK
 description: "Tugas 2 Ca-IRK 2014"
-baseurl:     "/blog"
+baseurl:     ""
 url:         "http://irkwan.github.io"
 date_format: "%b %-d, %Y"
 
