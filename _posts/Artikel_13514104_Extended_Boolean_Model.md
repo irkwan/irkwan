@@ -4,8 +4,8 @@
 <h2>Chapter 1, An Introduction to Information Retrieval</h2>
 <p>Starting from the basic; Information Retrieval is a broad term that can be summarized as &quot;taking  thing(s) that fullfill criteria(s) from collection&quot;. Even deciding which cereal box your little cousin Billy will like most for his 6th birthday party can be considered as a form of IR; however as an actual academic field of study its more formal definition is:</p>
 <p>&quot;The act of finding material (usually documents) of an unstructured nature (usually text) that satisfies an information need from within large collections (usually stored on computers)&quot;</p>
-<p>The most visible aplication for this field can be seen at Web Search Engine such as Bing, Yahoo, Baidu, AOL, Ask,  and of course.. Lycos. 
-<img src="http://1.bp.blogspot.com/-3WZ9sDYsdQs/T6Dw1jDl2cI/AAAAAAAAARg/Efimh6W5MDU/s1600/Lycos-580x321.jpg" /></p>
+<p>The most visible aplication for this field can be seen at Web Search Engine such as Bing, Yahoo, Baidu, AOL, Ask,  and of course.. Lycos. </p>
+<p><img src="http://1.bp.blogspot.com/-3WZ9sDYsdQs/T6Dw1jDl2cI/AAAAAAAAARg/Efimh6W5MDU/s1600/Lycos-580x321.jpg" /></p>
 <p>The way this sites work is fairly simple to understand yet hard to implements:</p>
 <ul>
 <li>The sites ask for &quot;the criteria(s)&quot; of the webpage we want in form of a Query.</li>
