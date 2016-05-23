@@ -122,7 +122,7 @@ Kondisi berhenti iterasi dapat dipilih salah satu dari kriteria berikut :
 ## Contoh Penerapan
 Sebagai contoh dapat digunakan fungsi berikut ini untuk dicari akar-akarnya.
 
-1. f(x) = e<sup>x</sup> - 5x<sup>2</sup>
+f(x) = e<sup>x</sup> - 5x<sup>2</sup>
   1. Grafik
      
      Agar memudahkan, saya akan memberikan gambar grafik dengan perbesaran yang berbeda untuk menunjukan daerah akar-akarnya.
