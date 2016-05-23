@@ -11,6 +11,7 @@ Untuk lebih sederhananya, permasalahan dapat dikatakan termasuk dalam kelas komp
 - Sumber yang dibatasi dan pembatasnya, biasanya kedua hal ini dinyatakan bersama, misalnya waktu polinom, ruang logaritmik, kedalaman konstan, dll.
 
 Berikut ini adalah beberapa contoh kelas kompleksitas.
+
 Kelas Kompleksitas | Model Komputasi | Batasan Sumber
 :---:|:---:|:---:
 DTIME(*f(n)*)|Mesin Turing deterministik|Waktu *f(n)*
