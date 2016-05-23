@@ -50,21 +50,46 @@ Dari pernyataan tersebut dapat disimpulkan bahwa selang [a,b] harus berbeda tand
 ### Kondisi yang Mungkin Terjadi
 #### 1. f(a)f(b) < 0
 Pada kondisi ini akan terdapat akar sebanyak bilangan ganjil.
+![Alt text](https://github.com/berviantoleo/mycapturepicrepo/raw/master/Numerical-Analysis/kurang0.PNG "f(a)f(b) < 0")
+
+###### Gambar 2 - Grafik yang menghasilkan f(a)f(b) < 0
+###### Sumber : [1][1]
 
 #### 2. f(a)f(b) > 0
 Pada kondisi ini akan terdapat akar sebanyak bilangan genap, termasuk saat tidak ada akar.
+![Alt text](https://github.com/berviantoleo/mycapturepicrepo/raw/master/Numerical-Analysis/lebih0.PNG "f(a)f(b) < 0")
+
+###### Gambar 3 - Grafik yang menghasilkan f(a)f(b) > 0
+###### Sumber : [1][1]
 
 ### Menentukan Selang [a,b]
 Ada beberapa cara untuk menentukan selang [a,b] yang cukup kecil dan mengandung akar. Adapun cara tersebut sebagai berikut :
+
 1. Membuat grafik fungsi di bidang X-Y, lalu melihat di mana perpotongan dengan sumbu-X.
 2. Membuat tabel yang memuat nilai-nilai fungsi pada titik-titik absis yang berjarak tetap (h). Nilai h dibuat cukup kecil. Contoh pembuatan tabel dan pemilihannya akan diperlihatkan dalam contoh penerapan. Cara yang digunakan yaitu menggunakan cara 2.
 
 ### Proses Membagi Dua dan Kondisi Berhenti Iterasi
 
+#### Proses Membagi Dua
+
+Adapun ringkasan dari proses membagi dua tersebut sebagai berikut.
+![Alt text](https://github.com/berviantoleo/mycapturepicrepo/raw/master/Numerical-Analysis/langkah.PNG "Proses Membagi Dua")
+###### Gambar 4 - Proses pada Metode Bagi Dua
+###### Sumber : [1][1]
+
+#### Kondisi Berhenti Iterasi
+Kondisi berhenti iterasi dapat dipilih salah satu dari kriteria berikut :
+
+1. Lebar selang baru : |a-b| < &epsilon;, yang dalam hal ini &epsilon; adalah nilai toleransi lebar selang yang mengurung akar.
+2. Nilai fungsi di hampiran akar: f(c) < &mu;, yang dalam hal ini &mu; adalah nilai yang sangat kecil mendekati 0.
+3. Galat relatif hampiran akar: |(c<sub>baru</sub> - c<sub>lama</sub>) / c<sub>baru</sub>| < &delta;, yang dalam hal ini &delta; adalah galat relatif hampiran yang diinginkan.
+
 ## Contoh Penerapan
 
 
 ###### Referensi :
-[1] Slide Solusi Persamaan Nirlanjar oleh Rinaldi Munir. [Go To Source](http://informatika.stei.itb.ac.id/~rinaldi.munir/MetNum/2010-2011/Solusi%20Persamaan%20Nirlanjar%20%28Bag%201%29.pdf)
 
-[2] Catatan Dosen dalam MIT Open Courseware pada kuliah [Introduction to Numerical Analysis](http://ocw.mit.edu/courses/mathematics/18-330-introduction-to-numerical-analysis-spring-2012/index.htm). Menerjemahkan dan mengambil sebagian konten [ini](http://ocw.mit.edu/courses/mathematics/18-330-introduction-to-numerical-analysis-spring-2012/lecture-notes/MIT18_330S12_Chapter4.pdf). [License link](http://ocw.mit.edu/terms/)
+1. Slide Solusi Persamaan Nirlanjar oleh Rinaldi Munir. [Go To Source][1]
+2. Catatan Dosen dalam MIT Open Courseware pada kuliah [Introduction to Numerical Analysis](http://ocw.mit.edu/courses/mathematics/18-330-introduction-to-numerical-analysis-spring-2012/index.htm). Menerjemahkan dan mengambil sebagian konten [ini](http://ocw.mit.edu/courses/mathematics/18-330-introduction-to-numerical-analysis-spring-2012/lecture-notes/MIT18_330S12_Chapter4.pdf). [License link](http://ocw.mit.edu/terms/)
+
+[1]: http://informatika.stei.itb.ac.id/~rinaldi.munir/MetNum/2010-2011/Solusi%20Persamaan%20Nirlanjar%20%28Bag%201%29.pdf
