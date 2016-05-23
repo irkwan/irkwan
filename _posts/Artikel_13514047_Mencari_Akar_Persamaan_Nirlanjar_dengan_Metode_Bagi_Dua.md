@@ -26,8 +26,6 @@ categories: tugas
 
 ---
 
-
-
 ## Hai, IRKWAN.
 Saat ini saya ingin membagikan sesuatu yang spesial untuk Anda. Apakah itu?
 Apakah Anda ingat dengan persamaan seperti berikut ini ?
@@ -93,6 +91,21 @@ Ada beberapa cara untuk menentukan selang [a,b] yang cukup kecil dan mengandung 
 ### Proses Membagi Dua dan Kondisi Berhenti Iterasi
 
 #### Proses Membagi Dua
+Metode bagi dua atau bisection, metode ini dimulai dari dua titik a<sub>0</sub> dan b<sub>0</sub> yang memiliki
+
+> f(a<sub>0</sub>) > 0, dan f(b<sub>0</sub>) < 0
+
+Karena fungsi f adalah kontinu, harus ada akar antara [a<sub>0</sub>,b<sub>0</sub>]. Dalam iterasi ke k, asumsikan kita telah mendapat interval [a<sub>k</sub>,b<sub>k</sub>] sehingga memenuhi: f(a<sub>0</sub>) > 0, dan f(b<sub>0</sub>) < 0. Metode bisection atau metode bagi dua ini mengelompokan interval [a<sub>k</sub>,b<sub>k</sub>] menjadi dua dan membuang setengahnya yang tidak mungkin ada akar-akarnya. Misalkan m<sub>k</sub> - (a<sub>k</sub> + b<sub>k</sub>) / 2.
+
+* Jika f(m<sub>k</sub>) < 0, maka interval [a<sub>k</sub>,m<sub>k</sub>] yang akan diambil. Sehingga a<sub>k+1</sub> = a<sub>k</sub> dan b<sub>k+1</sub> = m<sub>k</sub>.
+* Jika f(m<sub>k</sub>) > 0, maka interval [m<sub>k</sub>,b<sub>k</sub>] yang akan diambil. Sehingga a<sub>k+1</sub> = m<sub>k</sub> dan b<sub>k+1</sub> = b<sub>k</sub>.
+* Jika f(m<sub>k</sub>) = 0, maka m<sub>k</sub> adalah akarnya dan hentikan algoritma.
+
+Dalam prakteknya, iterasi ini akan berhenti ketika f(m<sub>k</sub>) sekecil mungkin. Misalkan x<sup>*</sup> sebagai akar yang tidak diketahui. Error yang akan didapat
+
+> |x<sup>*</sup> - m<sub>k</sub>| < |b<sub>k</sub> - a<sub>k</sub>| = 2<sup>-k</sup>|b<sub>0</sub> - a<sub>0</sub>|.
+
+Keuntungan dari metode bagi dua ini adalah bahwa hal itu dijamin untuk terpusat ke akar, dari pembentukan. Jika ada beberapa akar, metode bisection akan memusat ke salah satu dari beberapa akar tersebut (sehingga tidak dapat mengontrol akar yang akan dipilih oleh metode tersebut).
 
 Adapun ringkasan dari proses membagi dua tersebut sebagai berikut.
 ![Alt text](https://github.com/berviantoleo/mycapturepicrepo/raw/master/Numerical-Analysis/langkah.PNG "Proses Membagi Dua")
@@ -110,7 +123,20 @@ Kondisi berhenti iterasi dapat dipilih salah satu dari kriteria berikut :
 Sebagai contoh dapat digunakan fungsi berikut ini untuk dicari akar-akarnya.
 
 1. f(x) = e<sup>x</sup> - 5x<sup>2</sup>
-  1. Tabel Nilai
+  1. Grafik
+     
+     Agar memudahkan, saya akan memberikan gambar grafik dengan perbesaran yang berbeda untuk menunjukan daerah akar-akarnya.
+     
+     ![Alt text](https://raw.githubusercontent.com/berviantoleo/mycapturepicrepo/master/Numerical-Analysis/example1%2C1.PNG "Perbesaran -4 sampai 5")
+     ###### Gambar 5 - Grafik pada interval -4 sampai 5
+     ###### Sumber : Dokumen Pribadi
+
+     ![Alt text](https://raw.githubusercontent.com/berviantoleo/mycapturepicrepo/master/Numerical-Analysis/example1%2C2.PNG "Perbesaran -40 sampai 40")
+     ###### Gambar 6 - Grafik pada interval -40 sampai 40
+     ###### Sumber : Dokumen Pribadi
+
+  2. Tabel Nilai
+     
      Tabel nilai ini dimulai dari a = -0.5 sampai v = 1.4 dengan kenaikan absis sebesar h = 0.1.
 
      | x      | f(x)      |
@@ -142,11 +168,11 @@ Sebagai contoh dapat digunakan fungsi berikut ini untuk dicari akar-akarnya.
     
     [0.60,0.70]
     
-  2. Iterasinya
+  3. Iterasinya
 
 ## Referensi
 
-1. Slide Solusi Persamaan Nirlanjar oleh Rinaldi Munir. [Go To Source][1]
+1. Slide "Solusi Persamaan Nirlanjar" oleh Rinaldi Munir. [Go To Source][1]
 2. Catatan Dosen dalam MIT Open Courseware pada kuliah [Introduction to Numerical Analysis](http://ocw.mit.edu/courses/mathematics/18-330-introduction-to-numerical-analysis-spring-2012/index.htm). Menerjemahkan dan mengambil sebagian konten [ini](http://ocw.mit.edu/courses/mathematics/18-330-introduction-to-numerical-analysis-spring-2012/lecture-notes/MIT18_330S12_Chapter4.pdf). [License link](http://ocw.mit.edu/terms/)
 
 [1]: http://informatika.stei.itb.ac.id/~rinaldi.munir/MetNum/2010-2011/Solusi%20Persamaan%20Nirlanjar%20%28Bag%201%29.pdf
