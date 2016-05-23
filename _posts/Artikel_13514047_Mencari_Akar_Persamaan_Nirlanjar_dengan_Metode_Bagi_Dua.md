@@ -6,15 +6,6 @@ summary:    Silakan klik pada judul untuk detailnya
 categories: tugas
 ---
 
-## Hai, IRKWAN.
-Saat ini saya ingin membagikan sesuatu yang spesial untuk Anda. Apakah itu?
-Apakah Anda ingat dengan persamaan seperti berikut ini ?
-
-> x<sup>2</sup> + 2x + 2 = 0
-
-Saya rasa itu mudah bagi Anda untuk menemukan akar persamaannya. Bagaimana dengan sin(x<sup>2</sup>) = 0? Saya rasa semakin sulit.
-Pada kesempatan saat ini saya ingin mengenalkan metode bagi dua untuk mencari akar persamaan nirlanjar. Mari kita simak.
-
 ---
 #Daftar Isi
 
@@ -34,6 +25,17 @@ Pada kesempatan saat ini saya ingin mengenalkan metode bagi dua untuk mencari ak
 3. [Referensi](#referensi)
 
 ---
+
+
+
+## Hai, IRKWAN.
+Saat ini saya ingin membagikan sesuatu yang spesial untuk Anda. Apakah itu?
+Apakah Anda ingat dengan persamaan seperti berikut ini ?
+
+> x<sup>2</sup> + 2x + 2 = 0
+
+Saya rasa itu mudah bagi Anda untuk menemukan akar persamaannya. Bagaimana dengan sin(x<sup>2</sup>) = 0? Saya rasa semakin sulit.
+Pada kesempatan saat ini saya ingin mengenalkan metode bagi dua untuk mencari akar persamaan nirlanjar. Mari kita simak.
 
 ## Metode Bagi Dua
 
@@ -105,7 +107,42 @@ Kondisi berhenti iterasi dapat dipilih salah satu dari kriteria berikut :
 3. Galat relatif hampiran akar: |(c<sub>baru</sub> - c<sub>lama</sub>) / c<sub>baru</sub>| < &delta;, yang dalam hal ini &delta; adalah galat relatif hampiran yang diinginkan.
 
 ## Contoh Penerapan
+Sebagai contoh dapat digunakan fungsi berikut ini untuk dicari akar-akarnya.
 
+1. f(x) = e<sup>x</sup> - 5x<sup>2</sup>
+  1. Tabel Nilai
+     Tabel nilai ini dimulai dari a = -0.5 sampai v = 1.4 dengan kenaikan absis sebesar h = 0.1.
+
+     | x      | f(x)      |
+     |:------:|:---------:|
+     | -0.50  | -0.643469 |
+     | -0.40  | -0.129680 |
+     | -0.30  |  0.290818 |
+     | -0.20  |  0.618731 |
+     | -0.10  |  0.854837 |
+     |  0.00  |  1.000000 |
+     |  0.10  |  1.055171 |
+     |  0.20  |  1.021403 |
+     |  0.30  |  0.899859 |
+     |  0.40  |  0.691825 |
+     |  0.50  |  0.398721 |
+     |  0.60  |  0.022119 |
+     |  0.70  | -0.436247 |
+     |  0.80  | -0.974459 |
+     |  0.90  | -1.590397 |
+     |  1.00  | -2.281718 |
+     |  1.10  | -3.045834 |
+     |  1.20  | -3.879883 |
+     |  1.30  | -4.780703 |
+     |  1.40  | -5.744800 |
+     
+    Dari tabel tersebut selang-selang yang dapat dipilih dan mengandung akar:
+    
+    [-0.40,-0.30]
+    
+    [0.60,0.70]
+    
+  2. Iterasinya
 
 ## Referensi
 
