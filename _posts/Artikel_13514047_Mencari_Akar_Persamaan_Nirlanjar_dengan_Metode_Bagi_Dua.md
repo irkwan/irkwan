@@ -15,6 +15,26 @@ Apakah Anda ingat dengan persamaan seperti berikut ini ?
 Saya rasa itu mudah bagi Anda untuk menemukan akar persamaannya. Bagaimana dengan sin(x<sup>2</sup>) = 0? Saya rasa semakin sulit.
 Pada kesempatan saat ini saya ingin mengenalkan metode bagi dua untuk mencari akar persamaan nirlanjar. Mari kita simak.
 
+---
+#Daftar Isi
+
+1. [Metode Bagi Dua](#metode-bagi-dua)
+  1. [Pendahuluan](#pendahuluan)
+    1. [Metode Terbuka](#metode-terbuka)
+    2. [Metode Tertutup](#metode-tertutup)
+  2. [Syarat dalam Metode Tertutup](#syarat-dalam-metode-tertutup)
+  3. [Kondisi yang Mungkin Terjadi](#kondisi-yang-mungkin-terjadi)
+    1. [Hasil Kali Batas Negatif](#hasil-kali-batas-negatif)
+    2. [Hasil Kali Batas Positif](#hasil-kali-batas-positif)
+  4. [Menentukan Selang](#menentukan-selang)
+  5. [Proses Membagi Dua dan Kondisi Berhenti Iterasi](#proses-membagi-dua-dan-kondisi-berhenti-iterasi)
+    1. [Proses Membagi Dua](#proses-membagi-dua)
+    2. [Kondisi Berhenti Iterasi](#kondisi-berhenti-iterasi)
+2. [Contoh Penerapan](#contoh-penerapan)
+3. [Referensi](#referensi)
+
+---
+
 ## Metode Bagi Dua
 
 ### Pendahuluan
@@ -48,21 +68,21 @@ Dari pernyataan tersebut dapat disimpulkan bahwa selang [a,b] harus berbeda tand
 ###### Sumber : https://perguruanfarhan.files.wordpress.com/2012/03/pers19.jpg diakses pada tanggal 23 Juni 2016 pukul 11.44
 
 ### Kondisi yang Mungkin Terjadi
-#### 1. f(a)f(b) < 0
-Pada kondisi ini akan terdapat akar sebanyak bilangan ganjil.
+#### Hasil Kali Batas Negatif
+Pada kondisi ini akan terdapat akar sebanyak bilangan ganjil. Dalam matematis dapat ditulis sebagai berikut : f(a)f(b) < 0.
 ![Alt text](https://github.com/berviantoleo/mycapturepicrepo/raw/master/Numerical-Analysis/kurang0.PNG "f(a)f(b) < 0")
 
 ###### Gambar 2 - Grafik yang menghasilkan f(a)f(b) < 0
 ###### Sumber : [1][1]
 
-#### 2. f(a)f(b) > 0
-Pada kondisi ini akan terdapat akar sebanyak bilangan genap, termasuk saat tidak ada akar.
-![Alt text](https://github.com/berviantoleo/mycapturepicrepo/raw/master/Numerical-Analysis/lebih0.PNG "f(a)f(b) < 0")
+#### Hasil Kali Batas Positif
+Pada kondisi ini akan terdapat akar sebanyak bilangan genap, termasuk saat tidak ada akar. Dalam matematis dapat ditulis sebagai berikut : f(a)f(b) > 0.
+![Alt text](https://github.com/berviantoleo/mycapturepicrepo/raw/master/Numerical-Analysis/lebih0.PNG "f(a)f(b) > 0")
 
 ###### Gambar 3 - Grafik yang menghasilkan f(a)f(b) > 0
 ###### Sumber : [1][1]
 
-### Menentukan Selang [a,b]
+### Menentukan Selang
 Ada beberapa cara untuk menentukan selang [a,b] yang cukup kecil dan mengandung akar. Adapun cara tersebut sebagai berikut :
 
 1. Membuat grafik fungsi di bidang X-Y, lalu melihat di mana perpotongan dengan sumbu-X.
@@ -87,7 +107,7 @@ Kondisi berhenti iterasi dapat dipilih salah satu dari kriteria berikut :
 ## Contoh Penerapan
 
 
-###### Referensi :
+## Referensi
 
 1. Slide Solusi Persamaan Nirlanjar oleh Rinaldi Munir. [Go To Source][1]
 2. Catatan Dosen dalam MIT Open Courseware pada kuliah [Introduction to Numerical Analysis](http://ocw.mit.edu/courses/mathematics/18-330-introduction-to-numerical-analysis-spring-2012/index.htm). Menerjemahkan dan mengambil sebagian konten [ini](http://ocw.mit.edu/courses/mathematics/18-330-introduction-to-numerical-analysis-spring-2012/lecture-notes/MIT18_330S12_Chapter4.pdf). [License link](http://ocw.mit.edu/terms/)
