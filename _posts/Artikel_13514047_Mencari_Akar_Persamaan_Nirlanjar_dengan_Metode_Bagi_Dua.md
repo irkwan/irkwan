@@ -23,7 +23,7 @@ Sebelum mengetahui metode bagi dua, perlu diketahui bahwa untuk mencari akar per
 #### Metode Terbuka
 Berikut beberapa poin singkat mengenai metode terbuka :
 * tidak memerlukan selang [a,b] yang mengandung akar
-* mencari akar melalui suatu lelaran yang dimulai dari sebuah tebakan (guest) awal,
+* mencari akar melalui suatu lelaran (iterasi) yang dimulai dari sebuah tebakan (guest) awal,
 * pada setiap lelaran kita menghitung hampiran akar yang baru. 
 * Mungkin saja hampiran akar yang baru mendekati akar sejati (konvergen), atau mungkin juga menjauhinya (divergen). 
 * Karena itu, metode terbuka tidak selalu berhasil menemukan akar, kadang-kadang konvergen, kadangkala ia divergen.
@@ -42,6 +42,24 @@ Sudah diketahui bahwa metode bagi dua merupakan metode tertutup, oleh karena itu
 
 Dari pernyataan tersebut dapat disimpulkan bahwa selang [a,b] harus berbeda tanda pada nilai-nilai fungsinya supaya terdapat minimal 1 buah akar.
 
+![Alt text](https://perguruanfarhan.files.wordpress.com/2012/03/pers19.jpg "Ilustrasi Metode Bagi Dua")
+
+###### Gambar 1 - Ilustrasi grafis untuk akar hampiran dalam metode bagi dua.
+###### Sumber : https://perguruanfarhan.files.wordpress.com/2012/03/pers19.jpg diakses pada tanggal 23 Juni 2016 pukul 11.44
+
+### Kondisi yang Mungkin Terjadi
+#### 1. f(a)f(b) < 0
+Pada kondisi ini akan terdapat akar sebanyak bilangan ganjil.
+
+#### 2. f(a)f(b) > 0
+Pada kondisi ini akan terdapat akar sebanyak bilangan genap, termasuk saat tidak ada akar.
+
+### Menentukan Selang [a,b]
+Ada beberapa cara untuk menentukan selang [a,b] yang cukup kecil dan mengandung akar. Adapun cara tersebut sebagai berikut :
+1. Membuat grafik fungsi di bidang X-Y, lalu melihat di mana perpotongan dengan sumbu-X.
+2. Membuat tabel yang memuat nilai-nilai fungsi pada titik-titik absis yang berjarak tetap (h). Nilai h dibuat cukup kecil. Contoh pembuatan tabel dan pemilihannya akan diperlihatkan dalam contoh penerapan. Cara yang digunakan yaitu menggunakan cara 2.
+
+### Proses Membagi Dua dan Kondisi Berhenti Iterasi
 
 ## Contoh Penerapan
 
