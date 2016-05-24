@@ -129,6 +129,7 @@ Kondisi berhenti iterasi dapat dipilih salah satu dari kriteria berikut :
    * Metode bagi dua tidak berhasil menemukan akar ganda. Hal ini disebabkan karena tidak terdapat perbedaan tanda di ujung-ujung selang yang baru.
    * Contoh: f(x) = (x - 4)<sup>2</sup> = (x - 4)(x - 4), mempunyai dua akar yang sama, x = 4.
 3. Singularitas
+   
    Pada titik singular, nilai fungsinya tidak terdefinisi. Bila selang [a,b] mengandung titik singular, iterasi metode bagi dua tidak pernah berhenti. Penyebabnya, metode bagi dua menganggap titik singular sebagai akar karena iterasi cenderung konvergen. Yang sebenarnya, titik singular bukanlah akar, melainkan akar semu.
    * Cara mengatasinya: periksa nilai |f(b) - f(a)|.
    * Jika |f(b) - f(a)| konvergen ke nol, akar yang dicari pasti akar sejati,
