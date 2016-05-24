@@ -21,6 +21,7 @@ categories: tugas
   5. [Proses Membagi Dua dan Kondisi Berhenti Iterasi](#proses-membagi-dua-dan-kondisi-berhenti-iterasi)
     1. [Proses Membagi Dua](#proses-membagi-dua)
     2. [Kondisi Berhenti Iterasi](#kondisi-berhenti-iterasi)
+    3. [Kasus yang Mungkin Terjadi pada Penggunaan Metode Bagi Dua](#kondisi-yang-mungkin-terjadi-pada-penggunaan-metode-bagi-dua)
 2. [Contoh Penerapan](#contoh-penerapan)
 3. [Referensi](#referensi)
 
@@ -119,6 +120,19 @@ Kondisi berhenti iterasi dapat dipilih salah satu dari kriteria berikut :
 2. Nilai fungsi di hampiran akar: f(c) < &mu;, yang dalam hal ini &mu; adalah nilai yang sangat kecil mendekati 0.
 3. Galat relatif hampiran akar: |(c<sub>baru</sub> - c<sub>lama</sub>) / c<sub>baru</sub>| < &delta;, yang dalam hal ini &delta; adalah galat relatif hampiran yang diinginkan.
 
+#### Kasus yang Mungkin Terjadi pada Penggunaan Metode Bagi Dua
+
+1. Jumlah akar lebih dari satu
+   * Bila dalam selang [a,b] terdapat lebih dari satu akar (banyaknya akar ganjil), hanya satu buah akar yang dapat ditemukan.
+   * Cara mengatasinya: gunakan selang [a,b] yang cukup kecil yang memuat hanya satu buah akar.
+2. Akar ganda
+   * Metode bagi dua tidak berhasil menemukan akar ganda. Hal ini disebabkan karena tidak terdapat perbedaan tanda di ujung-ujung selang yang baru.
+   * Contoh: f(x) = (x - 4)<sup>2</sup> = (x - 4)(x - 4), mempunyai dua akar yang sama, x = 4.
+3. Singularitas
+   Pada titik singular, nilai fungsinya tidak terdefinisi. Bila selang [a,b] mengandung titik singular, iterasi metode bagi dua tidak pernah berhenti. Penyebabnya, metode bagi dua menganggap titik singular sebagai akar karena iterasi cenderung konvergen. Yang sebenarnya, titik singular bukanlah akar, melainkan akar semu.
+   * Cara mengatasinya: periksa nilai |f(b) - f(a)|.
+   * Jika |f(b) - f(a)| konvergen ke nol, akar yang dicari pasti akar sejati,
+   * Jika |f(b) - f(a)| divergen, akar yang dicari merupakan titik singular (akar semu). 
 ## Contoh Penerapan
 Sebagai contoh dapat digunakan fungsi berikut ini untuk dicari akar-akarnya.
 
@@ -168,8 +182,21 @@ Sebagai contoh dapat digunakan fungsi berikut ini untuk dicari akar-akarnya.
     
     [0.60,0.70]
     
+    [0.50,0.70], bisa dipilih, tetapi cukup lebar
+    
+    [-0.50,-0.20], bisa dipilih, tetapi cukup lebar
+    
   3. Iterasinya
+     
+     Berikut ini penyelesaian iterasinya pada selang [0,1] dan &epsilon; = 0.00001.
 
+     ![Alt text](https://raw.githubusercontent.com/berviantoleo/mycapturepicrepo/master/Numerical-Analysis/iterasi.PNG "Penyelesaian")
+     
+     ###### Gambar 7 - Penyelesaian
+     ###### Sumber : [1][1]
+     
+     Jadi, hampiran akarnya adalah x = 0.605263.
+     
 ## Referensi
 
 1. Slide "Solusi Persamaan Nirlanjar" oleh Rinaldi Munir. [Go To Source][1]
