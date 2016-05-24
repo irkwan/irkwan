@@ -21,7 +21,7 @@ categories: tugas
   5. [Proses Membagi Dua dan Kondisi Berhenti Iterasi](#proses-membagi-dua-dan-kondisi-berhenti-iterasi)
     1. [Proses Membagi Dua](#proses-membagi-dua)
     2. [Kondisi Berhenti Iterasi](#kondisi-berhenti-iterasi)
-    3. [Kasus yang Mungkin Terjadi pada Penggunaan Metode Bagi Dua](#kondisi-yang-mungkin-terjadi-pada-penggunaan-metode-bagi-dua)
+    3. [Kasus yang Mungkin Terjadi pada Penggunaan Metode Bagi Dua](#kasus-yang-mungkin-terjadi-pada-penggunaan-metode-bagi-dua)
 2. [Contoh Penerapan](#contoh-penerapan)
 3. [Referensi](#referensi)
 
@@ -133,6 +133,7 @@ Kondisi berhenti iterasi dapat dipilih salah satu dari kriteria berikut :
    * Cara mengatasinya: periksa nilai |f(b) - f(a)|.
    * Jika |f(b) - f(a)| konvergen ke nol, akar yang dicari pasti akar sejati,
    * Jika |f(b) - f(a)| divergen, akar yang dicari merupakan titik singular (akar semu). 
+
 ## Contoh Penerapan
 Sebagai contoh dapat digunakan fungsi berikut ini untuk dicari akar-akarnya.
 
