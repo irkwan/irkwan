@@ -10,10 +10,29 @@ Untuk lebih sederhananya, permasalahan dapat dikatakan termasuk dalam kelas komp
 - Model komputasi, misalnya mesin Turing (deterministik/non-deterministik), sirkuit Boolean, sirkuit monoton, dll.
 - Sumber yang dibatasi dan pembatasnya, biasanya kedua hal ini dinyatakan bersama, misalnya waktu polinom, ruang logaritmik, kedalaman konstan, dll.
 
-Berikut ini adalah beberapa contoh kelas kompleksitas.
-
+### Contoh Kelas Kompleksitas
+Berikut ini adalah beberapa contoh kelas kompleksitas dalam permasalahan keputusan.
 Kelas Kompleksitas | Model Komputasi | Batasan Sumber
 :---:|:---:|:---:
 DTIME(*f(n)*)|Mesin Turing deterministik|Waktu *f(n)*
 P|Mesin Turing deterministik|Waktu poli*(n)*
-EXPTIME|Mesin Turing deterministik|Waktu 2<sup>poly*(n)*</sup>
+EXPTIME|Mesin Turing deterministik|Waktu 2<sup>poli*(n)*</sup>
+NTIME(*f(n)*)|Mesin Turing non-deterministik|Waktu *f(n)*
+NP|Mesin Turing non-deterministik|Waktu poli*(n)*
+NEXPTIME|Mesin Turing non-deterministik|Waktu 2<sup>poli*(n)*</sup>
+DSPACE(*f(n)*)|Mesin Turing deterministik|Ruang *f(n)*
+L|Mesin Turing deterministik|Ruang O(log *n*)
+PSPACE|Mesin Turing deterministik|Ruang poli*(n)*
+EXPSPACE|Mesin Turing deterministik|Ruang 2<sup>poli*(n)*</sup>
+NSPACE(*f(n)*)|Mesin Turing non-deterministik|Ruang *f(n)*
+NL|Mesin Turing non-deterministik|Ruang O(log *n*)
+NPSPACE|Mesin Turing non-deterministik|Ruang poli*(n)*
+NEXPSPACE|Mesin Turing non-deterministik|Ruang 2<sup>poli*(n)*</sup>
+
+## Reduksi
+
+
+## Teorema Hierarki
+### Teorema Hierarki Waktu
+
+### Teorema Hierarki Ruang
