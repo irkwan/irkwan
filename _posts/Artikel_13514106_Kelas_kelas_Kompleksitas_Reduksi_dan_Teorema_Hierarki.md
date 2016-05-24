@@ -12,6 +12,7 @@ Untuk lebih sederhananya, permasalahan dapat dikatakan termasuk dalam kelas komp
 
 ### Contoh Kelas Kompleksitas
 Berikut ini adalah beberapa contoh kelas kompleksitas dalam permasalahan keputusan.
+
 Kelas Kompleksitas | Model Komputasi | Batasan Sumber
 :---:|:---:|:---:
 DTIME(*f(n)*)|Mesin Turing deterministik|Waktu *f(n)*
