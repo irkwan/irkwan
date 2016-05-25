@@ -30,7 +30,7 @@
 <p>starting from now, writer will assume that reader have basic set and boolean operation knowledge</p>
 </blockquote>
 <p>For example, using the picture above, query &quot;voyage AND trip&quot; would return the intersection of voyage array and trip array, resulting in array 000100, which mean that only the 4th document met that query criteria. The query ((NOT voyage) OR ocean) would return the union of ocean array and the complement of voyage array, resulting in 000000, which mean that none of the documents match the query. Simple.</p>
-<p><img src="https://www.cs.cmu.edu/~adamchik/15-121/labs/HW-3%20Fast%20Lists/pix/manylevels.bmp" /></p>
+<p><img src="http://flylib.com/books/3/55/1/html/2/images/03fig17.gif" /></p>
 <p>In the implementation of the Boolean Model, it is common practice to have an <strong>indexed lists</strong> containing terms/words in the vocabullary, and on each one have a <strong>list of documents ID</strong> that contains such terms. So processing a query can be summarized as:</p>
 <ol>
 <li>X AND Y, return document IDs that occur in both X list and Y list</li>
@@ -59,4 +59,22 @@ There are some results which might be <strong>counterintuitive to user</strong> 
 </ul>
 <p>Which is why <strong>several models had been proposed</strong> to improve upon this basic model, with an attempt to address the issues above...</p>
 <h2>Chapter 3, The Extended Boolean Model</h2>
-<p>WIP</p>
+<p>As previously explained, the <strong>Extended Boolean Model</strong> refer to all IR model that <strong>improve upon</strong> the <strong>Standard Boolean Model</strong> in order to deal with its weakness. There had been proposed many such model, such as the <strong>MMM</strong> model, the <strong>Paice</strong> model and <strong>P-norm</strong> model. This article will mainly focus its discussion around the <strong>P-Norm</strong> model, and if interested, the explanation of the other model can be found here: 
+<a href="http://orion.lcg.ufrj.br/Dr.Dobbs/books/book5/chap15.htm">http://orion.lcg.ufrj.br/Dr.Dobbs/books/book5/chap15.htm</a></p>
+<p>The concept of the P-Norm model is similar to its predecessor, but it also made some changes into it; to add more features and capability. One of the most important changes are the addition of term weights for every term appearance in a document. This concept is called <strong>term weighting</strong>, it is basically a way to measure and note how relevant is a term in a document. </p>
+<p>For example, in this article, the term &quot;Query&quot; should receive a higher score than the term &quot;voyage&quot;. Even though both of them appeared, the term &quot;Query&quot; is more relevant in this document; it can be seen from the fact that the term &quot;Query&quot; is mentioned way more often than &quot;voyage&quot;. There are all sort of way to weight terms. One of them, namely the <strong>TF-IDF</strong>, take these factors into account:</p>
+<ol>
+<li><strong>How often</strong> is the term used in the document.</li>
+<li><strong>How long</strong> is the document.</li>
+<li><strong>How many</strong> other document use the same term.</li>
+</ol>
+<blockquote>
+<p>And transform these idea into a simple yet effective term weighting formula:</p>
+<ul>
+<li><strong>TF(t)</strong>     = (Number of Times Term t Appears) / (Total Number of Terms)</li>
+<li><strong>IDF(t)</strong>    = log_e(Total Number of Documents / Number of Documents with Term t in it)</li>
+<li><strong>TF.IDF(t)</strong> = TF(t) x IDF(t)</li>
+</ul>
+</blockquote>
+<p>With this formula (or using other method you prefer), each term appearance in a document can be given an <strong>appropriate weight</strong>. This way, the system can diferentiate between a document that mention the term &quot;voyage&quot; as an example and the one that actually contains voyage advisory content. Moreover, the P-Norm model also allows for <strong>term weighting in queries</strong> as well. This'll allow advanced user to gain more spesific documents by using a more spesific query. </p>
+<p>With all of these changes, of course, the <strong>query processing</strong> process must be changed as well...</p>
