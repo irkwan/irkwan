@@ -31,6 +31,7 @@
 </blockquote>
 <p>For example, using the picture above, query &quot;voyage AND trip&quot; would return the intersection of voyage array and trip array, resulting in array 000100, which mean that only the 4th document met that query criteria. The query ((NOT voyage) OR ocean) would return the union of ocean array and the complement of voyage array, resulting in 000000, which mean that none of the documents match the query. Simple.</p>
 <p><img src="http://flylib.com/books/3/55/1/html/2/images/03fig17.gif" /></p>
+<blockquote>
 <p>In the implementation of the Boolean Model, it is common practice to have an <strong>indexed lists</strong> containing terms/words in the vocabullary, and on each one have a <strong>list of documents ID</strong> that contains such terms. So processing a query can be summarized as:</p>
 <ol>
 <li>X AND Y, return document IDs that occur in both X list and Y list</li>
@@ -38,6 +39,7 @@
 <li>NOT X, return document IDs that do not occur in X list</li>
 <li>(X AND (NOT Y)) OR Z, return document IDs that occur in either Z list or IDs that occur in X list but not in Y</li>
 </ol>
+</blockquote>
 <p><br>
 And that is the basic of basic Boolean Model, it is fairly easy to implement and understand but not without its <strong>weaknesses</strong>:</p>
 <ul>
@@ -77,4 +79,20 @@ There are some results which might be <strong>counterintuitive to user</strong> 
 </ul>
 </blockquote>
 <p>With this formula (or using other method you prefer), each term appearance in a document can be given an <strong>appropriate weight</strong>. This way, the system can diferentiate between a document that mention the term &quot;voyage&quot; as an example and the one that actually contains voyage advisory content. Moreover, the P-Norm model also allows for <strong>term weighting in queries</strong> as well. This'll allow advanced user to gain more spesific documents by using a more spesific query. </p>
-<p>With all of these changes, of course, the <strong>query processing</strong> process must be changed as well...</p>
+<p>With all of these changes, of course, the <strong>query processing</strong> process must be changed as well. P-Norm had a very different query processing method compared to the Standard Boolean Model. Previously, the model can only give a binary result, either a document fullfills the query or it didn't. </p>
+<p>The P-Norm model change this into a formula that resulted in an arbitrary number, which portray the document <strong>likeliness</strong> to the query. The value of this number vary largely between system depend on the weighting method used on the document and query; but it doesn't matter since all we need to do is sort the result according to this value. A high likeliness value document should be put above a low one, this way we can <strong>rank the result</strong> according to how well it fullfill the query. The followings are the formula used in the P-Norm model:</p>
+<p><img src="https://upload.wikimedia.org/math/1/8/5/1857c3ae9fa7b748b4e5a9061c1fe058.png" /></p>
+<blockquote>
+<p>The picture above is the formula used to calculate the similarity of the query <strong>q-and</strong> ( &quot;a-1 AND a-2 AND ... AND a-t&quot; where <strong>a-n</strong> is the <strong>nth</strong> term ) and the document <strong>d-j</strong> where the weight of term <strong>a-n</strong> is <strong>w-n</strong> (if the term doesn't exist then the weight is 0). The formula will yield the highest result when the weight of the terms desired is highest (for example w-n = 1), and will decrease as the weight of terms desired get lower.</p>
+</blockquote>
+<p><img src="https://upload.wikimedia.org/math/0/8/e/08eda2e93607ee59eb7b77dc60e63cf3.png" /></p>
+<blockquote>
+<p>The picture above is the formula used to calculate the similarity of the query <strong>q-or</strong> (&quot;a-1 OR a-2 OR ... OR a-t&quot;) and the document <strong>d-j</strong>. The formula will yield the lowest result when the weight of the terms desired is lowest (for example w-n = 0), and will increase as the weight of terms desired get higher.</p>
+</blockquote>
+<p><strong>SIM(q-not,dj) = 1 - SIM(q,dj)</strong></p>
+<blockquote>
+<p>The p used in the formulas above is called the <strong>degree of strictness</strong>, usually implemented as a system defined constant like 2. At p-value of 1, both <strong>q-or</strong> and <strong>q-and</strong> will yield the same result. </p>
+<p>When t=1 (a query with only one term), both q-and and q-or provide in the same result, <strong>SIM(q,dj) = w1</strong></p>
+</blockquote>
+<p>With the three basic formulas above, we can easily count the similarity of more complex query; for example, The similarity formula between q = &quot;a-1 AND ((NOT a-2) OR a-3)&quot; is:</p>
+<p>...WIP...</p>
