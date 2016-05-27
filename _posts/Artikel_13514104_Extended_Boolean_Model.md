@@ -160,5 +160,6 @@ For example, using the picture above:
 <h2>Reference</h2>
 <p><a href="http://orion.lcg.ufrj.br/Dr.Dobbs/books/book5/chap15.htm" title="Extended Boolean Model by E. Fox, S. Betrabet, M. Koushik and W. Lee">Extended Boolean Model by E. Fox, S. Betrabet, M. Koushik and W. Lee</a></p>
 <p><a href="http://nlp.stanford.edu/IR-book/html/htmledition/term-frequency-and-weighting-1.html" title="Term frequency and weighting from Cambridge University Press">Term frequency and weighting from Cambridge University Press</a></p>
+<p><a href="http://nlp.stanford.edu/IR-book/html/htmledition/boolean-retrieval-1.html" title="Boolean retrieval from Cambridge University Press">Boolean retrieval from Cambridge University Press</a></p>
 <p><a href="http://www.cs.cityu.edu.hk/~lwang/ccs4485/lecture8.ppt" title="Information Retrieval Lecture from The Department of Computer Science">Information Retrieval Lecture from The Department of Computer Science</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Extended_Boolean_model#Generalizing_the_idea_and_P-norms" title="Pictures from Wikipedia Extended Boolean Model Article ">Pictures from Wikipedia Extended Boolean Model Article</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Extended_Boolean_model#Generalizing_the_idea_and_P-norms" title="Pictures from Wikipedia Extended Boolean Model Article">Pictures from Wikipedia Extended Boolean Model Article</a></p>
