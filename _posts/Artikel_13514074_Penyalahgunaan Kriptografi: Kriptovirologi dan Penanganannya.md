@@ -5,7 +5,9 @@ Kriptografi merupakan suatu ilmu yang digunakan untuk menjaga kerahasiaan suatu 
 Kriptovirologi adalah ilmu yang mempelajari penerapan kriptografi pada perangkat lunak yang dibuat untuk tujuan tidak baik. Yang dimaksud dengan tidak baik di sini adalah perangkat lunak yang dibuat untuk tujuan membuat suatu data tidak bisa diakses atau mengubah data yang disimpan. Ilmu kriptovirologi memang membantu orang-orang yang bermaksud buruk, namun kita juga perlu mempelajarinya untuk menangani masalah yang ditimbulkan oleh kriptovirologi. Kita tidak bisa menangani masalah yang ditimbulkan kriptovirologi jika kita tidak mengerti mengenai hal tersebut.
 
 ### Metode Kriptografi yang Biasa Digunakan pada Kriptovirologi
+Ada dua metode kriptografi yang biasa digunakan pada kriptovirologi yaitu kriptografi simetris dan kriptografi dengan peblic-key.
 #### Kriptografi simetris
+Pada kriptografi simetris, enkripsi plainteks dan dekripsi cipherteks menggunakan kunci yang sama. Plainteks adalah data atau informasi yang dapat dibaca dan dimengerti maknanya. Cipherteks adalah pesan yang telah disandikan sehingga tidak memiliki makna lagi. Enkripsi adalah proses menyandikan plainteks menjadi cipherteks, sementara dekripsi adalah proses mengembalikan cipherteks menjadi plainteks.   
 #### Kriptografi dengan public-key
 
 ### High Survivability Virus
