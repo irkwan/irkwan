@@ -7,16 +7,36 @@ Kriptovirologi adalah ilmu yang mempelajari penerapan kriptografi pada perangkat
 ### Metode Kriptografi yang Biasa Digunakan pada Kriptovirologi
 Ada dua metode kriptografi yang biasa digunakan pada kriptovirologi yaitu kriptografi simetris dan kriptografi dengan peblic-key.
 #### Kriptografi simetris
-Pada kriptografi simetris, enkripsi plainteks dan dekripsi cipherteks menggunakan kunci yang sama. Plainteks adalah data atau informasi yang dapat dibaca dan dimengerti maknanya. Cipherteks adalah pesan yang telah disandikan sehingga tidak memiliki makna lagi. Enkripsi adalah proses menyandikan plainteks menjadi cipherteks, sementara dekripsi adalah proses mengembalikan cipherteks menjadi plainteks.   
+Pada kriptografi simetris, enkripsi plainteks dan dekripsi cipherteks menggunakan kunci yang sama. Plainteks adalah data atau informasi yang dapat dibaca dan dimengerti maknanya. Cipherteks adalah pesan yang telah disandikan sehingga tidak memiliki makna lagi. Enkripsi adalah proses menyandikan plainteks menjadi cipherteks, sementara dekripsi adalah proses mengembalikan cipherteks menjadi plainteks. <br><br>
+
+Berikut adalah ilustrasi kriptografi simetris :
+
+<img src="http://www2.powayusd.com/pusdtbes/cs/symmetric.gif">
+
+Pada pengiriman informasi antar dua pihak, ada suatu kunci yang digunakan bersama. Kunci tersebut digunakan untuk menjaga kerahasiaan informasi. Hal ini menyebabkan kedua pihak harus memiliki akses terhadap kunci rahasia tersebut. Contoh dari algoritma kriptografi simetris adalah Twofish, Serpent, AES, dan IDEA. 
+
 #### Kriptografi dengan public-key
+Kriptografi simetris memiliki kelemahan karena kunci enkripsi dan dekripsi yang sama. Hal ini menyebabkan kunci mudah diketahui oleh pihak lain sehingga mengurangi kerahasiaan informasi. Kelemahan ini diatasi pada kriptografi dengan public-key. Pada kriptogafi dengan public-key, digunakan dua kunci, yaitu public-key dan private-key. Public-key merupakan kunci yang digunakan untuk melakukan enkripsi, sementara private-key merupakan kunci yang digunakan untuk melakukan dekripsi. Jadi, semua orang bisa melakuka enkriipsi menggunakan public-key penerima, namun pesan tersebut hanya bisa didekripsi dengan private-key milik penerima. Public-key bisa diketahui oleh semua orang, sementara private-key hanya diketahui oleh penerima. Sementara pada kriptografi simetris, kunci harus diketahui oleh pengirim dan penerima. <br><br>
 
-### High Survivability Virus
-#### One-Half Virus
-#### LZR Virus
+Berikut adalah ilustrasi kriptografi dengan public-key :
+
+<img src="http://www.ooshutup.com/wp-content/uploads/2014/11/public_key_encryption.jpg"><br>
+Contoh dari algoritma kriptografi dengan public-key adalah RSA.
+
+### Virus Komputer
+Ada 3 jenis virus komputer yang sering menyebabkan gangguan, yaitu virus biasa, trojan, dan worms. **Virus biasa** adalah kode yang bisa menggandakan dirinya dan menginfeksi komputer tanpa sepengetahuan penggunanya. **Trojan** adalah program yang merupakan bagian dari program lain yang mengeksekusi perintah tanpa sepengetahuan pemilik program. **Worms** adalah komputer program yang bisa memperbanyak diri sendiri dan menggunakan suatu jaringan untuk mengirimkan salinan dirinya ke tempat lain. Untuk selanjutnya, virus mengacu pada ketiga hal ini. Virus yang mengandung dan menggunakan public-key adalah **kriptovirus**.
+
+### Serangan Kriptovirologi
+Serangan kriptovirologi dilakukan dengan menggunakan kriptovirus. Perancang virus membuat private-key dan public-key untuk virus. Private-key disimpan oleh perancang virus di suatu media, biasanya berbentuk *_smartcard_*. Public-key disimpan pada kriptovirus. Kriptovirus kemudian dilepaskan untuk menginfeksi mesin-mesin milik orang lain. Kriptovirus kemudian menggabungkan diri dengan data-data. Kriptovirus kemudian mengenkripsi data milik orang lain dengan menggunakan _symmetric key_. Kemudian, pemilik data akan mendapat notifikasi bahwa telah terjadi penyerangan dan data hanya bisa diakses dengan private-key. Untuk mendapat private-key tersebut, pemilik data harus membayar uang sebanyak yang diinginkan oleh perancang virus atau datanya tidak akan bisa diakses lagi. Jika pemilik data membayar, barulah perancang virus mengirimkan private-key untuk melakukan dekripsi. Kriptovirus biasanya merupakan _high survivable virus_, yaitu virus yang bisa bertahan pada inangnya karena membuat inangnya harus bergantung pada virus tersebut. Ada beberapa contoh kriptovirus dan serangannya yang dibahas selanjutnya.
+#### Virus One-Half
+Virus ini ditemukan pada Oktober 1994. Virus ini bekerja dengan melakukan enkripsi pada hard drive dimulai dari silinder terakhir dan perlahan maju ke silinder berikutnya. Virus One-Half menggunakan cipher simetris dan menyimpan kunci pada diriya sendiri.
+#### Virus LZR
+Virus LZR merupakan variasi dari komputer virus sektor boot yang bernama Stoned. LZR mengambil alih terhadap proses baca dan tulis hard disk dengan menggunakan _system call_ yang tidak diketahui. LZR menulis informasi _error correction_ pada disk, meskipun hal itu jarang dilakukan sistem operasi. Pada saat informasi ditulis ke disk, data diikuti oleh data _error correction_ dari virus. Jika virus dihapus, rutinitas penting tidak akan dipanggil, sehingga arsip-arsip yang ada akan dianggap tidak dapat dimengerti oleh  program user.
 #### AIDS Information Trojan
+Program ini menyediakan infomasi pada pengguna yang menimbulkan AIDS, dan pada saat yang bersamaan mengenkripsi hard drive pengguna setelah 90 reboot. Pengguna kemudian diberi notifikasi bahwa _license fee_ harus dibayar oleh pengguna untuk mendapatkan kunci dekripsi.
 #### KOH Virus
+Virus ini juga melakukan enkripsi terhadap sistem inang. Tujuan utama dari virus ini adalah untuk membuat enkripsi berjalan pada background, sehingga tidak ada intervensi dari pengguna. Virus ini menggunakan sistem kriptografi IDEA dan dijual secara komersial.
 
-### Bahaya Kriptovirologi
 ### Penanganan
 
 
