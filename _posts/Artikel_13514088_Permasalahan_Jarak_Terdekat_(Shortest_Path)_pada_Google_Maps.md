@@ -18,7 +18,7 @@ Kedua *vertex* kecil tersebut akan ditambah secara sementara saja pada saat penc
 Ada beberapa algoritma *shortest path* yang digunakan secara luas dan umum, dan dapat digunakan pada aplikasi Google Maps. Dimulai dari Algoritma brute force, kita akan melihat dan menganalisis performansi dari algoritma tersebut.
 
 #### Brute Force
-Menggunakan Algoritma *Brute Force*, maka akan mencari ke semua arah (dengan asumsi tidak ada jalan yang sama bakal dilalui dua kali) dan semua kemungkinan jalan yang mungkin dari awal sampai akhir, dengan menganggap suatu jalan sebagai bit "0 berarti tidak dipakai, 1 berarti dipakai", dan mencari minimumnya. Hal ini tentunya sangat tidak efisien, melihat kompleksitasnya yang menjadi __O(2^n)__, dimana n untuk satu kota saja, jumlahnya bisa mencapai puluhan - ratusan ribu, apalagi jika antar kota. Tentunya kompleksitas yang eksponensial dan n yang besar sudah tidak memungkinkan pencarian jalur menggunakan algoritma ini.
+Menggunakan Algoritma *Brute Force*, maka akan mencari ke semua arah (dengan asumsi tidak ada jalan yang sama bakal dilalui dua kali) dan semua kemungkinan jalan yang mungkin dari awal sampai akhir, dengan menganggap suatu jalan sebagai bit "0 berarti tidak dipakai, 1 berarti dipakai", dan mencari minimumnya. Hal ini tentunya sangat tidak efisien, melihat kompleksitasnya yang menjadi __O(2<sup>n</sup>)__, dimana n untuk satu kota saja, jumlahnya bisa mencapai puluhan - ratusan ribu, apalagi jika antar kota. Tentunya kompleksitas yang eksponensial dan n yang besar sudah tidak memungkinkan pencarian jalur menggunakan algoritma ini.
 
 #### DFS
 Menggunakan Algoritma DFS, kita akan mencari jalur dengan menelusuri setiap jalur yang ada. Jika diketemukan, maka keluarkan hasilnya. Hal ini dapat berakibat hasil yang tidak optimal karena DFS hanya berhasil apabila dipakai pada *unweighted graph* atau graf tidak berarah, sedangkan kita tahu bahwa jalan-jalan sebenarnya memiliki panjang yang berbeda-beda. Selain tidak optimal, algoritma ini juga lambat karena bisa saja menelusuri ke arah yang sebaliknya dengan arah tujuan (arah tujuan ke kanan, tetapi arah DFS malah ke kiri terus, mengakibatkan tidak ketemu-ketemu). Sebagai perhitungan, anggap banyaknya ekspansi adalah b, dan kedalamannya adalah d, maka kompleksitas algoritma tersebut bisa mencapai __O(b^d)__ dimana dapat dilihat naik secara eksponensial dengan bertambahnya kedalaman.
@@ -47,6 +47,16 @@ Karena itu biasanya hasil query-query tersebut dipecah-pecah menjadi beberapa ba
 Pendekatan ini sudah cukup optimal dan dapat digunakan pada Google Maps karena diharapkan dapat mencari jalur terdekat untuk jarak jauh, tanpa harus menghitung simpul-simpul yang tidak diperlukan, dan bisa diterapkan dalam waktu yang cepat. Algoritma ini memiliki kompleksitas maksimum __O(E)__ dengan E adalah jumlah jalan yang diekspan (jika diperlukan).
 
 ## Kesimpulan
+Ada sangat banyak algoritma *shortest path* yang dapat digunakan untuk *Google Maps*. Akan tetapi, walaupun begitu, hanya sedikit yang dapat menghasilkan solusi optimal dalam waktu polynomial (dijkstra, A-star, dan Precompute). Walaupun begitu, tidak semuanya dapat menghasilkan jalur dalam waktu yang cepat, dan tidak ada yang dapat menyelesaikan persoalan tersebut dalam waktu yang singkat tanpa menggunakan prekomputasional dan optimisasi lainnya, karena *node* yang ada sangat banyak. Berikut ini merupakan peta kota Jakarta:
+
+![Image of Jakarta](https://github.com/raditya1710/aradityaa/blob/master/JakartaEdited.png)
+
+Dapat dilihat bahwa pada gambar itu saja (kota besar di Indonesia), terdapat sangat banyak persimpangan / node didalamnya. 
+
+Tentunya untuk solusi yang saya berikan __(Precompute + A-Star)__, sudah cukup lumayan untuk dapat memenuhi kriteria dan kenyamanan pengguna, akan tetapi baru dalam skala kota saja, belum bisa antar kota. Untuk persoalan antar kota, terdapat algoritma campuran yang tidak dapat dibahas di sini (terlalu panjang dan memasukkan bagian sistem *low level*).
 
 ## Referensi
 
+* https://groups.google.com/forum/#!topic/Google-Maps-API/QMHKn-oaB24
+* https://guides.github.com/features/mastering-markdown/
+* Sumber Pribadi
