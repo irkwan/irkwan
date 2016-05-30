@@ -38,6 +38,14 @@ Program ini menyediakan infomasi pada pengguna yang menimbulkan AIDS, dan pada s
 Virus ini juga melakukan enkripsi terhadap sistem inang. Tujuan utama dari virus ini adalah untuk membuat enkripsi berjalan pada background, sehingga tidak ada intervensi dari pengguna. Virus ini menggunakan sistem kriptografi IDEA dan dijual secara komersial.
 
 ### Penanganan
+Ada beberapa cara penanganan terhadap serangan kriptografi, yaitu :
+* Melakukan pengawasan terhadap memori.<br> Hal ini berguna untuk menangkap kriptovirus yang _self encrypting_ dan _polymorphic_. _Polymorphic_ berarti virus bisa membuat salinan dirinya sendiri yang berbeda-beda untuk mengelabui pengguna.
+* Menggunakan dua bentuk otentikasi. Kata sandi (_password_) saja merupakan otentikasi yang lemah. Dua bentuk otentikasi, dengan kata sandi dan entitas biometrik pengguna seperti sidik jari bisa digunakan.
+* Menggunakan aplikasi anti-virus yang _up-to-date_. Anti-virus juga bisa digunakan untuk menangani kriptovirus dikarenakan kriptovirus menggunakan cara penyebaran yang sama dengan virus biasa.
+* Menggunakan _tools_ kriptografi dan API kriptografi. Hal ini bisa membantu admin sistem untuk mengidentifikasi penggunaan kriptografi yang mencurigakan.
+* Melakukan pengawasan terhadap proses-proses yang memanggil rutinitas kriptografi dan mencegah eksekusi proses yang tidak memiliki akses yang seharusnya untuk memanggil _library/toolkit_ kripto. Jika ada rutinitas kriptografi yang kuat dan generator angka acak, akan menyebabkan virus lebih mudah untuk membuat kode dan menjalankan kode tersebut. Menjalankan _tool_ kriptografi tertentu dapat meningkatkan keamanan sistem, namun membuat sistem mudah terinfeksi virus karena virus dapat memanggil rutinitas ini.
+* Menggunakan firewall dan Intrusion Detection System (IDS) untuk melindungi sistem yang terhubung dengan sistem lain maupun yang tidak.
+* Melakukan back-up pada data secara teratur. Meskipun data kita terinfeksi kriptovirus dan tidak dapat dibuka, jika kita sudah memiliki back-up maka kita tidak perlu membayar perancang virus untuk mendapatkan data kita kembali.
 
 
 
