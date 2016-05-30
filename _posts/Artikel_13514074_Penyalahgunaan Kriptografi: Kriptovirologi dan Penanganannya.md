@@ -1,6 +1,20 @@
 # Penyalahgunaan Kriptografi: Kriptovirologi dan Penanganannya
 Kriptografi merupakan suatu ilmu yang digunakan untuk menjaga kerahasiaan suatu informasi. Kriptografi biasanya digunakan untuk mengenskripsi suatu informasi sehingga tidak mudah diketahui oleh pihak yang tidak diinginkan. Contoh dari penggunaan kriptografi adalah pengiriman pesan rahasia pada badan intelijen dan militer. Dilihat dari kegunaannya, bisa dikatakan bahwa kriptografi dibuat dengan tujuan untuk melindungi. Namun, kriptografi bisa disalahgunakan untuk hal sebaliknya. Kriptografi justru bisa disalahgunakan untuk menghilangkan akses seseorang terhadap informasi, menghilangkan kerahasiaan informasi, dan menyebabkan kebocoran informasi, hal-hal yang biasanya justru dicegah dengan kriptografi. Hal-hal tersebut bisa terjadi jika ilmu kriptografi digabungkan dengan virus komputer yang menghasilkan ilmu baru bernama kriptovirologi.
 
+## Daftar Isi
+1. [Kriptovirologi](#kriptovirologi)
+  1. [Metode Kriptografi yang Biasa Digunakan pada Kriptovirologi](#metode-kriptografi-yang-biasa-digunakan-pada-kriptovirologi)
+    1. [Kriptografi simetris](#kriptografi-simetris)
+    2. [Kriptografi dengan public-key](#kriptografi-dengan-public-key)
+  2. [Virus Komputer](#virus-komputer)
+  3. [Serangan Kriptovirologi](#serangan-kriptovirologi)
+    1. [Virus One-Half](#virus-one-half)
+    2. [Virus LZR](#virus-lzr)
+    3. [AIDS Information Trojan](#aids-information-trojan)
+    4. [Virus KOH](#virus-koh)
+  4. [Penanganan](#penanganan)
+2. [Referensi](#referensi)
+
 ## Kriptovirologi
 Kriptovirologi adalah ilmu yang mempelajari penerapan kriptografi pada perangkat lunak yang dibuat untuk tujuan tidak baik. Yang dimaksud dengan tidak baik di sini adalah perangkat lunak yang dibuat untuk tujuan membuat suatu data tidak bisa diakses atau mengubah data yang disimpan. Ilmu kriptovirologi memang membantu orang-orang yang bermaksud buruk, namun kita juga perlu mempelajarinya untuk menangani masalah yang ditimbulkan oleh kriptovirologi. Kita tidak bisa menangani masalah yang ditimbulkan kriptovirologi jika kita tidak mengerti mengenai hal tersebut.
 
@@ -34,7 +48,7 @@ Virus ini ditemukan pada Oktober 1994. Virus ini bekerja dengan melakukan enkrip
 Virus LZR merupakan variasi dari komputer virus sektor boot yang bernama Stoned. LZR mengambil alih terhadap proses baca dan tulis hard disk dengan menggunakan _system call_ yang tidak diketahui. LZR menulis informasi _error correction_ pada disk, meskipun hal itu jarang dilakukan sistem operasi. Pada saat informasi ditulis ke disk, data diikuti oleh data _error correction_ dari virus. Jika virus dihapus, rutinitas penting tidak akan dipanggil, sehingga arsip-arsip yang ada akan dianggap tidak dapat dimengerti oleh  program user.
 #### AIDS Information Trojan
 Program ini menyediakan infomasi pada pengguna yang menimbulkan AIDS, dan pada saat yang bersamaan mengenkripsi hard drive pengguna setelah 90 reboot. Pengguna kemudian diberi notifikasi bahwa _license fee_ harus dibayar oleh pengguna untuk mendapatkan kunci dekripsi.
-#### KOH Virus
+#### Virus KOH
 Virus ini juga melakukan enkripsi terhadap sistem inang. Tujuan utama dari virus ini adalah untuk membuat enkripsi berjalan pada background, sehingga tidak ada intervensi dari pengguna. Virus ini menggunakan sistem kriptografi IDEA dan dijual secara komersial.
 
 ### Penanganan
@@ -47,5 +61,11 @@ Ada beberapa cara penanganan terhadap serangan kriptografi, yaitu :
 * Menggunakan firewall dan Intrusion Detection System (IDS) untuk melindungi sistem yang terhubung dengan sistem lain maupun yang tidak.
 * Melakukan back-up pada data secara teratur. Meskipun data kita terinfeksi kriptovirus dan tidak dapat dibuka, jika kita sudah memiliki back-up maka kita tidak perlu membayar perancang virus untuk mendapatkan data kita kembali.
 
+## Referensi
+* A. Young, M. Yung. 2004. _Malicious Cryptography: Exposing Cryptovirology_. New York: Wiley
+* A. Young and Moti Yung, "Cryptovirology: extortion-based security threats and countermeasures," Security and Privacy, 1996. Proceedings., 1996 IEEE Symposium on, Oakland, CA, 1996, pp. 129-140
+* Balepin, Ivan. 2003. "Superworms and Cryptovirology: a Deadly Combination". Department of Computer Science University of California, Davis
+May 2003
+* http://www.cryptovirology.com/, diakses pada 27 Mei 2016
 
 
