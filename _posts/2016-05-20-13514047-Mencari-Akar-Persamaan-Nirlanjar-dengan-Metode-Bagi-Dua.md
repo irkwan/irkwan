@@ -147,7 +147,7 @@ Sebagai contoh dapat digunakan fungsi berikut ini untuk dicari akar-akarnya.
 
 f(x) = e<sup>x</sup> - 5x<sup>2</sup>
 
-  1. Grafik
+  * Grafik
      
      Agar memudahkan, saya akan memberikan gambar grafik dengan perbesaran yang berbeda untuk menunjukan daerah akar-akarnya.
      
@@ -163,7 +163,7 @@ f(x) = e<sup>x</sup> - 5x<sup>2</sup>
      
      **Sumber : Dokumen Pribadi**
 
-  2. Tabel Nilai
+  * Tabel Nilai
      
      Tabel nilai ini dimulai dari a = -0.5 sampai v = 1.4 dengan kenaikan absis sebesar h = 0.1.
 
@@ -200,7 +200,7 @@ f(x) = e<sup>x</sup> - 5x<sup>2</sup>
     
     [-0.50,-0.20], bisa dipilih, tetapi cukup lebar
     
-  3. Iterasinya
+  * Iterasinya
      
      Berikut ini penyelesaian iterasinya pada selang [0,1] dan &epsilon; = 0.00001.
 
