@@ -7,18 +7,24 @@ categories: tugas
 ---
 
 ---
-#Daftar Isi
+##Daftar Isi
 
 1. [Metode Bagi Dua](#metode-bagi-dua)
+  
   1. [Pendahuluan](#pendahuluan)
+  
     1. [Metode Terbuka](#metode-terbuka)
     2. [Metode Tertutup](#metode-tertutup)
   2. [Syarat dalam Metode Tertutup](#syarat-dalam-metode-tertutup)
+  
   3. [Kondisi yang Mungkin Terjadi](#kondisi-yang-mungkin-terjadi)
+  
     1. [Hasil Kali Batas Negatif](#hasil-kali-batas-negatif)
     2. [Hasil Kali Batas Positif](#hasil-kali-batas-positif)
+  
   4. [Menentukan Selang](#menentukan-selang)
   5. [Proses Membagi Dua dan Kondisi Berhenti Iterasi](#proses-membagi-dua-dan-kondisi-berhenti-iterasi)
+  
     1. [Proses Membagi Dua](#proses-membagi-dua)
     2. [Kondisi Berhenti Iterasi](#kondisi-berhenti-iterasi)
     3. [Kasus yang Mungkin Terjadi pada Penggunaan Metode Bagi Dua](#kasus-yang-mungkin-terjadi-pada-penggunaan-metode-bagi-dua)
@@ -43,6 +49,7 @@ Sebelum mengetahui metode bagi dua, perlu diketahui bahwa untuk mencari akar per
 
 #### Metode Terbuka
 Berikut beberapa poin singkat mengenai metode terbuka :
+
 * tidak memerlukan selang [a,b] yang mengandung akar
 * mencari akar melalui suatu lelaran (iterasi) yang dimulai dari sebuah tebakan (guest) awal,
 * pada setiap lelaran kita menghitung hampiran akar yang baru. 
@@ -51,6 +58,7 @@ Berikut beberapa poin singkat mengenai metode terbuka :
 
 #### Metode Tertutup
 Sedangkan metode tertutup dapat diringkas sebagai berikut :
+
 * mencari akar di dalam selang [a,b];
 * Selang [a,b] sudah dipastikan berisi minimal satu buah akar,
 * karena itu metode jenis ini selalu berhasil menemukan akar.
@@ -131,6 +139,7 @@ Kondisi berhenti iterasi dapat dipilih salah satu dari kriteria berikut :
 3. Singularitas
    
    Pada titik singular, nilai fungsinya tidak terdefinisi. Bila selang [a,b] mengandung titik singular, iterasi metode bagi dua tidak pernah berhenti. Penyebabnya, metode bagi dua menganggap titik singular sebagai akar karena iterasi cenderung konvergen. Yang sebenarnya, titik singular bukanlah akar, melainkan akar semu.
+
    * Cara mengatasinya: periksa nilai |f(b) - f(a)|.
    * Jika |f(b) - f(a)| konvergen ke nol, akar yang dicari pasti akar sejati,
    * Jika |f(b) - f(a)| divergen, akar yang dicari merupakan titik singular (akar semu). 
