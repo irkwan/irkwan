@@ -6,7 +6,7 @@ summary:    Silakan klik pada judul untuk detailnya
 categories: tugas
 ---
 
-# Daftar Isi
+## Daftar Isi
 
 * [Metode Bagi Dua](#metode-bagi-dua)
   * [Pendahuluan](#pendahuluan)
@@ -124,7 +124,7 @@ Kondisi berhenti iterasi dapat dipilih salah satu dari kriteria berikut :
 
 1. Lebar selang baru : abs(a-b) < &epsilon;, yang dalam hal ini &epsilon; adalah nilai toleransi lebar selang yang mengurung akar.
 2. Nilai fungsi di hampiran akar: f(c) < &mu;, yang dalam hal ini &mu; adalah nilai yang sangat kecil mendekati 0.
-3. Galat relatif hampiran akar: abs( (c<sub>baru</sub> - c<sub>lama</sub>) / c<sub>baru</sub>) < &delta;, yang dalam hal ini &delta; adalah galat relatif hampiran yang diinginkan.
+3. Galat relatif hampiran akar: abs((c<sub>baru</sub> - c<sub>lama</sub>) / c<sub>baru</sub>) < &delta;, yang dalam hal ini &delta; adalah galat relatif hampiran yang diinginkan.
 
 #### Kasus yang Mungkin Terjadi pada Penggunaan Metode Bagi Dua
 
