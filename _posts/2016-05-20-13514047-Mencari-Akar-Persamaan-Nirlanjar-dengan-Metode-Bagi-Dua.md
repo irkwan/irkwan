@@ -8,21 +8,21 @@ categories: tugas
 
 # Daftar Isi
 
-1. [Metode Bagi Dua](#metode-bagi-dua)
-  1. [Pendahuluan](#pendahuluan)
-    1. [Metode Terbuka](#metode-terbuka)
-    2. [Metode Tertutup](#metode-tertutup)
-  2. [Syarat dalam Metode Tertutup](#syarat-dalam-metode-tertutup)
-  3. [Kondisi yang Mungkin Terjadi](#kondisi-yang-mungkin-terjadi)
-    1. [Hasil Kali Batas Negatif](#hasil-kali-batas-negatif)
-    2. [Hasil Kali Batas Positif](#hasil-kali-batas-positif)
-  4. [Menentukan Selang](#menentukan-selang)
-  5. [Proses Membagi Dua dan Kondisi Berhenti Iterasi](#proses-membagi-dua-dan-kondisi-berhenti-iterasi)
-    1. [Proses Membagi Dua](#proses-membagi-dua)
-    2. [Kondisi Berhenti Iterasi](#kondisi-berhenti-iterasi)
-    3. [Kasus yang Mungkin Terjadi pada Penggunaan Metode Bagi Dua](#kasus-yang-mungkin-terjadi-pada-penggunaan-metode-bagi-dua)
-2. [Contoh Penerapan](#contoh-penerapan)
-3. [Referensi](#referensi)
+* [Metode Bagi Dua](#metode-bagi-dua)
+  * [Pendahuluan](#pendahuluan)
+    * [Metode Terbuka](#metode-terbuka)
+    * [Metode Tertutup](#metode-tertutup)
+  * [Syarat dalam Metode Tertutup](#syarat-dalam-metode-tertutup)
+  * [Kondisi yang Mungkin Terjadi](#kondisi-yang-mungkin-terjadi)
+    * [Hasil Kali Batas Negatif](#hasil-kali-batas-negatif)
+    * [Hasil Kali Batas Positif](#hasil-kali-batas-positif)
+  * [Menentukan Selang](#menentukan-selang)
+  * [Proses Membagi Dua dan Kondisi Berhenti Iterasi](#proses-membagi-dua-dan-kondisi-berhenti-iterasi)
+    * [Proses Membagi Dua](#proses-membagi-dua)
+    * [Kondisi Berhenti Iterasi](#kondisi-berhenti-iterasi)
+    * [Kasus yang Mungkin Terjadi pada Penggunaan Metode Bagi Dua](#kasus-yang-mungkin-terjadi-pada-penggunaan-metode-bagi-dua)
+* [Contoh Penerapan](#contoh-penerapan)
+* [Referensi](#referensi)
 
 
 
