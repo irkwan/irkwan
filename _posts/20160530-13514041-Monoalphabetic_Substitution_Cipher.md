@@ -11,14 +11,14 @@ categories: tugas
 ---
 
 # Daftar Isi
-1. Definisi
-2. Algoritma Cipher yang digunakan
-  1. Caesar Cipher
-  2. Atbash Cipher
-  3. Baconian Cipher
-  4. Polybius Square
-  5. Keyword Cipher
-3. Referensi
+1. [Definisi](#Definisi)
+2. [Algoritma Cipher yang digunakan](#Algoritma Cipher yang digunakan)
+  1. [Caesar Cipher](#Caesar Cipher)
+  2. [Atbash Cipher](#Atbash Cipher)
+  3. [Baconian Cipher](#Baconian Cipher)
+  4. [Polybius Square](#Polybius Square)
+  5. [Keyword Cipher](#Keyword Cipher)
+3. [Referensi](#Referensi)
 
 ---
 
@@ -53,6 +53,7 @@ _Atbash Cipher_ merupakan jenis _cipher_ yang melakukan penyandian dengan melaku
 huruf B diganti dengan Y dan seterusnya. Dengan x adalah huruf yang ingin kita enkripsi (a = 0, b = 1, etc) maka algoritma _Atbash Cipher_ dapat kita
 nyatakan dalam fungsi matematika berikut :
 > _**e(x) = 25 - x**_
+
 _Atbash Cipher_ juga mudah sekali dipecahkan dan membutuhkan usaha yang lebih sedikit dibandingkan _Caesar Cipher_.
 
 ### Baconian Cipher
@@ -74,6 +75,7 @@ Perhatikan matriks contoh berikut :
 
 Sebagai contoh, huruf D akan dienkripsi menjadi 14 dsb. Sehingga penggunaannya :
 > Plain text  = Asisten IRK
+
 > Cipher text = 11432443441533 244225
 
 ### Keyword Cipher
@@ -85,7 +87,9 @@ Berikut adalah langkah pembuatan/penyandian dengan _Keyword Cipher_ :
 
 Lebih lengkapnya mari kita perhatikan contoh berikut :
 > Key = keyword
+
 > abcdefghijklmnopqrstuvwxyz
+
 > keywordabcfghijlmnpqstuvxz
 
 Dengan demikian, huruf a akan digantikan dengan k, b dengan e, dst.
