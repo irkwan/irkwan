@@ -6,33 +6,25 @@ summary:    Silakan klik pada judul untuk detailnya
 categories: tugas
 ---
 
----
-
-##Daftar Isi
+#Daftar Isi
 
 1. [Metode Bagi Dua](#metode-bagi-dua)
-  
   1. [Pendahuluan](#pendahuluan)
-  
     1. [Metode Terbuka](#metode-terbuka)
     2. [Metode Tertutup](#metode-tertutup)
   2. [Syarat dalam Metode Tertutup](#syarat-dalam-metode-tertutup)
-  
   3. [Kondisi yang Mungkin Terjadi](#kondisi-yang-mungkin-terjadi)
-  
     1. [Hasil Kali Batas Negatif](#hasil-kali-batas-negatif)
     2. [Hasil Kali Batas Positif](#hasil-kali-batas-positif)
-  
   4. [Menentukan Selang](#menentukan-selang)
   5. [Proses Membagi Dua dan Kondisi Berhenti Iterasi](#proses-membagi-dua-dan-kondisi-berhenti-iterasi)
-  
     1. [Proses Membagi Dua](#proses-membagi-dua)
     2. [Kondisi Berhenti Iterasi](#kondisi-berhenti-iterasi)
     3. [Kasus yang Mungkin Terjadi pada Penggunaan Metode Bagi Dua](#kasus-yang-mungkin-terjadi-pada-penggunaan-metode-bagi-dua)
 2. [Contoh Penerapan](#contoh-penerapan)
 3. [Referensi](#referensi)
 
----
+
 
 ## Hai, IRKWAN.
 Saat ini saya ingin membagikan sesuatu yang spesial untuk Anda. Apakah itu?
@@ -74,23 +66,26 @@ Dari pernyataan tersebut dapat disimpulkan bahwa selang [a,b] harus berbeda tand
 
 ![Alt text](https://perguruanfarhan.files.wordpress.com/2012/03/pers19.jpg "Ilustrasi Metode Bagi Dua")
 
-** Gambar 1 - Ilustrasi grafis untuk akar hampiran dalam metode bagi dua. **
-** Sumber : https://perguruanfarhan.files.wordpress.com/2012/03/pers19.jpg diakses pada tanggal 23 Juni 2016 pukul 11.44 **
+**Gambar 1 - Ilustrasi grafis untuk akar hampiran dalam metode bagi dua.**
+
+**Sumber : https://perguruanfarhan.files.wordpress.com/2012/03/pers19.jpg diakses pada tanggal 23 Juni 2016 pukul 11.44**
 
 ### Kondisi yang Mungkin Terjadi
 #### Hasil Kali Batas Negatif
 Pada kondisi ini akan terdapat akar sebanyak bilangan ganjil. Dalam matematis dapat ditulis sebagai berikut : f(a)f(b) < 0.
 ![Alt text](https://github.com/berviantoleo/mycapturepicrepo/raw/master/Numerical-Analysis/kurang0.PNG "f(a)f(b) < 0")
 
-** Gambar 2 - Grafik yang menghasilkan f(a)f(b) < 0 **
-** Sumber : [1][1] **
+**Gambar 2 - Grafik yang menghasilkan f(a)f(b) < 0**
+
+**Sumber : [1][1]**
 
 #### Hasil Kali Batas Positif
 Pada kondisi ini akan terdapat akar sebanyak bilangan genap, termasuk saat tidak ada akar. Dalam matematis dapat ditulis sebagai berikut : f(a)f(b) > 0.
 ![Alt text](https://github.com/berviantoleo/mycapturepicrepo/raw/master/Numerical-Analysis/lebih0.PNG "f(a)f(b) > 0")
 
-** Gambar 3 - Grafik yang menghasilkan f(a)f(b) > 0 **
-** Sumber : [1][1] **
+**Gambar 3 - Grafik yang menghasilkan f(a)f(b) > 0**
+
+**Sumber : [1][1]**
 
 ### Menentukan Selang
 Ada beberapa cara untuk menentukan selang [a,b] yang cukup kecil dan mengandung akar. Adapun cara tersebut sebagai berikut :
@@ -119,8 +114,10 @@ Keuntungan dari metode bagi dua ini adalah bahwa hal itu dijamin untuk terpusat 
 
 Adapun ringkasan dari proses membagi dua tersebut sebagai berikut.
 ![Alt text](https://github.com/berviantoleo/mycapturepicrepo/raw/master/Numerical-Analysis/langkah.PNG "Proses Membagi Dua")
-** Gambar 4 - Proses pada Metode Bagi Dua **
-** Sumber : [1][1] **
+
+**Gambar 4 - Proses pada Metode Bagi Dua**
+
+**Sumber : [1][1]**
 
 #### Kondisi Berhenti Iterasi
 Kondisi berhenti iterasi dapat dipilih salah satu dari kriteria berikut :
@@ -148,18 +145,23 @@ Kondisi berhenti iterasi dapat dipilih salah satu dari kriteria berikut :
 ## Contoh Penerapan
 Sebagai contoh dapat digunakan fungsi berikut ini untuk dicari akar-akarnya.
 
-1. f(x) = e<sup>x</sup> - 5x<sup>2</sup>
+f(x) = e<sup>x</sup> - 5x<sup>2</sup>
+
   1. Grafik
      
      Agar memudahkan, saya akan memberikan gambar grafik dengan perbesaran yang berbeda untuk menunjukan daerah akar-akarnya.
      
      ![Alt text](https://raw.githubusercontent.com/berviantoleo/mycapturepicrepo/master/Numerical-Analysis/example1%2C1.PNG "Perbesaran -4 sampai 5")
-     ** Gambar 5 - Grafik pada interval -4 sampai 5 **
-     ** Sumber : Dokumen Pribadi **
+     
+     **Gambar 5 - Grafik pada interval -4 sampai 5**
+     
+     **Sumber : Dokumen Pribadi**
 
      ![Alt text](https://raw.githubusercontent.com/berviantoleo/mycapturepicrepo/master/Numerical-Analysis/example1%2C2.PNG "Perbesaran -40 sampai 40")
-     ** Gambar 6 - Grafik pada interval -40 sampai 40 **
-     ** Sumber : Dokumen Pribadi **
+     
+     **Gambar 6 - Grafik pada interval -40 sampai 40**
+     
+     **Sumber : Dokumen Pribadi**
 
   2. Tabel Nilai
      
@@ -204,8 +206,9 @@ Sebagai contoh dapat digunakan fungsi berikut ini untuk dicari akar-akarnya.
 
      ![Alt text](https://raw.githubusercontent.com/berviantoleo/mycapturepicrepo/master/Numerical-Analysis/iterasi.PNG "Penyelesaian")
      
-     ** Gambar 7 - Penyelesaian **
-     ** Sumber : [1][1] **
+     **Gambar 7 - Penyelesaian**
+     
+     **Sumber : [1][1]**
      
      Jadi, hampiran akarnya adalah x = 0.605263.
      
