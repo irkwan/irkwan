@@ -6,7 +6,7 @@ summary:    Silakan klik pada judul untuk detailnya
 categories: tugas
 ---
 
-#Daftar Isi
+# Daftar Isi
 
 1. [Metode Bagi Dua](#metode-bagi-dua)
   1. [Pendahuluan](#pendahuluan)
