@@ -7,6 +7,7 @@ categories: tugas
 ---
 
 ---
+
 ##Daftar Isi
 
 1. [Metode Bagi Dua](#metode-bagi-dua)
@@ -73,23 +74,23 @@ Dari pernyataan tersebut dapat disimpulkan bahwa selang [a,b] harus berbeda tand
 
 ![Alt text](https://perguruanfarhan.files.wordpress.com/2012/03/pers19.jpg "Ilustrasi Metode Bagi Dua")
 
-###### Gambar 1 - Ilustrasi grafis untuk akar hampiran dalam metode bagi dua.
-###### Sumber : https://perguruanfarhan.files.wordpress.com/2012/03/pers19.jpg diakses pada tanggal 23 Juni 2016 pukul 11.44
+** Gambar 1 - Ilustrasi grafis untuk akar hampiran dalam metode bagi dua. **
+** Sumber : https://perguruanfarhan.files.wordpress.com/2012/03/pers19.jpg diakses pada tanggal 23 Juni 2016 pukul 11.44 **
 
 ### Kondisi yang Mungkin Terjadi
 #### Hasil Kali Batas Negatif
 Pada kondisi ini akan terdapat akar sebanyak bilangan ganjil. Dalam matematis dapat ditulis sebagai berikut : f(a)f(b) < 0.
 ![Alt text](https://github.com/berviantoleo/mycapturepicrepo/raw/master/Numerical-Analysis/kurang0.PNG "f(a)f(b) < 0")
 
-###### Gambar 2 - Grafik yang menghasilkan f(a)f(b) < 0
-###### Sumber : [1][1]
+** Gambar 2 - Grafik yang menghasilkan f(a)f(b) < 0 **
+** Sumber : [1][1] **
 
 #### Hasil Kali Batas Positif
 Pada kondisi ini akan terdapat akar sebanyak bilangan genap, termasuk saat tidak ada akar. Dalam matematis dapat ditulis sebagai berikut : f(a)f(b) > 0.
 ![Alt text](https://github.com/berviantoleo/mycapturepicrepo/raw/master/Numerical-Analysis/lebih0.PNG "f(a)f(b) > 0")
 
-###### Gambar 3 - Grafik yang menghasilkan f(a)f(b) > 0
-###### Sumber : [1][1]
+** Gambar 3 - Grafik yang menghasilkan f(a)f(b) > 0 **
+** Sumber : [1][1] **
 
 ### Menentukan Selang
 Ada beberapa cara untuk menentukan selang [a,b] yang cukup kecil dan mengandung akar. Adapun cara tersebut sebagai berikut :
@@ -112,21 +113,21 @@ Karena fungsi f adalah kontinu, harus ada akar antara [a<sub>0</sub>,b<sub>0</su
 
 Dalam prakteknya, iterasi ini akan berhenti ketika f(m<sub>k</sub>) sekecil mungkin. Misalkan x<sup>*</sup> sebagai akar yang tidak diketahui. Error yang akan didapat
 
-> |x<sup>*</sup> - m<sub>k</sub>| < |b<sub>k</sub> - a<sub>k</sub>| = 2<sup>-k</sup>|b<sub>0</sub> - a<sub>0</sub>|.
+> abs(x<sup>*</sup> - m<sub>k</sub>) < abs(b<sub>k</sub> - a<sub>k</sub>) = 2<sup>-k</sup> abs(b<sub>0</sub> - a<sub>0</sub>).
 
 Keuntungan dari metode bagi dua ini adalah bahwa hal itu dijamin untuk terpusat ke akar, dari pembentukan. Jika ada beberapa akar, metode bisection akan memusat ke salah satu dari beberapa akar tersebut (sehingga tidak dapat mengontrol akar yang akan dipilih oleh metode tersebut).
 
 Adapun ringkasan dari proses membagi dua tersebut sebagai berikut.
 ![Alt text](https://github.com/berviantoleo/mycapturepicrepo/raw/master/Numerical-Analysis/langkah.PNG "Proses Membagi Dua")
-###### Gambar 4 - Proses pada Metode Bagi Dua
-###### Sumber : [1][1]
+** Gambar 4 - Proses pada Metode Bagi Dua **
+** Sumber : [1][1] **
 
 #### Kondisi Berhenti Iterasi
 Kondisi berhenti iterasi dapat dipilih salah satu dari kriteria berikut :
 
-1. Lebar selang baru : |a-b| < &epsilon;, yang dalam hal ini &epsilon; adalah nilai toleransi lebar selang yang mengurung akar.
+1. Lebar selang baru : abs(a-b) < &epsilon;, yang dalam hal ini &epsilon; adalah nilai toleransi lebar selang yang mengurung akar.
 2. Nilai fungsi di hampiran akar: f(c) < &mu;, yang dalam hal ini &mu; adalah nilai yang sangat kecil mendekati 0.
-3. Galat relatif hampiran akar: |(c<sub>baru</sub> - c<sub>lama</sub>) / c<sub>baru</sub>| < &delta;, yang dalam hal ini &delta; adalah galat relatif hampiran yang diinginkan.
+3. Galat relatif hampiran akar: abs( (c<sub>baru</sub> - c<sub>lama</sub>) / c<sub>baru</sub>) < &delta;, yang dalam hal ini &delta; adalah galat relatif hampiran yang diinginkan.
 
 #### Kasus yang Mungkin Terjadi pada Penggunaan Metode Bagi Dua
 
@@ -140,9 +141,9 @@ Kondisi berhenti iterasi dapat dipilih salah satu dari kriteria berikut :
    
    Pada titik singular, nilai fungsinya tidak terdefinisi. Bila selang [a,b] mengandung titik singular, iterasi metode bagi dua tidak pernah berhenti. Penyebabnya, metode bagi dua menganggap titik singular sebagai akar karena iterasi cenderung konvergen. Yang sebenarnya, titik singular bukanlah akar, melainkan akar semu.
 
-   * Cara mengatasinya: periksa nilai |f(b) - f(a)|.
-   * Jika |f(b) - f(a)| konvergen ke nol, akar yang dicari pasti akar sejati,
-   * Jika |f(b) - f(a)| divergen, akar yang dicari merupakan titik singular (akar semu). 
+   * Cara mengatasinya: periksa nilai abs(f(b) - f(a)).
+   * Jika abs(f(b) - f(a)) konvergen ke nol, akar yang dicari pasti akar sejati,
+   * Jika abs(f(b) - f(a)) divergen, akar yang dicari merupakan titik singular (akar semu). 
 
 ## Contoh Penerapan
 Sebagai contoh dapat digunakan fungsi berikut ini untuk dicari akar-akarnya.
@@ -153,12 +154,12 @@ Sebagai contoh dapat digunakan fungsi berikut ini untuk dicari akar-akarnya.
      Agar memudahkan, saya akan memberikan gambar grafik dengan perbesaran yang berbeda untuk menunjukan daerah akar-akarnya.
      
      ![Alt text](https://raw.githubusercontent.com/berviantoleo/mycapturepicrepo/master/Numerical-Analysis/example1%2C1.PNG "Perbesaran -4 sampai 5")
-     ###### Gambar 5 - Grafik pada interval -4 sampai 5
-     ###### Sumber : Dokumen Pribadi
+     ** Gambar 5 - Grafik pada interval -4 sampai 5 **
+     ** Sumber : Dokumen Pribadi **
 
      ![Alt text](https://raw.githubusercontent.com/berviantoleo/mycapturepicrepo/master/Numerical-Analysis/example1%2C2.PNG "Perbesaran -40 sampai 40")
-     ###### Gambar 6 - Grafik pada interval -40 sampai 40
-     ###### Sumber : Dokumen Pribadi
+     ** Gambar 6 - Grafik pada interval -40 sampai 40 **
+     ** Sumber : Dokumen Pribadi **
 
   2. Tabel Nilai
      
@@ -203,8 +204,8 @@ Sebagai contoh dapat digunakan fungsi berikut ini untuk dicari akar-akarnya.
 
      ![Alt text](https://raw.githubusercontent.com/berviantoleo/mycapturepicrepo/master/Numerical-Analysis/iterasi.PNG "Penyelesaian")
      
-     ###### Gambar 7 - Penyelesaian
-     ###### Sumber : [1][1]
+     ** Gambar 7 - Penyelesaian **
+     ** Sumber : [1][1] **
      
      Jadi, hampiran akarnya adalah x = 0.605263.
      
