@@ -54,3 +54,11 @@ Langkah algoritma tesebut pada pseucode dituliskan sebagai berikut:
 Gambar 3. *Pseudocode* Algoritma Ford-Fulkerson
 
 ## Algoritma *Augmenting Path*
+
+
+
+
+
+#### Referensi
+* http://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/
+* https://web.stanford.edu/class/cs97si/08-network-flow-problems.pdf
