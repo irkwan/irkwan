@@ -2,7 +2,7 @@
 layout:     post
 title:      Mencari Akar Persamaan Nirlanjar dengan Metode Bagi Dua
 date:       2016-05-20
-summary:    Silakan klik pada judul untuk detailnya, Created by : Bervianto Leo Pratama - 13514047
+summary:    Silakan klik pada judul untuk detailnya
 categories: tugas
 ---
 
