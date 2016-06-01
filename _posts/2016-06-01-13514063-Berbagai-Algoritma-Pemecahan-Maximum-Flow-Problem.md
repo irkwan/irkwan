@@ -28,15 +28,19 @@ Untuk mencari aliran maksimum pada graf tersebut bukanlah hal mudah. Harus diper
 
 Oleh karena itu, dibuatlah algoritma-algoritma yang dapat memecahkan permasalahan *maximum-flow* ini. Pada tulisan ini, akan dijelaskan lebih lanjut mengenai algoritma pemecahan *maximum-flow problem*. Algoritma yang akan dijabarkan pada tulisan kali ini adalah:
 
+---
+
 1. [Algoritma Ford-Fulkerson] (#algoritma-ford-fulkerson)
 2. [Algoritmma Edmonds-Karp] (#algoritma-edmonds-karp)
 3. [Algoritma Dinic] (#algoritma-dinic)
+
+---
 
 ## Algoritma Ford-Fulkerson
 
 Salah satu algoritma paling terkenal adalah Algoritma Ford-Fulkerson. Algoritma ini memecahkan masalah dengan cara mencari lintasan dari sumber ke penampungan yang masih memiliki kapasitas untuk dilewati sehingga aliran bisa melewati lintasan tersebut dengan jumlah semaksimal mungkin.
 
-Langkah-langkah dalam melakukan algoritma Ford-Fulkerson untuk mencari aliran maksimum adalah sebagai berikut:
+Langkah-langkah dalam mengimplementasikan algoritma Ford-Fulkerson untuk mencari aliran maksimum adalah sebagai berikut:
 
 1. Menginisialisasi jumlah aliran dari sumber S ke penampungan T pada setiap sisi dengan 0.
 2. Mencari lintasan *augmenting*. Lintasan *augmenting* merupakan lintasan yang berasal dari simpul sumber menuju simpul penampungan. Lintasan *augmenting* terbagi menjadi dua, yakni lintasan dengan sisi selanjutnya belum penuh (*non-full forward-edges*), atau lintasan dengan sisi sebaliknya tidak kosong (*non-empty backward-edge*). Sisi belum penuh berarti jumlah aliran lebih kecil sama dengan kapasitas. Sisi tidak kosong berarti jumlah aliran lebih besar nol. Misalkan pada Gambar 1, lintasan **s**, **o**, **q**, **t** merupakan lintasan *augmenting*. Begitu juga dengan lintasan **s**, **p**, **r**, **t**. Perlu diperhatikan bahwa dalam pemilihan lintasan augmenting, penghitung yang satu dengan yang lain dapat menghasilkan lintasan *augmenting* yang berbeda-beda, namun aliran maksimum total yang didapat hasilnya akan sama.
@@ -66,7 +70,11 @@ Langkah yang digunakan pada algoritma Edmonds-Karp sama dengan langkah yang digu
 
 ## Algoritma Dinic
 
+Algoritma Dinic merupakan algoritma pemecahan *maximum-flow problem*. Algoritma ini memanfaatkan konsep *blocking flow* dalam penentuan lintasan *augmenting*. 
 
+Langkah-langkah dalam mengimplementasikan algoritma Ford-Fulkerson untuk mencari aliran maksimum adalah sebagai berikut:
+
+1. 
 
 
 
