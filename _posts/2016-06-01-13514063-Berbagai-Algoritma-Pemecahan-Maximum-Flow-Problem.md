@@ -12,6 +12,8 @@ categories: tugas
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Max_flow.svg/330px-Max_flow.svg.png">
 
+Gambar 1. Graf Berarah dan Berbobot
+
 Graf di atas menunjukan aliran yang berasal dari suatu sumber (*source*) **s** ke penampungan (*sink*) **t** dengan melewati keempat simpul, yaitu **o**, **p**, **q**, dan **r**. Anggap sisi-sisi pada graf sebagai pipa. Setiap pipa memiliki bobot. Bobot tersebut menunjukan jumlah aliran (*flow*) yang telah melewati pipa dari sumber menuju penampungan, serta kapasitas maksimum aliran (*capacity*) yang dilewati oleh sebuah pipa. Kedua bobot tersebut dituliskan dengan cara jumlah aliran di sebelah kiri dan kapasitas dituliskan sebelah kanan, keduanya dibatasi dengan garis miring ‘/’ atau garis lurus ‘|’.
 
 Dari graf tersebut di atas, akan dicari aliram maksimum yang mungkin dari sumber S ke penampungan T dengan syarat sebagai berikut:
@@ -28,11 +30,27 @@ Oleh karena itu, dibuatlah algoritma-algoritma yang dapat memecahkan permasalaha
 
 1. [*Linear Programming*] (#linear-programming)
 2. [Algoritma Ford-Fulkerson] (#algoritma-ford-fulkerson)
-3. [Algoritma Augmenting Path] (#algoritma-augmenting-path)
+3. [Algoritma *Augmenting Path*] (#algoritma-augmenting-path)
 
 
 ## *Linear Programming*
 
 ## Algoritma Ford-Fulkerson
+
+Salah satu algoritma paling terkenal adalah Algoritma Ford-Fulkerson. Algoritma ini ditemukan oleh   Algoritma ini memecahkan masalah dengan cara mencari lintasan dari sumber ke penampungan yang masih memiliki kapasitas untuk dilewati sehingga aliran bisa melewati lintasan tersebut dengan jumlah semaksimal mungkin.
+
+Langkah-langkah dalam melakukan algoritma Ford-Fulkerson untuk mencari aliran maksimum adalah sebagai berikut:
+
+1. Menginisialisasi jumlah aliran dari sumber S ke penampungan T pada setiap sisi dengan 0.
+2. Mencari lintasan *augmenting*. Lintasan *augmenting* merupakan lintasan yang berasal dari simpul sumber menuju simpul penampungan. Lintasan *augmenting* terbagi menjadi dua, yakni lintasan dengan sisi selanjutnya belum penuh (*non-full forward-edges*), atau lintasan dengan sisi sebaliknya tidak kosong (*non-empty backward-edge*). Sisi belum penuh berarti jumlah aliran lebih kecil sama dengan kapasitas. Sisi tidak kosong berarti jumlah aliran lebih besar nol. Misalkan pada Gambar 1, lintasan **s**, **o**, **q**, **t** merupakan lintasan *augmenting*. Begitu juga dengan lintasan **s**, **p**, **r**, **t**. Perlu diperhatikan bahwa dalam pemilihan lintasan augmenting, penghitung yang satu dengan yang lain dapat menghasilkan lintasan *augmenting* yang berbeda-beda, namun aliran maksimum total yang didapat hasilnya akan sama.
+3. Selama masih ada lintasan *augmenting*, proses perhitungan terus berjalan. Perhitungan dilakukan berdasarkan kapasitas terkecil pada sisi dalam lintasan *augmenting* (*bottleneck capacity*). Jumlah aliran maksimum yang dapat dilalui suatu lintasan adalah kapasitas tersisa yang terkecil pada sisi dari lintasan tersebut. Kapasitas tersisa suatu sisi merupakan pengurangan dari kapasitas awal dengan jumlah aliran yang telah melewati sisi. Jumlah aliran maksimum suatu lintasan kemudian ditambahkan pada masing-masing jumlah aliran sisi yang terlibat pada lintasan tersebut.
+4. Langkah 1 dan 2 dilakukan sampai lintasan *augmenting* sudah tidak ada.
+5. Menjumlahkan semua jumlah aliran maksimum pada setiap lintasan augmenting.
+
+Langkah algoritma tesebut pada pseucode dituliskan sebagai berikut:
+
+<img src="http://courses.ics.hawaii.edu/ReviewICS311/morea/200.maximum-flow/fig/code-Ford-Fulkerson.jpg">
+
+Gambar 3. *Pseudocode* Algoritma Ford-Fulkerson
 
 ## Algoritma *Augmenting Path*
