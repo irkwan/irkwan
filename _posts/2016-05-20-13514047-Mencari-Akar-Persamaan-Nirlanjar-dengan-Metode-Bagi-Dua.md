@@ -28,8 +28,6 @@ categories: tugas
 
 ## Hai, IRKWAN.
 
-Created by : Bervianto Leo P - 13514047
-
 Saat ini saya ingin membagikan sesuatu yang spesial untuk Anda. Apakah itu?
 Apakah Anda ingat dengan persamaan seperti berikut ini ?
 
@@ -219,5 +217,7 @@ f(x) = e<sup>x</sup> - 5x<sup>2</sup>
 
 1. Slide "Solusi Persamaan Nirlanjar" oleh Rinaldi Munir. [Go To Source][1]
 2. Catatan Dosen dalam MIT Open Courseware pada kuliah [Introduction to Numerical Analysis](http://ocw.mit.edu/courses/mathematics/18-330-introduction-to-numerical-analysis-spring-2012/index.htm). Menerjemahkan dan mengambil sebagian konten [ini](http://ocw.mit.edu/courses/mathematics/18-330-introduction-to-numerical-analysis-spring-2012/lecture-notes/MIT18_330S12_Chapter4.pdf). [License link](http://ocw.mit.edu/terms/)
+
+Created by : Bervianto Leo Pratama, 13514047
 
 [1]: http://informatika.stei.itb.ac.id/~rinaldi.munir/MetNum/2010-2011/Solusi%20Persamaan%20Nirlanjar%20%28Bag%201%29.pdf
