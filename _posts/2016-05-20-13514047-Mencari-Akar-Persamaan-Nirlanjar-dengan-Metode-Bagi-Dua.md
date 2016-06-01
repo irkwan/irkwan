@@ -24,8 +24,6 @@ categories: tugas
 * [Contoh Penerapan](#contoh-penerapan)
 * [Referensi](#referensi)
 
-
-
 ## Hai, IRKWAN.
 
 Saat ini saya ingin membagikan sesuatu yang spesial untuk Anda. Apakah itu?
@@ -33,15 +31,16 @@ Apakah Anda ingat dengan persamaan seperti berikut ini ?
 
 > x<sup>2</sup> + 2x + 2 = 0
 
-Saya rasa itu mudah bagi Anda untuk menemukan akar persamaannya. Bagaimana dengan sin(x<sup>2</sup>) = 0? Saya rasa semakin sulit.
-Pada kesempatan saat ini saya ingin mengenalkan metode bagi dua untuk mencari akar persamaan nirlanjar. Mari kita simak.
+Saya rasa itu mudah bagi Anda untuk menemukan akar persamaannya. Bagaimana dengan sin(x<sup>2</sup>) = 0? Saya rasa semakin sulit. Pada kesempatan saat ini saya ingin mengenalkan metode bagi dua untuk mencari akar persamaan nirlanjar. Mari kita simak.
 
 ## Metode Bagi Dua
 
 ### Pendahuluan
+
 Sebelum mengetahui metode bagi dua, perlu diketahui bahwa untuk mencari akar persamaan memiliki dua metode secara umum, yaitu metode terbuka dan metode tertutup. Metode bagi dua termasuk pada metode tertutup. Adapun penjelesan singkat mengenai metode tersebut sebagai berikut.
 
 #### Metode Terbuka
+
 Berikut beberapa poin singkat mengenai metode terbuka :
 
 * tidak memerlukan selang [a,b] yang mengandung akar
@@ -51,6 +50,7 @@ Berikut beberapa poin singkat mengenai metode terbuka :
 * Karena itu, metode terbuka tidak selalu berhasil menemukan akar, kadang-kadang konvergen, kadangkala ia divergen.
 
 #### Metode Tertutup
+
 Sedangkan metode tertutup dapat diringkas sebagai berikut :
 
 * mencari akar di dalam selang [a,b];
@@ -60,7 +60,9 @@ Sedangkan metode tertutup dapat diringkas sebagai berikut :
 * karena itu metode tertutup kadang-kadang dinamakan juga **metode konvergen**.
 
 ### Syarat dalam Metode Tertutup
+
 Sudah diketahui bahwa metode bagi dua merupakan metode tertutup, oleh karena itu perlu diketahui juga mengenai metode tertutup lebih dalam dan mengenai syarat-syaratnya. Pada metode tertutup memerlukan selang [a,b] yang mengandung minimal satu buah akar. Adapun **syarat cukup** keberadaan akar sebagai berikut :
+
 > Jika f(a)f(b) < 0 dan f(x) menerus di dalam selang [a,b], maka *paling sedikit* terdapat satu buah akar persamaan f(x) = 0 di dalam selang [a,b].
 
 Dari pernyataan tersebut dapat disimpulkan bahwa selang [a,b] harus berbeda tanda pada nilai-nilai fungsinya supaya terdapat minimal 1 buah akar.
@@ -72,7 +74,9 @@ Dari pernyataan tersebut dapat disimpulkan bahwa selang [a,b] harus berbeda tand
 **Sumber : https://perguruanfarhan.files.wordpress.com/2012/03/pers19.jpg diakses pada tanggal 23 Juni 2016 pukul 11.44**
 
 ### Kondisi yang Mungkin Terjadi
+
 #### Hasil Kali Batas Negatif
+
 Pada kondisi ini akan terdapat akar sebanyak bilangan ganjil. Dalam matematis dapat ditulis sebagai berikut : f(a)f(b) < 0.
 ![Alt text](https://github.com/berviantoleo/mycapturepicrepo/raw/master/Numerical-Analysis/kurang0.PNG "f(a)f(b) < 0")
 
@@ -81,6 +85,7 @@ Pada kondisi ini akan terdapat akar sebanyak bilangan ganjil. Dalam matematis da
 **Sumber : [1][1]**
 
 #### Hasil Kali Batas Positif
+
 Pada kondisi ini akan terdapat akar sebanyak bilangan genap, termasuk saat tidak ada akar. Dalam matematis dapat ditulis sebagai berikut : f(a)f(b) > 0.
 ![Alt text](https://github.com/berviantoleo/mycapturepicrepo/raw/master/Numerical-Analysis/lebih0.PNG "f(a)f(b) > 0")
 
@@ -89,6 +94,7 @@ Pada kondisi ini akan terdapat akar sebanyak bilangan genap, termasuk saat tidak
 **Sumber : [1][1]**
 
 ### Menentukan Selang
+
 Ada beberapa cara untuk menentukan selang [a,b] yang cukup kecil dan mengandung akar. Adapun cara tersebut sebagai berikut :
 
 1. Membuat grafik fungsi di bidang X-Y, lalu melihat di mana perpotongan dengan sumbu-X.
@@ -121,6 +127,7 @@ Adapun ringkasan dari proses membagi dua tersebut sebagai berikut.
 **Sumber : [1][1]**
 
 #### Kondisi Berhenti Iterasi
+
 Kondisi berhenti iterasi dapat dipilih salah satu dari kriteria berikut :
 
 1. Lebar selang baru : abs(a-b) < &epsilon;, yang dalam hal ini &epsilon; adalah nilai toleransi lebar selang yang mengurung akar.
@@ -144,6 +151,7 @@ Kondisi berhenti iterasi dapat dipilih salah satu dari kriteria berikut :
    * Jika abs(f(b) - f(a)) divergen, akar yang dicari merupakan titik singular (akar semu). 
 
 ## Contoh Penerapan
+
 Sebagai contoh dapat digunakan fungsi berikut ini untuk dicari akar-akarnya.
 
 f(x) = e<sup>x</sup> - 5x<sup>2</sup>
