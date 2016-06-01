@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      Tugas 2 Ca-IRK 2016
+title:      Berbagai Algoritma Pemecahan Maximum-Flow Problem
 date:       2016-06-01 
-summary:    Berbagai Algoritma Pemecahan Maximum-Flow Problem
+summary:    Artikel yang diajukan untuk memenuhi tugas 2 calon IRK 2016
 categories: tugas
 ---
 
