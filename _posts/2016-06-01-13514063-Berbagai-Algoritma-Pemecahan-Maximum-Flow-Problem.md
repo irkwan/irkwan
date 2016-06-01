@@ -28,12 +28,9 @@ Untuk mencari aliran maksimum pada graf tersebut bukanlah hal mudah. Harus diper
 
 Oleh karena itu, dibuatlah algoritma-algoritma yang dapat memecahkan permasalahan *maximum-flow* ini. Pada tulisan ini, akan dijelaskan lebih lanjut mengenai algoritma pemecahan *maximum-flow problem*. Algoritma yang akan dijabarkan pada tulisan kali ini adalah:
 
-1. [*Linear Programming*] (#linear-programming)
-2. [Algoritma Ford-Fulkerson] (#algoritma-ford-fulkerson)
-3. [Algoritma *Augmenting Path*] (#algoritma-augmenting-path)
+1. [Algoritma Ford-Fulkerson] (#algoritma-ford-fulkerson)
+2. [Algoritmma *Breadth-First Search*] (#algoritma-breadth-first-search)
 
-
-## *Linear Programming*
 
 ## Algoritma Ford-Fulkerson
 
@@ -51,9 +48,11 @@ Langkah algoritma tesebut pada pseucode dituliskan sebagai berikut:
 
 <img src="http://courses.ics.hawaii.edu/ReviewICS311/morea/200.maximum-flow/fig/code-Ford-Fulkerson.jpg">
 
-Gambar 3. *Pseudocode* Algoritma Ford-Fulkerson
+Gambar 2. *Pseudocode* Algoritma Ford-Fulkerson
 
-## Algoritma *Augmenting Path*
+## Algoritma *Breadth-First Search*
+
+
 
 
 
