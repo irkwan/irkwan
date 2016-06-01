@@ -2,7 +2,7 @@
 layout:     post
 title:      Mencari Akar Persamaan Nirlanjar dengan Metode Bagi Dua
 date:       2016-05-20
-summary:    Silakan klik pada judul untuk detailnya
+summary:    Silakan klik pada judul untuk detailnya, Created by : Bervianto Leo Pratama - 13514047
 categories: tugas
 ---
 
@@ -27,6 +27,9 @@ categories: tugas
 
 
 ## Hai, IRKWAN.
+
+Created by : Bervianto Leo P - 13514047
+
 Saat ini saya ingin membagikan sesuatu yang spesial untuk Anda. Apakah itu?
 Apakah Anda ingat dengan persamaan seperti berikut ini ?
 
