@@ -10,15 +10,15 @@ categories: tugas
 
 ---
 
-# Daftar Isi
-1. [Definisi](#Definisi)
-2. [Algoritma Cipher yang digunakan](#Algoritma Cipher yang digunakan)
-  1. [Caesar Cipher](#Caesar Cipher)
-  2. [Atbash Cipher](#Atbash Cipher)
-  3. [Baconian Cipher](#Baconian Cipher)
-  4. [Polybius Square](#Polybius Square)
-  5. [Keyword Cipher](#Keyword Cipher)
-3. [Referensi](#Referensi)
+## Daftar Isi
+1. [Definisi](#definisi)
+2. [Algoritma Cipher yang digunakan](#algoritma-cipher-yang-digunakan)
+  1. [Caesar Cipher](#caesar-cipher)
+  2. [Atbash Cipher](#atbash-cipher)
+  3. [Baconian Cipher](#baconian-cipher)
+  4. [Polybius Square](#polybius-square)
+  5. [Keyword Cipher](#keyword-cipher)
+3. [Referensi](#referensi)
 
 ---
 
