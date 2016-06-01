@@ -29,8 +29,8 @@ Untuk mencari aliran maksimum pada graf tersebut bukanlah hal mudah. Harus diper
 Oleh karena itu, dibuatlah algoritma-algoritma yang dapat memecahkan permasalahan *maximum-flow* ini. Pada tulisan ini, akan dijelaskan lebih lanjut mengenai algoritma pemecahan *maximum-flow problem*. Algoritma yang akan dijabarkan pada tulisan kali ini adalah:
 
 1. [Algoritma Ford-Fulkerson] (#algoritma-ford-fulkerson)
-2. [Algoritmma Edmonds-Karp] (#algoritma-edmond-karp)
-
+2. [Algoritmma Edmonds-Karp] (#algoritma-edmonds-karp)
+3. [Algoritma Dinic] (#algoritma-dinic)
 
 ## Algoritma Ford-Fulkerson
 
@@ -58,7 +58,15 @@ Gambar 3. Contoh pengimplementasian Algoritma Ford-Fulkerson pada pemecahan *max
 
 ## Algoritma Edmonds-Karp
 
-Algoritma Edmonds-Karp merupakan penyempurnaan dari algoritma Ford-Fulkerson. Perbedaan mendasar dari kedua algoritma tersebut adalah pemilihan lintasan *augmenting*. Lintasan *augmenting* pada algoritma Ford-Fulkerson biasanya tidak ditentukan berdasarkan apapun asalkan terdapat *non-full forward-edges* dan *non-empty backward-edge*.
+Algoritma Edmonds-Karp merupakan penyempurnaan dari algoritma Ford-Fulkerson. Perbedaan mendasar dari kedua algoritma tersebut adalah pemilihan lintasan *augmenting*. Lintasan *augmenting* pada algoritma Ford-Fulkerson biasanya tidak ditentukan berdasarkan apapun asalkan terdapat *non-full forward-edges* dan *non-empty backward-edge*. Hal ini memungkinkan terjadi pemilihan lintasan *augmenting* yang kurang baik dan pemilihan-pemilihan selanjutnya akan terkena imbasnya sehingga menjadi kurang efisien. 
+
+Pada algoritma Edmonds-Karp, pemilihan lintasan *augmenting* berdasarkan jumlah sisi paling sedikit pada beberapa pilihan lintasan. Lintasan dengan jumlah sisi paling sedikit akan didahulukan. Jika terdapat beberapa lintasan dengan jumlah sisi yang sama, maka yang didahulukan adalah lintasan dengan simpul memiliki abjad atau urutan terkecil. Pemilihan lintasan *augmenting* algoritma Edmonds-Karp ini menggunakan algoritma *Breadth-First Search* (BFS). Setiap pilihan lintasan dimasukkan ke dalam antrian. Lintasan dengn jumlah sisi paling sedikit didahulukan dalam antrian.
+
+Langkah yang digunakan pada algoritma Edmonds-Karp sama dengan langkah yang digunakan pada algoritma Edmonds-Karp. Perbedaannya hanyalah pada langkah pemilihan lintasan *augmenting*. 
+
+## Algoritma Dinic
+
+
 
 
 
@@ -67,3 +75,4 @@ Algoritma Edmonds-Karp merupakan penyempurnaan dari algoritma Ford-Fulkerson. Pe
 #### Referensi
 * http://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/
 * https://web.stanford.edu/class/cs97si/08-network-flow-problems.pdf
+* http://www.cs.cornell.edu/courses/cs4820/2012sp/handouts/edmondskarp.pdf
