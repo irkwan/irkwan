@@ -29,12 +29,12 @@ Untuk mencari aliran maksimum pada graf tersebut bukanlah hal mudah. Harus diper
 Oleh karena itu, dibuatlah algoritma-algoritma yang dapat memecahkan permasalahan *maximum-flow* ini. Pada tulisan ini, akan dijelaskan lebih lanjut mengenai algoritma pemecahan *maximum-flow problem*. Algoritma yang akan dijabarkan pada tulisan kali ini adalah:
 
 1. [Algoritma Ford-Fulkerson] (#algoritma-ford-fulkerson)
-2. [Algoritmma *Breadth-First Search*] (#algoritma-breadth-first-search)
+2. [Algoritmma Edmonds-Karp] (#algoritma-edmond-karp)
 
 
 ## Algoritma Ford-Fulkerson
 
-Salah satu algoritma paling terkenal adalah Algoritma Ford-Fulkerson. Algoritma ini ditemukan oleh   Algoritma ini memecahkan masalah dengan cara mencari lintasan dari sumber ke penampungan yang masih memiliki kapasitas untuk dilewati sehingga aliran bisa melewati lintasan tersebut dengan jumlah semaksimal mungkin.
+Salah satu algoritma paling terkenal adalah Algoritma Ford-Fulkerson. Algoritma ini memecahkan masalah dengan cara mencari lintasan dari sumber ke penampungan yang masih memiliki kapasitas untuk dilewati sehingga aliran bisa melewati lintasan tersebut dengan jumlah semaksimal mungkin.
 
 Langkah-langkah dalam melakukan algoritma Ford-Fulkerson untuk mencari aliran maksimum adalah sebagai berikut:
 
@@ -50,9 +50,15 @@ Langkah algoritma tesebut pada pseucode dituliskan sebagai berikut:
 
 Gambar 2. *Pseudocode* Algoritma Ford-Fulkerson
 
-## Algoritma *Breadth-First Search*
+Contoh pengimplementasian Algoritma Ford-Fulkerson pada pemecahan *maximum-flow problem* digambarkan pada ilustrasi di bawah ini.
 
+<img src="http://staff.ustc.edu.cn/~csli/graduate/algorithms/book6/595_a.gif">
 
+Gambar 3. Contoh pengimplementasian Algoritma Ford-Fulkerson pada pemecahan *maximum-flow problem*
+
+## Algoritma Edmonds-Karp
+
+Algoritma Edmonds-Karp merupakan penyempurnaan dari algoritma Ford-Fulkerson. Perbedaan mendasar dari kedua algoritma tersebut adalah pemilihan lintasan *augmenting*. Lintasan *augmenting* pada algoritma Ford-Fulkerson biasanya tidak ditentukan berdasarkan apapun asalkan terdapat *non-full forward-edges* dan *non-empty backward-edge*.
 
 
 
