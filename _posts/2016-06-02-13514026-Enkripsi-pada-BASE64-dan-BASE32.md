@@ -32,41 +32,6 @@ Istilah Base64 berasal dari konten pengkodean MIME tertentu.
 
 Base64 disusun oleh 64 karakter yang dimana karakternya berdasarkan RFC 1421 yang terdiri dari (A-Z, a-z, 0-9, +, /) Sehingga totalnya 64. Ditambah satu karakter khusus untuk padding byte yaitu “=”. Bila dalam kelompok 3-byte itu, satu byte terakhir hanya berisi padding bit, maka satu karakter “=” ditambahkan. Bila dua, maka dua karaker “=” (menjadi “==”)
 
-|        Bit       |  Desimal | Karakter |      Bit      |  Desimal | Karakter |
-|:----------------:|:--------:|:--------:|:-------------:|:--------:|:--------:|
-|      000 000     |     0    |     A    |    100 000    |    32    |     g    |
-|      000 001     |     1    |     B    |    100 001    |    33    |     h    |
-|      000 010     |     2    |     C    |    100 010    |    34    |     i    |
-|      000 011     |     3    |     D    |    100 011    |    35    |     j    |
-|      000 100     |     4    |     E    |    100 100    |    36    |     k    |
-|      000 101     |     5    |     F    |    100 101    |    37    |     l    |
-|      000 110     |     6    |     G    |    100 110    |    38    |     m    |
-|      000 111     |     7    |     H    |    100 111    |    39    |     n    |
-|      001 000     |     8    |     I    |    101 000    |    40    |     o    |
-|      001 001     |     9    |     J    |    101 001    |    41    |     p    |
-|      001 010     |    10    |     K    |    101 010    |    42    |     q    |
-|      001 011     |    11    |     L    |    101 011    |    43    |     r    |
-|      001 100     |    12    |     M    |    101 100    |    44    |     s    |
-|      001 101     |    13    |     N    |    101 101    |    45    |     t    |
-|       001 110    |    14    |     O    |    101 110    |    46    |     u    |
-|      001 111     |    15    |     P    |    101 111    |    47    |     v    |
-|      010 000     |    16    |     Q    |    110 000    |    48    |     w    |
-|      010 001     |    17    |     R    |    110 001    |    49    |     x    |
-|      010 010     |    18    |     S    |    110 010    |    50    |     y    |
-|      010 011     |    19    |     T    |    110 011    |    51    |     z    |
-|      010 100     |    20    |     U    |    110 100    |    52    |     0    |
-|      010 101     |    21    |     V    |    110 101    |    53    |     1    |
-|      010 110     |    22    |     W    |    110 110    |    54    |     2    |
-|      010 111     |    23    |     X    |    110 111    |    55    |     3    |
-|      011 000     |    24    |     Y    |    111 000    |    56    |     4    |
-|      011 001     |    25    |     Z    |    111 001    |    57    |     5    |
-|      011 010     |    26    |     a    |    111 010    |    58    |     6    |
-|      011 011     |    27    |     b    |    111 011    |    59    |     7    |
-|      011 100     |    28    |     c    |    111 100    |    60    |     8    |
-|      011 101     |    29    |     d    |    111 101    |    61    |     9    |
-|      011 110     |    30    |     e    |    111 110    |    62    |     +    |
-|      011 111     |    31    |     f    |    111 111    |    63    |     /    |
-
 > <img src="https://github.com/Johansentosa/IRK-img/blob/master/tabel%20base64.PNG">
 
 > tabel indeks BASE 64
@@ -83,7 +48,7 @@ Jika pada terakhir terdapat sekelompok karakter yang dimiliki tidak bernilai 3By
 
 <p>
 <div align="center">
-<img src="https://github.com/Johansentosa/IRK-img/blob/master/contoh.PNG">
+<img src="https://github.com/Johansentosa/IRK-img/blob/master/paddingB64.PNG">
 </div>
 </p>
 
@@ -100,10 +65,25 @@ Base 32 pada dasarnya sama seperti base 64. Hanya saja pada base 32 menggunakan 
 
 <p>
 <div align="center">
-> <img src="https://github.com/Johansentosa/IRK-img/blob/master/tabel%20base32.PNG">
+<img src="https://github.com/Johansentosa/IRK-img/blob/master/tabel%20base32.PNG">
+tabel indeks BASE32
+</div></p>
 
-> tabel indeks BASE32
+Untuk penggunaan padding juga sama seperti pada BASE 64. Contohnya bisa dilihat di bawah ini
+<p>
+<div align="center">
+<img src="https://github.com/Johansentosa/IRK-img/blob/master/paddingB32.PNG">
 </div></p>
 
 ###BASE 64 vs BASE 32
+Base64 dan Base32 memiliki kelebihan dan kelemahannya masing-masing. Base64 memiliki jumlah karakter yang dapat dipakai yang lebih banyak. Sehingga kemungkinan bisa dikatakan akan lebih aman jika diencode menggunakan Base64. Selain itu representasi Base32 akan memakan 20% lebih banyak memory dibandingkan dengan Base64. Hal ini karena Base32 mengkodekan 5 bytes menjadi 8 karakter, Base64 mengkodekan 3 bytes menjadi 4 karakter.
+<p>
+<div align="center">
+|          |  Base64 | Base32 |
+|:--------:|:-------:|:------:|
+| 8-bit    |   133%  | 160%   |
+| 7-bit    | 117%    | 140%   |
+Panjang notasi Base64 dan Base32 sebagai persentase dari data biner
+</div></p>
 
+Tetapi di lain hal, Base32 lebih menguntungkan. Karakter yang dihasilkan Base32 semuanya satu kasus, yang seringkali bermanfaat saat menggunakan file sistem yang bersifat *case-insensitive*, bahasa lisan, atau memori manusia. Hasil dari Base32 tidak mengandung karakter '/' sehingga bisa digunakan dalam penamaan sebuah file dan dapat dimasukkan dalam sebuah link tanpa pengkodean karakter apapun.
