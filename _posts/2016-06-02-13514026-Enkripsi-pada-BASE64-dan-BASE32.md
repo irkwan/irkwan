@@ -66,6 +66,7 @@ Base 32 pada dasarnya sama seperti base 64. Hanya saja pada base 32 menggunakan 
 <p>
 <div align="center">
 <img src="https://github.com/Johansentosa/IRK-img/blob/master/tabel%20base32.PNG">
+
 tabel indeks BASE32
 </div></p>
 
@@ -77,13 +78,11 @@ Untuk penggunaan padding juga sama seperti pada BASE 64. Contohnya bisa dilihat 
 
 ###BASE 64 vs BASE 32
 Base64 dan Base32 memiliki kelebihan dan kelemahannya masing-masing. Base64 memiliki jumlah karakter yang dapat dipakai yang lebih banyak. Sehingga kemungkinan bisa dikatakan akan lebih aman jika diencode menggunakan Base64. Selain itu representasi Base32 akan memakan 20% lebih banyak memory dibandingkan dengan Base64. Hal ini karena Base32 mengkodekan 5 bytes menjadi 8 karakter, Base64 mengkodekan 3 bytes menjadi 4 karakter.
-<p>
-<div align="center">
+
 |          |  Base64 | Base32 |
 |:--------:|:-------:|:------:|
 | 8-bit    |   133%  | 160%   |
 | 7-bit    | 117%    | 140%   |
 Panjang notasi Base64 dan Base32 sebagai persentase dari data biner
-</div></p>
 
 Tetapi di lain hal, Base32 lebih menguntungkan. Karakter yang dihasilkan Base32 semuanya satu kasus, yang seringkali bermanfaat saat menggunakan file sistem yang bersifat *case-insensitive*, bahasa lisan, atau memori manusia. Hasil dari Base32 tidak mengandung karakter '/' sehingga bisa digunakan dalam penamaan sebuah file dan dapat dimasukkan dalam sebuah link tanpa pengkodean karakter apapun.
