@@ -40,7 +40,6 @@ Oleh karena itu, dibuatlah algoritma-algoritma yang dapat memecahkan permasalaha
 ---
 
 <br>
-<br>
 
 ## Algoritma Ford-Fulkerson
 
@@ -131,9 +130,64 @@ Algoritma *push-relabel*, berbeda dengan tiga algoritma di atas, tidak menggunak
 
 Ada dua operasi utama pada algoritma ini, **_push_** dan **_relabel_**, sesuai dengan nama algoritma ini.Langkah-langkah dalam mengimplementasikan algoritma *push-relabel* untuk mencari aliran maksimum adalah sebagai berikut:
 
-1. Menginisialisasi jumlah aliran dari sumber S ke penampungan T pada setiap sisi dengan 0. *Height* pada setiap simpul juga diinisialisasi menjadi nol, kecuali pada simpul sumber. *Height* pada simpul sumber dinyatakan sebagai *n*. Kemudian, semua jumlah aliram pada sisi yang keluar dari simpul sumber dibuat penuh (jumlah aliran sisi sama dengan jumlah kapasitas maksimu).
-2. **_Push_**. Operasi ini dijalankan ketika terdapat 
+1. Menginisialisasi jumlah aliran dari sumber S ke penampungan T pada setiap sisi dengan 0. *Height* pada setiap simpul juga diinisialisasi menjadi nol, kecuali pada simpul sumber. *Height* pada simpul sumber dinyatakan sebagai *n*. Kemudian, semua jumlah aliram pada sisi yang keluar dari simpul sumber dibuat penuh (jumlah aliran sisi sama dengan jumlah kapasitas maksimum). Aliran tersebut disebut *pre-flow*
+2. **_Push_**. Operasi ini dijalankan ketika terdapat sisi memiliki jumlah aliran sisi *f(u,v)* tidak sama dengan jumlah kapasitas maksimum sisi *c(u,v)*, *excess flow* sisi awal *e(u)* lebih besar dari nol, dan tinggi simpul awal *h(u)* lebih besar dari tinggi simpul akhir *h(v)*. Jumlah aliran kemudian didorong (*push*) ke simpul akhir adalah nilai paling kecil dari jumlah sisa kapasitas sisi *cf(u),v* (pengurangan dari jumlah kapasitas maksismum sisi dengan jumlah aliran sisi) dan *excess flow* simpul awal. 
+3. **_Relabel_**. Operasi ini dijalankan ketika suatu tangki atau simpul memiliki *excess flow* lebih besar dari nol, namum tidak ada tangki tujuan yang memiliki *height* yang lebih rendah dari dirinya sehingga tangki tersebut tidak dapat mengalirkan aliran ke tangki lain. *Height* simpul ini kemudian dinaikkan menjadi satu kali lebih besar dari simpul akhir manapun yang dihubungkan oleh satu sisi yang sama. Oleh karena operasi *relabel* ini, operasi *push* mungkin untuk dijalankan.
+4. Melakukan kedua operasi *push* dan *relabel* sampai operasi tersebut tidak dijalankan kembali. Menghitung jumlah total aliran maksimum pada sistem.
 
+
+<br> 
+
+---
+
+*Syarat operasi push dapat dijalankan*
+
+> f(u,v) tidak sama dengan c(u,v)
+
+> h(u) > h(v)
+
+> e(u) > 0
+
+*Nilai flow yang di-push*
+
+> flow = min(e(u),f(u,v))
+
+*Syarat operasi push dapat dijalankan*
+
+> h(u) <= h(v)
+
+---
+
+Langkah algoritma tesebut pada pseucode dituliskan sebagai berikut:
+
+```sh
+Push(u,v)
+1  temp = min (e(u), cf(u,v))
+2  f(u,v) = f(u,v) + temp
+3  f(v,u) = - f(u,v)
+4  e(u) = e(u) - temp
+5  e(v) = e(v) + temp
+6  cf(u,v) = c(u,v) - f(u,v)
+7  cf(v,u) = c(v,u) - f(v,u)
+```
+
+```sh
+Relabel(u)
+1  set temp = -1
+2  for i = 0 to number of vertex do
+3     v = G(u,i)
+4     if cf(u,i) > 0 then
+5           if temp = -1 or temp > h(v)
+6                 temp = h(v)
+7  h(u) = temp +1
+```
+
+```sh
+Push-Relabel(G,s,t)
+1  initialize
+2  while there is an operation that can be carried out
+3       Select an operation and perform it
+```
 
 <br>
 
