@@ -191,6 +191,14 @@ Push-Relabel(G,s,t)
 
 <br>
 
+---
+
+<br>
+
+Demikian algoritma-algoritma pemecahan *maximum-flow problem*, yakni algoritma Fordk-Fulkerson, algoritma Edmonds-Karp, Algoritma Dinic, dan algoritma *Push-Relabel*. Semoga bermanfaat.
+
+<br>
+
 #### Referensi
 * [*Network-Flow Problems* by Stanford University](https://web.stanford.edu/class/cs97si/08-network-flow-problems.pdf)
 * [*Ford-Fulkerson Algorithm for Maximum Problem* by GeeksforGeeks.org] (http://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/)
