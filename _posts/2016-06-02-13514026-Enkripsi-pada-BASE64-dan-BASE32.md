@@ -32,11 +32,14 @@ Istilah Base64 berasal dari konten pengkodean MIME tertentu.
 
 Base64 disusun oleh 64 karakter yang dimana karakternya berdasarkan RFC 1421 yang terdiri dari (A-Z, a-z, 0-9, +, /) Sehingga totalnya 64. Ditambah satu karakter khusus untuk padding byte yaitu “=”. Bila dalam kelompok 3-byte itu, satu byte terakhir hanya berisi padding bit, maka satu karakter “=” ditambahkan. Bila dua, maka dua karaker “=” (menjadi “==”)
 
-> <img src="https://github.com/Johansentosa/IRK-img/blob/master/tabel%20base64.PNG">
+<div align="center">
+<img src="https://github.com/Johansentosa/IRK-img/blob/master/tabel%20base64.PNG">
+<br>
+tabel indeks BASE 64
+</div> 
+<br><br>
 
-> tabel indeks BASE 64
-
-######contoh penggunaan base64 dalam melakukan encoding karakter
+contoh penggunaan base64 dalam melakukan encoding karakter
 > _Plaintext_ = "ilmu rekayasa komputasi"
 
 > Hasil yang didapatkan = "aWxtdSByZWtheWFzYSBrb21wdXRhc2k="
@@ -69,7 +72,7 @@ Base 32 pada dasarnya sama seperti base 64. Hanya saja pada base 32 menggunakan 
 <br>
 tabel indeks BASE32
 </div></p>
-
+<br>
 Untuk penggunaan padding juga sama seperti pada BASE 64. Contohnya bisa dilihat di bawah ini
 <p>
 <div align="center">
@@ -86,7 +89,9 @@ Base64 dan Base32 memiliki kelebihan dan kelemahannya masing-masing. Base64 memi
 Panjang notasi Base64 dan Base32 sebagai persentase dari data biner
 
 Tetapi di lain hal, Base32 lebih menguntungkan. Karakter yang dihasilkan Base32 semuanya satu kasus, yang seringkali bermanfaat saat menggunakan file sistem yang bersifat *case-insensitive*, bahasa lisan, atau memori manusia. Hasil dari Base32 tidak mengandung karakter '/' sehingga bisa digunakan dalam penamaan sebuah file dan dapat dimasukkan dalam sebuah link tanpa pengkodean karakter apapun.
+<br><br>
 
+---
 #### Referensi
 * [*The Base16, Base32, and Base64 Data Encodings* from RFC 4648.](https://tools.ietf.org/html/rfc4648)
 * [*The Base16, Base32, and Base64 Data Encodings* from RFC 3548.](https://tools.ietf.org/html/rfc3548)
