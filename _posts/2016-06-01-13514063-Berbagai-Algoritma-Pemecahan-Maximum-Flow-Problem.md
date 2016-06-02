@@ -6,6 +6,8 @@ summary:    Artikel yang diajukan untuk memenuhi tugas 2 calon IRK 2016
 categories: tugas
 ---
 
+<br>
+
 # Berbagai Algoritma Pemecahan *Maximum-Flow Problem*
 
 *Maximum-flow problem* (Permasalahan Aliran Maksimum) merupakan salah satu model yang seringkali digunakan dalam optimasi suatu sistem di dunia nyata sehingga sistem tersebut menghasilkan produksi semaksimal mungkin. *Maximum-flow* (aliran maksimum) suatu sistem ditinjau untuk mengetahui jumlah maksimum yang dapat dilalui oleh suatu aliran tertentu dari satu sumber ke suatu tampungan. Jumlah yang dialirkan dari sumber sama dengan jumlah yang berada pada tampungan. *Maximum-flow problem* digambarkan dalam suatu graf berarah dengan masing-masing sisi berperan sebagai arah aliran dan masing-masing sisi memiliki bobot. Ilustrasi singkat mengenai konsep *maximum-flow problem* akan dijelaskan di bawah ini.
@@ -33,8 +35,12 @@ Oleh karena itu, dibuatlah algoritma-algoritma yang dapat memecahkan permasalaha
 ####1. [Algoritma Ford-Fulkerson] (#algoritma-ford-fulkerson)
 ####2. [Algoritmma Edmonds-Karp] (#algoritma-edmonds-karp)
 ####3. [Algoritma Dinic] (#algoritma-dinic)
+####4. [Algoritma *Push-Relabel*] (#algoritma-push-relabel)
 
 ---
+
+<br>
+<br>
 
 ## Algoritma Ford-Fulkerson
 
@@ -60,6 +66,8 @@ Contoh pengimplementasian Algoritma Ford-Fulkerson pada pemecahan *maximum-flow 
 
 Gambar 3. Contoh pengimplementasian Algoritma Ford-Fulkerson pada pemecahan *maximum-flow problem*
 
+<br>
+
 ## Algoritma Edmonds-Karp
 
 Algoritma Edmonds-Karp merupakan penyempurnaan dari algoritma Ford-Fulkerson. Perbedaan mendasar dari kedua algoritma tersebut adalah pemilihan lintasan *augmenting*. Lintasan *augmenting* pada algoritma Ford-Fulkerson biasanya tidak ditentukan berdasarkan apapun asalkan terdapat *non-full forward-edges* dan *non-empty backward-edge*. Hal ini memungkinkan terjadi pemilihan lintasan *augmenting* yang kurang baik dan pemilihan-pemilihan selanjutnya akan terkena imbasnya sehingga menjadi kurang efisien. 
@@ -81,6 +89,8 @@ Edmonds-Karp(G,s,t)
 7.      Update Gf
 8. return flow
 ```
+
+<br>
 
 ## Algoritma Dinic
 
@@ -113,6 +123,13 @@ Dinic(G,s,t)
 13. return flow
 ```
 
+<br>
+
+## Algoritma *Push-Relabel*
+
+Algoritma "push-relabel*, berbeda dengan tiga algoritma di atas, tidak menggunakan konsep lintasan *augmenting* sama sekali. 
+
+<br>
 
 #### Referensi
 * http://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/
