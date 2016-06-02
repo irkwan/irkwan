@@ -30,9 +30,9 @@ Oleh karena itu, dibuatlah algoritma-algoritma yang dapat memecahkan permasalaha
 
 ---
 
-1. [Algoritma Ford-Fulkerson] (#algoritma-ford-fulkerson)
-2. [Algoritmma Edmonds-Karp] (#algoritma-edmonds-karp)
-3. [Algoritma Dinic] (#algoritma-dinic)
+####1. [Algoritma Ford-Fulkerson] (#algoritma-ford-fulkerson)
+####2. [Algoritmma Edmonds-Karp] (#algoritma-edmonds-karp)
+####3. [Algoritma Dinic] (#algoritma-dinic)
 
 ---
 
@@ -46,7 +46,7 @@ Langkah-langkah dalam mengimplementasikan algoritma Ford-Fulkerson untuk mencari
 2. Mencari lintasan *augmenting*. Lintasan *augmenting* merupakan lintasan yang berasal dari simpul sumber menuju simpul penampungan. Lintasan *augmenting* terbagi menjadi dua, yakni lintasan dengan sisi selanjutnya belum penuh (*non-full forward-edges*), atau lintasan dengan sisi sebaliknya tidak kosong (*non-empty backward-edge*). Sisi belum penuh berarti jumlah aliran lebih kecil sama dengan kapasitas. Sisi tidak kosong berarti jumlah aliran lebih besar nol. Misalkan pada Gambar 1, lintasan **s**, **o**, **q**, **t** merupakan lintasan *augmenting*. Begitu juga dengan lintasan **s**, **p**, **r**, **t**. Perlu diperhatikan bahwa dalam pemilihan lintasan augmenting, penghitung yang satu dengan yang lain dapat menghasilkan lintasan *augmenting* yang berbeda-beda, namun aliran maksimum total yang didapat hasilnya akan sama.
 3. Selama masih ada lintasan *augmenting*, proses perhitungan terus berjalan. Perhitungan dilakukan berdasarkan kapasitas terkecil pada sisi dalam lintasan *augmenting* (*bottleneck capacity*). Jumlah aliran maksimum yang dapat dilalui suatu lintasan adalah kapasitas tersisa yang terkecil pada sisi dari lintasan tersebut. Kapasitas tersisa suatu sisi merupakan pengurangan dari kapasitas awal dengan jumlah aliran yang telah melewati sisi. Jumlah aliran maksimum suatu lintasan kemudian ditambahkan pada masing-masing jumlah aliran sisi yang terlibat pada lintasan tersebut.
 4. Langkah 1 dan 2 dilakukan sampai lintasan *augmenting* sudah tidak ada.
-5. Menjumlahkan semua jumlah aliran maksimum pada setiap lintasan augmenting.
+5. Menjumlahkan semua jumlah aliran maksimum pada setiap lintasan *augmenting*. *Maximum-flow* suatu sistem merupakan total dari semua jumlah aliran maksimum pada setiap lintasan *augmenting*
 
 Langkah algoritma tesebut pada pseucode dituliskan sebagai berikut:
 
@@ -68,16 +68,50 @@ Pada algoritma Edmonds-Karp, pemilihan lintasan *augmenting* berdasarkan jumlah 
 
 Langkah yang digunakan pada algoritma Edmonds-Karp sama dengan langkah yang digunakan pada algoritma Edmonds-Karp. Perbedaannya hanyalah pada langkah pemilihan lintasan *augmenting*. 
 
+Langkah algoritma tesebut pada pseucode dituliskan sebagai berikut:
+
+```sh
+Edmonds-Karp(G,s,t)
+1. for each edge (u, v) element of G.E
+2.      (u, v).f = 0
+3. flow <- 0; Gf <- G 
+4. while there exists a path p from s to t in the residual graph Gf
+5.      Let p be an s - t path in Gf with the minimum number of edges
+6.      Augment flow using P
+7.      Update Gf
+8. return flow
+```
+
 ## Algoritma Dinic
 
-Algoritma Dinic merupakan algoritma pemecahan *maximum-flow problem*. Algoritma ini memanfaatkan konsep *blocking flow* dalam penentuan lintasan *augmenting*. 
+Algoritma Dinic merupakan algoritma pemecahan *maximum-flow problem*. Algoritma ini memanfaatkan konsep *blocking flow* dalam penentuan lintasan *augmenting*. *Blocking flow* pada suatu graf menyebabkan setidaknya memiliki satu sisi pada semua lintasan dari sumber ke penampungan yang jumlah alirannya sama dengan jumlah kapasitas maksimumnya (sisi tidak bisa dialiri lagi). Penjelasan mengenai penggunaan *blocking flow* akan dijelaskan lebih lanjut pada bagian langkah pengimplementasian algoritma Dinic di bawah ini.
 
-Langkah-langkah dalam mengimplementasikan algoritma Ford-Fulkerson untuk mencari aliran maksimum adalah sebagai berikut:
+Langkah-langkah dalam mengimplementasikan algoritma Dinic untuk mencari aliran maksimum adalah sebagai berikut:
 
-1. 
+1. Menginisialisasi jumlah aliran dari sumber S ke penampungan T pada setiap sisi dengan 0.
+2. Mengonstruksi suatu graf residu relatif terhadap aliran yang ada. Graf residu merupakan graf yang menunjukan kapasitas ketika sudah ada suatu aliran yang mengalir di graf tersebut. Jika belum ada aliran yang mengalir, maka graf residu sama dengan graf awal (*flow* = 0). 
+3. Membentuk lintasan *augmenting* dari graf residu. Jika tidak ada lintasan *augmenting* yang memenuhi (aturan penentuan lintasan *augmenting* sama dengan aturan pada algoritma Edmonds-Karp, yakni memilih lintasan dengan sisi tersedikit), maka keluarkan nilai *flow* yang telah didefinisikan sebelumnya. Jika terdapat lintasan *augmenting* yang memenuhi, maka *blocking flow* dibentuk. Dengan *blocking flow*, dapat dipastikan bahwa suatu lintasan *augmenting* memiliki sisi yang sudah penuh (jumlah aliran sisi sama dengan jumlah kapasitas maksimum sisi).  
+4. Melakukan tahap 2 dan 3 sampai tidak terdapat lintasan *augmenting* yang memenuhi.
+5. Menjumlahkan semua jumlah aliran maksimum pada setiap lintasan *augmenting*. *Maximum-flow* suatu sistem merupakan total dari semua jumlah aliran maksimum pada setiap lintasan *augmenting*
 
+Langkah algoritma tesebut pada pseucode dituliskan sebagai berikut:
 
-
+```sh
+Dinic(G,s,t)
+1. for each edge (u, v) element of G.E
+2.      (u, v).f = 0
+3. flow <- 0; Gf <- G
+4. while there exists a path p from s to t in the residual graph Gf
+5.      find blocking flow of path p in Gf
+6.      cf(p) <- blocking flow of path p in Gf
+7.      for each edge (u, v) in p
+8.           if (u, v) element of E
+9.                (u, v).f <- (u, v).f + cf(p)
+10.           else (v, u).f <- (v, u).f - cf(p)
+11.     flow <- flow + cf(p)
+12.     Update Gf
+13. return flow
+```
 
 
 #### Referensi
