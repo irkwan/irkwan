@@ -31,7 +31,7 @@ Apakah Anda ingat dengan persamaan seperti berikut ini ?
 
 > x<sup>2</sup> + 2x + 2 = 0
 
-Saya rasa itu mudah bagi Anda untuk menemukan akar persamaannya. Bagaimana dengan sin(x<sup>2</sup>) = 0? Saya rasa semakin sulit. Pada kesempatan saat ini saya ingin mengenalkan metode bagi dua untuk mencari akar persamaan nirlanjar. Mari kita simak.
+Saya rasa itu mudah bagi Anda untuk menemukan akar persamaannya. Bagaimana dengan sin(x<sup>2</sup>) = 0 ? Saya rasa semakin sulit. Pada kesempatan saat ini saya ingin mengenalkan metode bagi dua untuk mencari akar persamaan nirlanjar. Mari kita simak.
 
 ## Metode Bagi Dua
 
