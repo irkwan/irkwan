@@ -80,14 +80,14 @@ Langkah algoritma tesebut pada pseucode dituliskan sebagai berikut:
 
 ```sh
 Edmonds-Karp(G,s,t)
-1. for each edge (u, v) element of G.E
-2.      (u, v).f = 0
-3. flow <- 0; Gf <- G 
-4. while there exists a path p from s to t in the residual graph Gf
-5.      Let p be an s - t path in Gf with the minimum number of edges
-6.      Augment flow using P
-7.      Update Gf
-8. return flow
+1 for each edge (u, v) element of G.E
+2      (u, v).f = 0
+3 flow <- 0; Gf <- G 
+4 while there exists a path p from s to t in the residual graph Gf
+5      Let p be an s - t path in Gf with the minimum number of edges
+6      Augment flow using P
+7      Update Gf
+8 return flow
 ```
 
 <br>
@@ -108,19 +108,19 @@ Langkah algoritma tesebut pada pseucode dituliskan sebagai berikut:
 
 ```sh
 Dinic(G,s,t)
-1. for each edge (u, v) element of G.E
-2.      (u, v).f = 0
-3. flow <- 0; Gf <- G
-4. while there exists a path p from s to t in the residual graph Gf
-5.      find blocking flow of path p in Gf
-6.      cf(p) <- blocking flow of path p in Gf
-7.      for each edge (u, v) in p
-8.           if (u, v) element of E
-9.                (u, v).f <- (u, v).f + cf(p)
-10.           else (v, u).f <- (v, u).f - cf(p)
-11.     flow <- flow + cf(p)
-12.     Update Gf
-13. return flow
+1  for each edge (u, v) element of G.E
+2       (u, v).f = 0
+3  flow <- 0; Gf <- G
+4  while there exists a path p from s to t in the residual graph Gf
+5       find blocking flow of path p in Gf
+6       cf(p) <- blocking flow of path p in Gf
+7       for each edge (u, v) in p
+8            if (u, v) element of E
+9                 (u, v).f <- (u, v).f + cf(p)
+10           else (v, u).f <- (v, u).f - cf(p)
+11      flow <- flow + cf(p)
+12      Update Gf
+13  return flow
 ```
 
 <br>
