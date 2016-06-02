@@ -127,7 +127,7 @@ Dinic(G,s,t)
 
 ## Algoritma *Push-Relabel*
 
-Algoritma "push-relabel*, berbeda dengan tiga algoritma di atas, tidak menggunakan konsep lintasan *augmenting* sama sekali. 
+Algoritma *push-relabel*, berbeda dengan tiga algoritma di atas, tidak menggunakan konsep lintasan *augmenting* sama sekali. 
 
 <br>
 
