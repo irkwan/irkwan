@@ -118,3 +118,4 @@ Dinic(G,s,t)
 * http://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/
 * https://web.stanford.edu/class/cs97si/08-network-flow-problems.pdf
 * http://www.cs.cornell.edu/courses/cs4820/2012sp/handouts/edmondskarp.pdf
+* http://repository.ipb.ac.id/bitstream/handle/123456789/33525/G03ayu2.pdf?sequence=1&isAllowed=y
