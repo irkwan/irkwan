@@ -2,7 +2,7 @@
 layout:     post
 title:      Berbagai Algoritma Pemecahan Maximum-Flow Problem
 date:       2016-06-01 
-summary:    Artikel yang diajukan untuk memenuhi tugas 2 calon IRK 2016
+summary:    Silahkan klik judul untuk melihat isi artikel
 categories: tugas
 ---
 
@@ -127,12 +127,18 @@ Dinic(G,s,t)
 
 ## Algoritma *Push-Relabel*
 
-Algoritma *push-relabel*, berbeda dengan tiga algoritma di atas, tidak menggunakan konsep lintasan *augmenting* sama sekali. 
+Algoritma *push-relabel*, berbeda dengan tiga algoritma di atas, tidak menggunakan konsep lintasan *augmenting* sama sekali. Algoritma ini menggunakan konsep aliran air, yakni kecenderungan air untuk mengalir dari tempat yang lebih tinggi ke tempat yang lebih rendah. Oleh karena itu, pada algoritma ini, terdapat properti yang disebut *height* (tinggi) pada masing-masing simpul pada graf, termasuk sumber dan tampungan. Pada algoritma ini, tidak hanya sisi atau pipa yang berperan, tetapi juga simpul atau tangki berperan juga. Selain *height*, properti yang dimiliki oleh simpul adalah *excess flow*. *Excess flow* merupakan jumlah aliran yang sedang ditampung oleh suatu tangki. Properti ini tidak dimiliki oleh simpul sumber.
+
+Ada dua operasi utama pada algoritma ini, **_push_** dan **_relabel_**, sesuai dengan nama algoritma ini.Langkah-langkah dalam mengimplementasikan algoritma *push-relabel* untuk mencari aliran maksimum adalah sebagai berikut:
+
+1. Menginisialisasi jumlah aliran dari sumber S ke penampungan T pada setiap sisi dengan 0. *Height* pada setiap simpul juga diinisialisasi menjadi nol, kecuali pada simpul sumber. *Height* pada simpul sumber dinyatakan sebagai *n*. Kemudian, semua jumlah aliram pada sisi yang keluar dari simpul sumber dibuat penuh (jumlah aliran sisi sama dengan jumlah kapasitas maksimu).
+2. **_Push_**. Operasi ini dijalankan ketika terdapat 
+
 
 <br>
 
 #### Referensi
-* http://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/
-* https://web.stanford.edu/class/cs97si/08-network-flow-problems.pdf
-* http://www.cs.cornell.edu/courses/cs4820/2012sp/handouts/edmondskarp.pdf
-* http://repository.ipb.ac.id/bitstream/handle/123456789/33525/G03ayu2.pdf?sequence=1&isAllowed=y
+* [*Network-Flow Problems* by Stanford University](https://web.stanford.edu/class/cs97si/08-network-flow-problems.pdf)
+* [*Ford-Fulkerson Algorithm for Maximum Problem* by GeeksforGeeks.org] (http://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/)
+* [*The Edmonds-Karp Max-Flow Algorithm* by Cornell University] (http://www.cs.cornell.edu/courses/cs4820/2012sp/handouts/edmondskarp.pdf)
+* [*Algoritma Dinic untuk Masalah Arus Maksimum* by Agung Yudhianto](http://repository.ipb.ac.id/bitstream/handle/123456789/33525/G03ayu2.pdf?sequence=1&isAllowed=y)
