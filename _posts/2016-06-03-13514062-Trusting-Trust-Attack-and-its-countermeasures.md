@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Trusting Trust" Attack and its countermeasures
+title:      Trusting Trust Attack and its countermeasures
 date:       2016-06-03
 summary:    An analysis of trusting trust attack on compiler and its coutermeasures
 categories: tugas
@@ -59,5 +59,7 @@ Actually, this attack has grown easier overtime, because compiler has became mor
 # References
 
 ["Reflections on Trusting Trust" by Ken Thompson] (https://www.ece.cmu.edu/~ganger/712.fall02/papers/p761-thompson.pdf)
+
 ["Countering "Trusting Trust"" by Bruce Schneier] (https://www.schneier.com/blog/archives/2006/01/countering_trus.html)
+
 ["Fully Countering Trusting Trust through Diverse Double-Compiling (DDC) - Countering Trojan Horse attacks on Compilers" by David A. Wheeler] (http://www.dwheeler.com/trusting-trust/)
