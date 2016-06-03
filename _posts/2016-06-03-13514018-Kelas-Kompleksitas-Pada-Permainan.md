@@ -6,11 +6,11 @@ summary:    Membandingkan kelas kompleksitas.
 categories: tugas
 ---
 <br>
-##Pendahuluan
+## Pendahuluan
 Artikel ini akan membahas kompleksitas dari beberapa permainan, yang umumnya merupakan permainan papan (board game) seperti tic-tac-toe, checkers, dan catur. Selain itu juga membahas kompleksitas komputasinya jika permainan tersebut digeneralisasi.
 <br>
 
-##Dasar Teori
+## Dasar Teori
 
 ### Kompleksitas
 Teori kompleksitas komputasi adalah teori yang mengklasifikasikan permasalahan komputasi berdasarkan tingkat kesulitannya dan hubungan dari kelas-kelas tersebut. Permasalahan komputasi dipahami sebagai sebuah masalah yang dapat diselesaikan dengan computer. Permasalahan dapat diselesaikan dengan aplikasi mekanik dari tahap-tahap matematika seperti algoritma. 
