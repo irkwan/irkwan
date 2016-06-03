@@ -16,12 +16,16 @@ categories: tugas
 
 Gambar 1. Graf Berarah dan Berbobot
 
+<br>
+
 Graf di atas menunjukan aliran yang berasal dari suatu sumber (*source*) **s** ke penampungan (*sink*) **t** dengan melewati keempat simpul, yaitu **o**, **p**, **q**, dan **r**. Anggap sisi-sisi pada graf sebagai pipa. Setiap pipa memiliki bobot. Bobot tersebut menunjukan jumlah aliran (*flow*) yang telah melewati pipa dari sumber menuju penampungan, serta kapasitas maksimum aliran (*capacity*) yang dilewati oleh sebuah pipa. Kedua bobot tersebut dituliskan dengan cara jumlah aliran di sebelah kiri dan kapasitas dituliskan sebelah kanan, keduanya dibatasi dengan garis miring ‘/’ atau garis lurus ‘|’.
 
 Dari graf tersebut di atas, akan dicari aliram maksimum yang mungkin dari sumber S ke penampungan T dengan syarat sebagai berikut:
+
 ```sh
 1. Jumlah aliran pada pipa tidak melebih jumlah kapasitas pipa
 ```
+
 ```sh
 2. Jumlah aliran yang masuk dari dari satu simpul ke simpul lain sama.
 ```
