@@ -11,11 +11,14 @@ Kriptografi merupakan suatu ilmu yang digunakan untuk menjaga kerahasiaan suatu 
 
 ## Daftar Isi
 1. [Kriptovirologi](#kriptovirologi)
+
   1. [Metode Kriptografi yang Biasa Digunakan pada Kriptovirologi](#metode-kriptografi-yang-biasa-digunakan-pada-kriptovirologi)
+
     1. [Kriptografi simetris](#kriptografi-simetris)
     2. [Kriptografi dengan public-key](#kriptografi-dengan-public-key)
   2. [Virus Komputer](#virus-komputer)
   3. [Serangan Kriptovirologi](#serangan-kriptovirologi)
+  
     1. [Virus One-Half](#virus-one-half)
     2. [Virus LZR](#virus-lzr)
     3. [AIDS Information Trojan](#aids-information-trojan)
@@ -27,7 +30,8 @@ Kriptografi merupakan suatu ilmu yang digunakan untuk menjaga kerahasiaan suatu 
 Kriptovirologi adalah ilmu yang mempelajari penerapan kriptografi pada perangkat lunak yang dibuat untuk tujuan tidak baik. Yang dimaksud dengan tidak baik di sini adalah perangkat lunak yang dibuat untuk tujuan membuat suatu data tidak bisa diakses atau mengubah data yang disimpan. Ilmu kriptovirologi memang membantu orang-orang yang bermaksud buruk, namun kita juga perlu mempelajarinya untuk menangani masalah yang ditimbulkan oleh kriptovirologi. Kita tidak bisa menangani masalah yang ditimbulkan kriptovirologi jika kita tidak mengerti mengenai hal tersebut.
 
 ### Metode Kriptografi yang Biasa Digunakan pada Kriptovirologi
-Ada dua metode kriptografi yang biasa digunakan pada kriptovirologi yaitu kriptografi simetris dan kriptografi dengan peblic-key.
+Ada dua metode kriptografi yang biasa digunakan pada kriptovirologi yaitu kriptografi simetris dan kriptografi dengan _public-key_.
+
 #### Kriptografi simetris
 Pada kriptografi simetris, enkripsi plainteks dan dekripsi cipherteks menggunakan kunci yang sama. Plainteks adalah data atau informasi yang dapat dibaca dan dimengerti maknanya. Cipherteks adalah pesan yang telah disandikan sehingga tidak memiliki makna lagi. Enkripsi adalah proses menyandikan plainteks menjadi cipherteks, sementara dekripsi adalah proses mengembalikan cipherteks menjadi plainteks. <br><br>
 
@@ -50,17 +54,22 @@ Ada 3 jenis virus komputer yang sering menyebabkan gangguan, yaitu virus biasa, 
 
 ### Serangan Kriptovirologi
 Serangan kriptovirologi dilakukan dengan menggunakan kriptovirus. Perancang virus membuat private-key dan public-key untuk virus. Private-key disimpan oleh perancang virus di suatu media, biasanya berbentuk *_smartcard_*. Public-key disimpan pada kriptovirus. Kriptovirus kemudian dilepaskan untuk menginfeksi mesin-mesin milik orang lain. Kriptovirus kemudian menggabungkan diri dengan data-data. Kriptovirus kemudian mengenkripsi data milik orang lain dengan menggunakan _symmetric key_. Kemudian, pemilik data akan mendapat notifikasi bahwa telah terjadi penyerangan dan data hanya bisa diakses dengan private-key. Untuk mendapat private-key tersebut, pemilik data harus membayar uang sebanyak yang diinginkan oleh perancang virus atau datanya tidak akan bisa diakses lagi. Jika pemilik data membayar, barulah perancang virus mengirimkan private-key untuk melakukan dekripsi. Kriptovirus biasanya merupakan _high survivable virus_, yaitu virus yang bisa bertahan pada inangnya karena membuat inangnya harus bergantung pada virus tersebut. Ada beberapa contoh kriptovirus dan serangannya yang dibahas selanjutnya.
+
 #### Virus One-Half
 Virus ini ditemukan pada Oktober 1994. Virus ini bekerja dengan melakukan enkripsi pada hard drive dimulai dari silinder terakhir dan perlahan maju ke silinder berikutnya. Virus One-Half menggunakan cipher simetris dan menyimpan kunci pada diriya sendiri.
+
 #### Virus LZR
 Virus LZR merupakan variasi dari komputer virus sektor boot yang bernama Stoned. LZR mengambil alih terhadap proses baca dan tulis hard disk dengan menggunakan _system call_ yang tidak diketahui. LZR menulis informasi _error correction_ pada disk, meskipun hal itu jarang dilakukan sistem operasi. Pada saat informasi ditulis ke disk, data diikuti oleh data _error correction_ dari virus. Jika virus dihapus, rutinitas penting tidak akan dipanggil, sehingga arsip-arsip yang ada akan dianggap tidak dapat dimengerti oleh  program user.
+
 #### AIDS Information Trojan
 Program ini menyediakan infomasi pada pengguna yang menimbulkan AIDS, dan pada saat yang bersamaan mengenkripsi hard drive pengguna setelah 90 reboot. Pengguna kemudian diberi notifikasi bahwa _license fee_ harus dibayar oleh pengguna untuk mendapatkan kunci dekripsi.
+
 #### Virus KOH
 Virus ini juga melakukan enkripsi terhadap sistem inang. Tujuan utama dari virus ini adalah untuk membuat enkripsi berjalan pada background, sehingga tidak ada intervensi dari pengguna. Virus ini menggunakan sistem kriptografi IDEA dan dijual secara komersial.
 
 ### Penanganan
 Ada beberapa cara penanganan terhadap serangan kriptografi, yaitu :
+
 * Melakukan pengawasan terhadap memori.<br> Hal ini berguna untuk menangkap kriptovirus yang _self encrypting_ dan _polymorphic_. _Polymorphic_ berarti virus bisa membuat salinan dirinya sendiri yang berbeda-beda untuk mengelabui pengguna.
 * Menggunakan dua bentuk otentikasi. Kata sandi (_password_) saja merupakan otentikasi yang lemah. Dua bentuk otentikasi, dengan kata sandi dan entitas biometrik pengguna seperti sidik jari bisa digunakan.
 * Menggunakan aplikasi anti-virus yang _up-to-date_. Anti-virus juga bisa digunakan untuk menangani kriptovirus dikarenakan kriptovirus menggunakan cara penyebaran yang sama dengan virus biasa.
@@ -74,6 +83,6 @@ Ada beberapa cara penanganan terhadap serangan kriptografi, yaitu :
 * A. Young and Moti Yung, "Cryptovirology: extortion-based security threats and countermeasures," Security and Privacy, 1996. Proceedings., 1996 IEEE Symposium on, Oakland, CA, 1996, pp. 129-140
 * Balepin, Ivan. 2003. "Superworms and Cryptovirology: a Deadly Combination". Department of Computer Science University of California, Davis
 May 2003
-* http://www.cryptovirology.com/, diakses pada 27 Mei 2016
+* <http://www.cryptovirology.com/>, diakses pada 27 Mei 2016
 
 
