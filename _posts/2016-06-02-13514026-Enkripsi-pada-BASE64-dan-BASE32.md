@@ -21,9 +21,9 @@ By:  Johan 13514026
 
 Setiap manusia pasti memiliki *privacy*nya masing-masing. Ada informasi yang tidak boleh diketahui oleh orang lain. Di lain hal, seiring berkembangnya teknologi, informasi dapat diketahui dengan mudah dan cepat melalui internet. Untuk menjaga kerahasiaan, data-data informasi yang ada di internet biasanya disembunyikan menggunakan sistem kriptografi yaitu dengan menyandikan isi informasi (plaintext) tersebut menjadi isi yang tidak dipahami melalui proses enkripsi (enchiper). Dan untuk memperoleh kembali informasi yang asli, dilakukan proses dekripsi (decipher). Kriptografi berasal dari bahasa Yunani “cryptos” artinya secret dan “graphein” yang artinya writing (tulisan). Sehingga kriptografi berarti tulisan rahasia. Jadi kriptografi dapat didefinisikan sebagai perpaduan antara ilmu dan seni.
 
-Biasanya enkripsi dan dekripsi ini banyak dipakai dalam pengiriman pesan. Enkripsi dilakukan pada saat pengiriman dengan cara mengubah data asli menjadi data rahasia, sedangkan dekripsi dilakukan pada saat penerimaan dengan cara mengubah data rahasia menjadi data asli. Jadi data yang dikirimkan selama proses pengiriman adalah data rahasia, sehingga data asli tidak dapat diketahui oleh pihak yang tidak berkepentingan. Beberapa caranya adalah dengan algoritma [Base64] (#base64) dan [Base32] (#base32) yang akan dibahas di bawah. Base64 dan Base32 sebenarnya bukan enkripsi, namun hanyalah sebuah standar dari encoding.
+Biasanya enkripsi dan dekripsi ini banyak dipakai dalam pengiriman pesan. Enkripsi dilakukan pada saat pengiriman dengan cara mengubah data asli menjadi data rahasia, sedangkan dekripsi dilakukan pada saat penerimaan dengan cara mengubah data rahasia menjadi data asli. Jadi data yang dikirimkan selama proses pengiriman adalah data rahasia, sehingga data asli tidak dapat diketahui oleh pihak yang tidak berkepentingan. Beberapa caranya adalah dengan algoritma [Base64](#BASE-64) dan [Base32](#BASE-32) yang akan dibahas di bawah. Base64 dan Base32 sebenarnya bukan enkripsi, namun hanyalah sebuah standar dari encoding.
 
-###<a name="base64"></a> BASE 64
+### BASE 64
 
 Istilah Base64 berasal dari konten pengkodean MIME tertentu.
 
@@ -37,14 +37,14 @@ Base64 disusun oleh 64 karakter yang dimana karakternya berdasarkan RFC 1421 yan
 
 ![Alt text](https://raw.githubusercontent.com/Johansentosa/IRK-img/master/tabel%20base64.PNG "tabel indeks BASE64")
 
-<br><br>
+<br>
 
 contoh penggunaan base64 dalam melakukan encoding karakter
 
 > _Plaintext_ = "ilmu rekayasa komputasi"
 > Hasil yang didapatkan = "aWxtdSByZWtheWFzYSBrb21wdXRhc2k="
 
-![](img src = "https://raw.githubusercontent.com/Johansentosa/IRK-img/master/Capture.PNG")
+![](https://raw.githubusercontent.com/Johansentosa/IRK-img/master/Capture.PNG)
 
 Pada contoh diatas dibagi per 3 karakter menjadi ilm, u r, eka, ….dst. Kata “ilm” diganti menjadi “aWxt”. Pada tabel ASCII, huruf i, l, m disimpan sebagai 105, 108, dan 109, atau dengan kata lain 01101001, 01101100, 01101101 pada binary atau bilangan berbasis 2. Apabila ketiga byte tersebut digabungkan, maka akan dihasilkan 24 bit buffer yaitu 011010010110110001101101. Angka tersebut dikonversi sehingga berbasis 64, dengan membagi 24bit tersebut menjadi masing-masing 6bit. Maka dihasilkan 4 bagian. Kemudian masing-masing bagian tersebut dikonversi ke nilai yang ada di Base64.
 Jika pada terakhir terdapat sekelompok karakter yang dimiliki tidak bernilai 3Byte (24 bit) maka akan dilakukan padding. Pading dilakukan dengan menambahkan karakter ‘=’
@@ -56,20 +56,21 @@ Jika pada terakhir terdapat sekelompok karakter yang dimiliki tidak bernilai 3By
 </p>
 
 
-###<a name="base32"></a> BASE 32
+### BASE 32
 
 Base 32 pada dasarnya sama seperti base 64. Hanya saja pada base 32 menggunakan susunan 32 karakter yang terdiri dari (A-Z, 2-7) ditambah 1 karakter khusus untuk padding byte yaitu “=”. Ini merupakan standar yang sudah didefinisikan dari RFC 4648. 0 dan 1 dilewati karena adanya kemiripan dengan huruf O dan l.
 
 > **Cara kerja BASE 32**
- -	Kelompokkan pesan setiap 5 karakter (5byte = 40 bit). Bila terdapat sisa di akhir, tambahkan (padding) bit 0 sehingga panjangnya genap 40 bit.
+
+> -	Kelompokkan pesan setiap 5 karakter (5byte = 40 bit). Bila terdapat sisa di akhir, tambahkan (padding) bit 0 sehingga panjangnya genap 40 bit.
  - Pecah 40 bit tadi menjadi 8 kelompok yang masing-masing beranggotakan 5 bit.
  - Setiap kelompok sekarang punya 2^5 kemungkinan susunan bit, berarti ada 2^5 = 32 karakter yang tersedia untuk merepresentasikan 5 bit ini. Petakan setiap kelompok dengan karakter yang terdapat dalam tabel base32.
 
-> <img src="https://raw.githubusercontent.com/Johansentosa/IRK-img/master/contohB32.PNG">
+<img src="https://raw.githubusercontent.com/Johansentosa/IRK-img/master/contohB32.PNG">
 
 <p>
 <div align="center">
-![](https://raw.githubusercontent.com/Johansentosa/IRK-img/master/tabel%20base32.PNG)
+![](https://raw.githubusercontent.com/Johansentosa/IRK-img/master/tabel%20base32.PNG "tabel indeks BASE32")
 <br>
 tabel indeks BASE32
 </div></p>
