@@ -5,8 +5,6 @@ date:       2016-06-03
 summary:    Silakan klik pada judul untuk penjelasan tugas
 categories: tugas
 ---
-**Oleh: Alfonsus Raditya Arsadjaja / 13514088**
----
 
 # Permasalahan Jarak Terdekat (Shortest Path) pada Google Maps
 
