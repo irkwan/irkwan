@@ -112,15 +112,15 @@ Langkah algoritma tesebut pada pseucode dituliskan sebagai berikut:
 Dinic(G,s,t)
 1  for each edge (u, v) element of G.E
 2       (u, v).f = 0
-3  flow <- 0; Gf <- G
+3  flow = 0; Gf = G
 4  while there exists a path p from s to t in the residual graph Gf
 5       find blocking flow of path p in Gf
 6       cf(p) <- blocking flow of path p in Gf
 7       for each edge (u, v) in p
 8            if (u, v) element of E
-9                 (u, v).f <- (u, v).f + cf(p)
-10           else (v, u).f <- (v, u).f - cf(p)
-11      flow <- flow + cf(p)
+9                 (u, v).f = (u, v).f + cf(p)
+10           else (v, u).f = (v, u).f - cf(p)
+11      flow = flow + cf(p)
 12      Update Gf
 13  return flow
 ```
@@ -155,7 +155,9 @@ Ada dua operasi utama pada algoritma ini, **_push_** dan **_relabel_**, sesuai d
 
 > flow = min(e(u),f(u,v))
 
-*Syarat operasi push dapat dijalankan*
+<br>
+
+*Syarat operasi relabel dapat dijalankan*
 
 > h(u) <= h(v)
 
