@@ -1,12 +1,12 @@
 ---
 layout:     post
-title:      Kelas-kelas Kompleksitas Reduksi dan Teorema Hierarki
+title:      Kelas-kelas Kompleksitas, Reduksi dan Teorema Hierarki
 date:       2016-06-03
 summary:    Penjelasan singkat mengenai kelas kompleksitas
 categories: tugas
 ---
 
-# Kelas-kelas Kompleksitas: Reduksi dan Teorema Hierarki
+#### Oleh: Hasna Nur Karimah/13514106
 
 ## Kelas Kompleksitas
 
@@ -53,11 +53,28 @@ Reduksi yang biasanya digunakan adalah reduksi waktu-polinom, yaitu reduksi yang
 ## Teorema Hierarki
 
 ### Teorema Hierarki Waktu
-Teorema hierarki waktu dibedakan menjadi teorema hierarki waktu deterministik dan non-deterministik, dengan bunyi berikut ini (berurutan):
+Sebuah fungsi dikatakan *time-constructible* jika terdapat suatu mesin Turing deterministik sedemikian hingga untuk setiap *n* dalam domain, ketika mesin tersebut dimulai dengan sebuah masukan *n*, ia akan berhenti setelah tepat *f(n)* langkah.
+
+Teorema hierarki waktu dibedakan menjadi teorema hierarki waktu deterministik dan non-deterministik, dengan bunyi berikut ini secara berurutan.
 
 > Jika *f(n)* adalah fungsi *time-constructible* maka terdapat permasalahan keputusan yang tidak dapat dipecahkan dalam waktu deterministik *worst-case* *f(n)* tetapi dapat dipecahkan dalam waktu deterministik *worst-case* *f(n)<sup>2</sup>*.
 
 > Jika *g(n)* adalah fungsi *time-constructible* dan *f(n+1)*=o(*g(n)*), maka terdapat permasalahan keputusan yang tidak dapat dipecahkan dalam waktu non-deterministik *f(n)* tetapi dapat dipecahkan dalam waktu non-deterministik *g(n)*.
 
-
 ### Teorema Hierarki Ruang
+Sebuah fungsi dikatakan *space-constructible* jika *f(n)* >= log *n* dan terdapat suatu mesin Turing yang dapat mengomputasi fungsi *f(n)* dalam ruang O(*f(n)*) ketika dimulai dengan masukan 1<sup>n</sup>, di mana 1<sup>n</sup> merepresentasikan sebuah string dengan *n* buah 1.
+
+> Untuk setiap fungsi *space-constructible*, terdapat sebuah bahasa *L* yang dapat diputuskan di ruang O(*f(n)*) tetapi tidak pada ruang o(*f(n)*).
+
+Teorema hierarki ruang dapat dibilang lebih kuat daripada teorema hierarki waktu, dapat dilihat dari hal-hal berikut ini.
+
+- Hanya membutuhkan s(n) setidaknya log *n*, sedangkan teorema hierarki waktu membutuhkan setidaknya *n*.
+- Dapat memisahkan kelas dengan perbedaan asimtot apapun, sedangkan teorema hierarki waktu harus menggunakan faktor logaritma.
+- Hanya membutuhkan fungsi yang *space-constructible*, tidak harus *time-constructible*.
+
+
+## Referensi
+
+- Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest and Clifford Stein, Introduction to Algorithms, MIT Press, 2001, ISBN 978-0-262-03293-3
+- Michael Sipser (1997). Introduction to the Theory of Computation. PWS Publishing. ISBN 0-534-94728-X
+- Arora, Sanjeev; Barak, Boaz (2009). Computational complexity. A modern approach. Cambridge University Press. ISBN 978-0-521-42426-4
