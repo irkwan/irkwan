@@ -3,7 +3,7 @@ layout: post
 title: Penggunaan Clustering dalam Information Retrieval pada Search Engine
 date: 2016-06-03
 summary: Silahkan klik pada judul untuk melihat isi artikel
-category: tugas
+categories: tugas
 ---
 
 <br>
