@@ -9,7 +9,7 @@ categories: tugas
 
 ---
 
-By:  Johan 13514026 v3.0
+By:  Johan 13514026
 
 ---
 
@@ -25,7 +25,8 @@ Biasanya enkripsi dan dekripsi ini banyak dipakai dalam pengiriman pesan. Enkrip
 
 Istilah Base64 berasal dari konten pengkodean MIME tertentu.
 
-
+> **Cara kerja BASE 32**
+>
 > -	Kelompokkan pesan setiap 3 karakter (3byte = 24 bit). Bila terdapat sisa di akhir, tambahkan (padding) bit 0 sehingga panjangnya genap 24 bit.
 > - Pecah 24 bit tadi menjadi 4 kelompok yang masing-masing beranggotakan 6 bit.
 > - Setiap kelompok sekarang punya 2^6 kemungkinan susunan bit, berarti ada 2^6 = 64 karakter yang tersedia untuk merepresentasikan 6 bit ini. Petakan setiap kelompok dengan karakter yang terdapat dalam tabel base64.
@@ -60,6 +61,7 @@ Jika pada terakhir terdapat sekelompok karakter yang dimiliki tidak bernilai 3By
 Base 32 pada dasarnya sama seperti base 64. Hanya saja pada base 32 menggunakan susunan 32 karakter yang terdiri dari (A-Z, 2-7) ditambah 1 karakter khusus untuk padding byte yaitu “=”. Ini merupakan standar yang sudah didefinisikan dari RFC 4648. 0 dan 1 dilewati karena adanya kemiripan dengan huruf O dan l.
 
 > **Cara kerja BASE 32**
+>
 > -	Kelompokkan pesan setiap 5 karakter (5byte = 40 bit). Bila terdapat sisa di akhir, tambahkan (padding) bit 0 sehingga panjangnya genap 40 bit.
 > - Pecah 40 bit tadi menjadi 8 kelompok yang masing-masing beranggotakan 5 bit.
 > - Setiap kelompok sekarang punya 2^5 kemungkinan susunan bit, berarti ada 2^5 = 32 karakter yang tersedia untuk merepresentasikan 5 bit ini. Petakan setiap kelompok dengan karakter yang terdapat dalam tabel base32.
