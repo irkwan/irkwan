@@ -67,6 +67,7 @@ Evaluasi suatu model IR yang paling umum adalah menggunakan ukuran **R** (Recall
 rasio cacah dokumen relevan terpanggil dengan cacah total dokumen terpanggil, sedangkan *precision* didefinisikan sebagai rasio antara 
 cacah dokumen relevan terpanggil dengan total cacah dokumen relevan dalam koleksi. Parameter yang menggabungkan kedua ukuran ini disebut 
 **F-measure**, yang dihitung dengan rumus:
+<br>
 <img src = "http://i.imgur.com/9Wz0yc9.png">
 <br>
 Dengan β adalah parameter kepentingan relatif aspek *recall* dan *precision*. Jika *recall* dan *precision* sama penting, maka nilai β = 1.
@@ -80,12 +81,15 @@ Contohnya, kata “sel” dapat dihubungkan dengan konteks biologi, tabel data, 
 
 <img src = "http://i.imgur.com/SzHh4T2.png">
 <br>
-Gambar 4. Screenshot *search engine* Yippy
+Gambar 4. Screenshot *search engine* Yippy [sumber](http://new.yippy.com/search?query=cell&tb=sitesearch-all&v%3Aproject=clusty-new)
 <br> <br>
 Pada gambar di atas, dapat dilihat dengan term "cell", pengguna dapat melihat hasil pencarian berdasarkan konteks tertentu. 
 Lain halnya dengan *search engine* konvensional, untuk memperoleh hasil pencarian dengan suatu konteks perlu ditelusuri hingga halaman 
 lebih lanjut.
 
-## Referensi
-*[Introduction to Information Retrieval Chapter 1. 2009. Cambridge University Press](http://nlp.stanford.edu/IR-book/pdf/01bool.pdf)
-*[Introduction to Information Retrieval Chapter 16. 2009. Cambridge University Press](http://nlp.stanford.edu/IR-book/pdf/16flat.pdf)
+#### Referensi
+* [Introduction to Information Retrieval Chapter 1. 2009. Cambridge University Press](http://nlp.stanford.edu/IR-book/pdf/01bool.pdf)
+* [Introduction to Information Retrieval Chapter 16. 2009. Cambridge University Press](http://nlp.stanford.edu/IR-book/pdf/16flat.pdf)
+* [Amir Hamzah. Temu Kembali Informasi Berbasis Kluster untuk Sistem Temu Kembali Informasi Teks Bahasa Indonesia. 2009](http://jurtek.akprind.ac.id/sites/default/files/1-7_Amir.pdf)
+* [Ogechukwu N. Iloanusi. Clustering: Applied to Data Structuring and Retrieval. 2011. Nigeria](https://thesai.org/Downloads/Volume2No11/Paper%2016-%20Clustering%20Applied%20to%20Data%20Structuring%20and%20Retrieval.pdf)
+* [Hua Jun Zheng, et al. Learning to Cluster Web Search Result](http://research.microsoft.com/pubs/69103/19.pdf)
