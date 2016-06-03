@@ -54,8 +54,8 @@ PDA has 7 tuples
 - F is the final state
 - I is the initial stack
 
-## Determine the possibilities a successful contruction using Finite Automata
-Material is one of the important thing when to construct a buidling. Wrongly mixing material amount can cause collapse of a buidling. In this article, we are going to use how much material so the building can stay good. This is some kind of simulator machine. For example we are making a column for supporting structural, let say it needs 1 : 2 of cements, water. let's short cements, water into c, w and as a ∑. Each of them amount to 50 kg. if the user input cww ,the column has 50 kg of cements and 100 L of water. The initial state is input from any of the material. The final state is when the material meets the same ratio mentioned above. The following is design of the PDA.
+## Determine the possibilities a successful contruction using PushDown Automata
+Material is one of the important thing when to construct a buidling. Wrongly mixing material amount can cause collapse of a buidling. In this article, we are going to use how much material so the building can stay good. This is some kind of simulator machine. For example we are making a column for supporting structural, let say it needs 1 : 2 of cements, water. let's short cements, water into c, w and as a ∑. Each of them amount to 50 kg. if you input cww ,the column has 50 kg of cements and 100 L of water. The initial state is input from any of the material. The final state is when the material meets the same ratio mentioned above. The following is design of the PDA.
 
 P = {Q = {q0,q1}, ∑ = {c,w}, S = {c,w}, δ, q0, q1, Zo}
 The transition:
@@ -66,10 +66,12 @@ The transition:
 
 ![PDA](https://github.com/tauficls/hello-world/blob/master/image.jpeg)
 
+Then the acceptable possibilities are cww, ccwwww, cccwwwwww, ... with an asumption that cements always finish pouring all the cements then continue with water. Then how about the column with different amount of material? For example cements : water : sands : gravels = 4 : 2 : 2 : 5 is it still visible using pushdown automata?
 
 ## Conclusion
-Material is an important thing. Bad composition will cause disaster. Many life will be wasted and money will be drained too. By using theory language to have good composition hopefully it can prevent any casualties.
+Material is an important thing. Bad composition will cause disaster. Many life will be wasted and money will be drained too. By using theory language to have good composition hopefully it can prevent any casualties. The writer did not mentioned this is the best way but it's better to prepare then nothing.
 
 ## Reference
 - http://www.tutorialspoint.com/automata_theory/
 - http://medansatu.com/berita/tag/atap-sun-plaza-medan-runtuh/url/bruukkk-atap-sun-plaza-medan-runtuh-lihat-fotonya
+- http://infolab.stanford.edu/~ullman/ialc/spr10/slides/pda1.pdf
