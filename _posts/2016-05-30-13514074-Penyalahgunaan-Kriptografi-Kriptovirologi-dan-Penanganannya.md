@@ -11,16 +11,16 @@ Kriptografi merupakan suatu ilmu yang digunakan untuk menjaga kerahasiaan suatu 
 
 ## Daftar Isi
 1. [Kriptovirologi](#kriptovirologi)<br>
-  1. [Metode Kriptografi yang Biasa Digunakan pada Kriptovirologi](#metode-kriptografi-yang-biasa-digunakan-pada-kriptovirologi)<br>
-    1. [Kriptografi simetris](#kriptografi-simetris)<br>
-    2. [Kriptografi dengan public-key](#kriptografi-dengan-public-key)<br>
-  2. [Virus Komputer](#virus-komputer)<br>
-  3. [Serangan Kriptovirologi](#serangan-kriptovirologi)<br>
-    1. [Virus One-Half](#virus-one-half)<br>
-    2. [Virus LZR](#virus-lzr)<br>
-    3. [AIDS Information Trojan](#aids-information-trojan)<br>
-    4. [Virus KOH](#virus-koh)<br>
-  4. [Penanganan](#penanganan)<br>
+    1. [Metode Kriptografi yang Biasa Digunakan pada Kriptovirologi](#metode-kriptografi-yang-biasa-digunakan-pada-kriptovirologi)<br>
+      1. [Kriptografi simetris](#kriptografi-simetris)<br>
+      2. [Kriptografi dengan public-key](#kriptografi-dengan-public-key)<br>
+    2. [Virus Komputer](#virus-komputer)<br>
+    3. [Serangan Kriptovirologi](#serangan-kriptovirologi)<br>
+      1. [Virus One-Half](#virus-one-half)<br>
+      2. [Virus LZR](#virus-lzr)<br>
+      3. [AIDS Information Trojan](#aids-information-trojan)<br>
+      4. [Virus KOH](#virus-koh)<br>
+    4. [Penanganan](#penanganan)<br>
 2. [Referensi](#referensi)<br>
 
 ## Kriptovirologi
