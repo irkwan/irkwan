@@ -22,10 +22,10 @@ _This article is base on Duffield, Lund and Thorup paper "Priority Sampling for 
 1. [Introduction](#introduction)
 2. [Finding a Subset](#finding-a-subset)
 3. [Priority Sampling](#priority-sampling)
-  1. [Lemma 1](#lemma-1)
-  2. [Lemma 2](#lemma-1)
-  3. [Lemma 3](#lemma-1)
-  4. [Lemma 4](#lemma-1)
+    1. [Lemma 1](#lemma-1)
+    2. [Lemma 2](#lemma-1)
+    3. [Lemma 3](#lemma-1)
+    4. [Lemma 4](#lemma-1)
 4. [References](#references)
 
 ---
@@ -57,7 +57,7 @@ Suppose we are give n items with weight w. The goal is to compute all the subset
 There's many techniques to take a sample; from *randomly picked up sample* - missed item with high weight to *weighted sample* - always give high weight items. Each of the schemes show a vulnarablity but there is an elegant scheme proposed by Duffield, Lund, and Thorup which called priority sampling.
 <br><br>
 
-> ![Image1](https://github.com/MalvinJu/MalvinJu.github.io/blob/MalvinJu-patch-1/1.PNG)
+> ![Image1](https://cloud.githubusercontent.com/assets/19385651/15768064/eb34e382-2977-11e6-8b96-3db0ea1d6be4.PNG)
 
 <br>
 
@@ -73,19 +73,19 @@ The priority sampling scheme as can seen bellow :
 
 ### Lemma 1
 
-![lemma1](https://github.com/MalvinJu/MalvinJu.github.io/blob/MalvinJu-patch-1/lemma1.PNG)
+![lemma1](https://cloud.githubusercontent.com/assets/19385651/15768086/2c2d4f3c-2978-11e6-9580-e93b1c0098e9.PNG)
 
 ### Lemma 2
 
-![lemma2](https://github.com/MalvinJu/MalvinJu.github.io/blob/MalvinJu-patch-1/lemma2.PNG)
+![lemma2](https://cloud.githubusercontent.com/assets/19385651/15768093/34c870c2-2978-11e6-8965-9600eafec073.PNG)
 
 ### Lemma 3
 
-![lemma3](https://github.com/MalvinJu/MalvinJu.github.io/blob/MalvinJu-patch-1/lemma3.PNG)
+![lemma3](https://cloud.githubusercontent.com/assets/19385651/15768098/3c499ef2-2978-11e6-8dfe-acba7f559121.PNG)
 
 ### Lemma 4
 
-![lemma4](https://github.com/MalvinJu/MalvinJu.github.io/blob/MalvinJu-patch-1/lemma4.PNG)
+![lemma4](https://cloud.githubusercontent.com/assets/19385651/15768099/45504758-2978-11e6-912d-60b346be6870.PNG)
 
 ## References
 
