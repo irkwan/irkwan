@@ -8,6 +8,8 @@ categories: tugas
 
 # Permasalahan Jarak Terdekat (Shortest Path) pada Google Maps
 
+**Oleh : Alfonsus Raditya Arsadjaja / 13514088**
+
 ## Daftar Isi
 * [Latar Belakang Masalah](#latar-belakang-masalah)
 * [Algoritma Yang Digunakan](#algoritma-yang-digunakan)
@@ -72,7 +74,7 @@ Pendekatan ini sudah cukup optimal dan dapat digunakan pada Google Maps karena d
 Ada sangat banyak algoritma *shortest path* yang dapat digunakan untuk *Google Maps*. Akan tetapi, walaupun begitu, hanya sedikit yang dapat menghasilkan solusi optimal dalam waktu polynomial (dijkstra, A-star, dan Precompute). Walaupun begitu, tidak semuanya dapat menghasilkan jalur dalam waktu yang cepat, dan tidak ada yang dapat menyelesaikan persoalan tersebut dalam waktu yang singkat tanpa menggunakan prekomputasional dan optimisasi lainnya, karena *node* yang ada sangat banyak. Berikut ini merupakan peta kota Jakarta:
 
 ![Image of Jakarta](https://raw.githubusercontent.com/raditya1710/aradityaa/master/JakartaEdited.png)
-
+[Gambar 1. Kota Jakarta](https://raw.githubusercontent.com/raditya1710/aradityaa/master/JakartaEdited.png)
 Dapat dilihat bahwa pada gambar itu saja (kota besar di Indonesia), terdapat sangat banyak persimpangan / node didalamnya. 
 
 Tentunya untuk solusi yang saya berikan __(Precompute + A-Star)__, sudah cukup lumayan untuk dapat memenuhi kriteria dan kenyamanan pengguna, akan tetapi baru dalam skala kota saja, belum bisa antar kota. Untuk persoalan antar kota, terdapat algoritma campuran yang tidak dapat dibahas di sini (terlalu panjang dan memasukkan bagian sistem *low level*).
