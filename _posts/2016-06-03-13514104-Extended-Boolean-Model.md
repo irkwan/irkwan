@@ -6,8 +6,7 @@ summary:    A short explanation of the extended boolean model
 categories: tugas
 ---
 
-<br>
-## Chapter 1, An Introduction to Information Retrieval ##
+# Chapter 1, An Introduction to Information Retrieval
 
 Information Retrieval is a broad term that can be summarized as "taking  **thing**(s) that fullfill **criteria**(s) from **collection**". Even deciding which cereal box your cousin will like most for his 6th birthday party breakfast can be considered as a form of IR; however as an actual academic field of study its more formal definition is:
 
@@ -28,7 +27,7 @@ Due to the unstructured nature of a webpage / documents in general, it would be 
 There are all sort of model already developed for IR system, each whith its own query format, advantages, and disadvantages. One of such model which we will elaborate later is **The Extended Boolean Model**.
 
 <br>
-## Chapter 2, The Standard Boolean Model ##
+# Chapter 2, The Standard Boolean Model
 
 As the name would imply, Extended Boolean Model is an **Extended** version of the **Standard Boolean Model**. So it might be good to try to understand the basic of Boolean Model first before going ahead (still, there're not that much similarities between them, so feel free to skip this chapter if you wish). Basically this particular IR model works by storing the information of a document content in form of a **list** containing **words/terms** that exist in said document. For example, consider the following picture:
 
@@ -77,7 +76,7 @@ Which is why **several models had been proposed** to improve upon this basic mod
 
 
 <br>
-## Chapter 3, The Extended Boolean Model ##
+# Chapter 3, The Extended Boolean Model
 
 The **Extended Boolean Model** is really just a general term that refer to all IR model that **improve upon** the **Standard Boolean Model**. There had been proposed many such model, such as the **MMM** model, the **Paice** model and **P-norm** model. This article will mainly focus its discussion around the **P-Norm** model (the more feature complete out of the three), and if interested, the explanation of the other model (as well as this article source) can be found here: 
 [Extended Boolean Model by E. Fox, S. Betrabet, M. Koushik and W. Lee](http://orion.lcg.ufrj.br/Dr.Dobbs/books/book5/chap15.htm "Extended Boolean Model by E. Fox, S. Betrabet, M. Koushik and W. Lee")
@@ -137,7 +136,7 @@ With the three basic formulas above, we can easily count the similarity of more 
 And with that, we can now easily calculate the similarities between any boolean query and a documents model. 
 
 <br>
-## Chapter 4, Implementation ##
+# Chapter 4, Implementation
 
 **Implementation** of the **Extended Boolean Model** can be done in many different ways. Below is one of the common way of doing things:
 
@@ -165,7 +164,7 @@ And with that, we can now easily calculate the similarities between any boolean 
  - This way, document ranking can be done sequentially down the document list by assigning similarity value to each of the document then sorting it from highest similarity to the lowest one.
 
 <br>
-## Reference ##
+# References
 [Extended Boolean Model by E. Fox, S. Betrabet, M. Koushik and W. Lee](http://orion.lcg.ufrj.br/Dr.Dobbs/books/book5/chap15.htm "Extended Boolean Model by E. Fox, S. Betrabet, M. Koushik and W. Lee")
 
 [Term frequency and weighting from Cambridge University Press](http://nlp.stanford.edu/IR-book/html/htmledition/term-frequency-and-weighting-1.html "Term frequency and weighting from Cambridge University Press")
