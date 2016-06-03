@@ -25,9 +25,10 @@ tidak harus memiliki kata yang sama persis dengan *query*. Di sisi lain, pencari
 membuat *cluster* atau kumpulan dokumen yang memiliki karakteristik yang mirip dalam satu *cluster*, namun secara jelas berbeda dengan 
 *cluster* lainnya.
 
-<img src = "http://imgur.com/BEZxTvq">
+<img src = "http://i.imgur.com/BEZxTvq.png">
+<br>
 Gambar 1. Ilustrasi *clustering*
-
+<br> <br>
 Pada gambar di atas, data dikelompokkan menjadi 3 kelompok. Dalam satu *cluster*, data (file) memiliki kemiripan, namun harus dipastikan 
 berbeda karakteristiknya dengan *cluster* lainnya.
 
@@ -48,7 +49,14 @@ sudah ditempatkan dalam satu *cluster* tidak akan ditempatkan dalam *cluster* la
 memungkinkan terjadinya *overlapping*. Sedangkan *hierarchial clustering* membuat kumpulan *nested clusters* yang disusun menjadi sebuah pohon. 
 
 Perbandingan antara metode IR dengan dan tanpa *clustering* dapat dilihat melalui bagan berikut.
-
+<img src = "http://i.imgur.com/GC4lpGe.png">
+<br>
+Gambar 2. Alur pemrosesan hasil pencarian pada IFS
+<br> <br>
+<img src = "http://i.imgur.com/T86py42.png">
+<br>
+Gambar 3. Alur pemrosesan hasil pencarian dengan *clustering*
+<br> <br>
 Metode IR tanpa *clustering* yang diilustrasikan di atas adalah **IFS (inverted file search)**, yang merupakan metode yang paling banyak 
 digunakan saat ini. Dapat dilihat, indeks yang dipakai berbeda. Dalam clustering, *indexing* telah diadaptasi sehingga *term-list* mengacu 
 pada *cluster* tertentu. Hal ini menyebabkan pengambilan data lebih efisien karena tidak perlu menelusuri data di setiap term, cukup 
@@ -59,7 +67,8 @@ Evaluasi suatu model IR yang paling umum adalah menggunakan ukuran **R** (Recall
 rasio cacah dokumen relevan terpanggil dengan cacah total dokumen terpanggil, sedangkan *precision* didefinisikan sebagai rasio antara 
 cacah dokumen relevan terpanggil dengan total cacah dokumen relevan dalam koleksi. Parameter yang menggabungkan kedua ukuran ini disebut 
 **F-measure**, yang dihitung dengan rumus:
-
+<img src = "http://i.imgur.com/9Wz0yc9.png">
+<br>
 Dengan β adalah parameter kepentingan relatif aspek *recall* dan *precision*. Jika *recall* dan *precision* sama penting, maka nilai β = 1.
 Nilai F-measure yang lebih tinggi menyatakan kinerja yang lebih baik. Dalam berbagai penelitian, telah ditunjukkan bahwa IR dengan 
 *clustering* secara umum menghasilkan nilai F-measure yang lebih baik jika dibandingkan dengan IR tanpa *clustering*.
@@ -67,11 +76,16 @@ Nilai F-measure yang lebih tinggi menyatakan kinerja yang lebih baik. Dalam berb
 ## Penerapan pada *Search Engine*
 Bagaimana *clustering* membantu *search engine*? Seringkali, *query* atau kata kunci pencarian yang kita masukkan memiliki polisemi. 
 Contohnya, kata “sel” dapat dihubungkan dengan konteks biologi, tabel data, atau sel penjara. *Search engine* yang mengadaptasi sistem 
-*clustering* menyediakan opsi bagi penggunanya untuk menampilkan hasil berdasarkan konteks-konteks tersebut. Contoh *search engine* yang 
-menerapkan metode ini adalah **Yippy**, yang dikembangkan oleh Vivisimo.
+*clustering* menyediakan opsi bagi penggunanya untuk menampilkan hasil berdasarkan konteks-konteks tersebut. Contoh *search engine* yang menerapkan metode ini adalah **Yippy**, yang dikembangkan oleh Vivisimo.
 
+<img src = "http://i.imgur.com/SzHh4T2.png">
+<br>
+Gambar 4. Screenshot *search engine* Yippy
+<br> <br>
 Pada gambar di atas, dapat dilihat dengan term "cell", pengguna dapat melihat hasil pencarian berdasarkan konteks tertentu. 
 Lain halnya dengan *search engine* konvensional, untuk memperoleh hasil pencarian dengan suatu konteks perlu ditelusuri hingga halaman 
 lebih lanjut.
 
 ## Referensi
+*[Introduction to Information Retrieval Chapter 1. 2009. Cambridge University Press](http://nlp.stanford.edu/IR-book/pdf/01bool.pdf)
+*[Introduction to Information Retrieval Chapter 16. 2009. Cambridge University Press](http://nlp.stanford.edu/IR-book/pdf/16flat.pdf)
