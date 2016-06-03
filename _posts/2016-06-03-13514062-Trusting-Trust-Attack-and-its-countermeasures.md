@@ -50,7 +50,6 @@ This attack is beautiful in fulfilling the ultimate reason of any anonymous hack
 
 But as David A. Wheeler said in his DDC paper, it may not broke our trust in this and society. As he said in his own words :
 > First, complaining that people trust others is a waste of time. You must trust others in a modern world. No one grows all their own food, builds their own shelters from their own materials, and provides all their other needs by themselves; we all trust others. However, there is a serious systemic problem if you cannot independently verify what you trust. You should strive to “trust, but verify”.
-
 I believe the fundamental problem caused by the trusting trust attack was that it was impractical to independently verify that what you depended on (the executable) corresponds to its human-readable representation (the source code). This is because program-handling programs can subvert the relationship between what humans review and what is actually used. Ken Thompson’s paper is not titled “Reflections on trust”; it is “Reflections on trusting trust”. Again, I believe problem was not trust, but the lack of a meaningful process for independent verification.
 
 This too will be my stance on overcoming this problem.
