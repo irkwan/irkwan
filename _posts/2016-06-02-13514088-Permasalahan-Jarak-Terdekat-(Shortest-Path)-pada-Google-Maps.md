@@ -1,5 +1,31 @@
+---
+layout:     post
+title:      Permasalahan Jarak Terdekat (Shortest Path) pada Google Maps
+date:       2016-06-03
+summary:    Silakan klik pada judul untuk penjelasan tugas
+categories: tugas
+---
+---
+---
+**Oleh: Alfonsus Raditya Arsadjaja / 13514088**
+---
+---
+
 # Permasalahan Jarak Terdekat (Shortest Path) pada Google Maps
 
+## Daftar Isi
+* [Latar Belakang Masalah](#latar-belakang-masalah)
+* [Algoritma yang Digunakan](#algoritma-yang-digunakan)
+  * [Pencarian Node](#pencarian-node)
+  * [Pencarian Shortest Path](#pencarian-shortest-path)
+    * [Brute Force](#brute-force)
+    * [DFS](#dfs)
+    * [BFS](#bfs)
+    * [Greedy Best First Search](#greedy-best-first-search)
+    * [A Star](#a-star)
+    * [Precompute + A Star](#precompute-a-star)
+* [Kesimpulan](#kesimpulan)
+* [Referensi](#referensi)
 
 ## Latar Belakang Masalah
 Google Maps atau biasa disingkat *Maps* adalah sesuatu yang sangat tidak asing lagi bagi manusia. Maps merupakan aplikasi yang digunakan oleh milyaran orang di dunia ini untuk mencari jalan ke suatu tempat tertentu. Akibatnya, aplikasi ini sudah dapat dianggap tidak dapat dipisahkan dari kehidupan manusia. Dari perspektif pengguna, mereka berharap dapat menemukan jalan menuju suatu tempat, tanpa tersesat, dan dalam waktu yang singkat. Intinya mereka dapat mendapatkan jalur yang diharapkan dengan cepat. Akan tetapi, tidak semudah itu kelihatannya bagi sang developer. Bagi sang developer, permasalahan penemuan jalan terdekat merupakan suatu masalah besar sendiri, karena dibutuhkan algoritma yang optimal dan sangat cepat untuk mendapatkan jalur dan alternatif jalurnya secara cepat dan tepat (tanpa melalui jalan yang sebenarnya tidak ada).
@@ -26,20 +52,20 @@ Menggunakan Algoritma DFS, kita akan mencari jalur dengan menelusuri setiap jalu
 #### BFS
 Dengan Menggunakan algoritma BFS, maka semua node akan terekspan. Hasilnya merupakan jalur yang ketemu untuk pertama kalinya. Akan tetapi, ternyata algoritma ini juga tidak optimal dalam mencari jarak terdekat, karena grafnya berbobot. Akan tetapi, kompleksitasnya jauh lebih kecil, hanya __O(n)__ saja dimana n adalah jumlah node atau persimpangan yang terdapat pada graf tersebut. Hal ini memiliki kompleksitas waktu yang cukup kecil dibandingkan dengan Brute Force dan DFS, akan tetapi masih termasuk sangat besar. Akan tetapi, karena algoritma ini juga tidak optimal, maka algoritma ini tidak digunakan dalam aplikasi *shortest path* pada Maps apapun.
 
-#### Dijkstra's Algorithm
+#### Dijkstra
 Algoritma ini merupakan algoritma shortest path yang digunakan pertama kalinya yang dapat menemukan solusi untuk graf berarah (asumsi graf tidak ada *negative cycle*). Algoritma ini dijalankan dengan menggunakan STL *priority_queue* dan menggunakan heap tree sebagai implementasinya (agar bisa mendapatkan query dan mengupdate tree dalam waktu log(n) saja). __(tulis sumber Dijkstra disini)__. Algoritma ini dimulai dari node pertama, dan akan berhenti ketika node yang diproses adalah node tujuan. Kompleksitas dari algoritma ini adalah __O(E + V log V)__ dimana E adalah jumlah jalan dan V adalah jumlah persimpangan yang terdapat pada *Maps*. Algoritma ini sudah cukup mereduksi dari Brute Force dan sudah dapat mengeluarkan hasil yang optimal, akan tetapi untuk ukuran yang sangat besar, ini belum bisa mengeluarkan hasil dalam waktu yang cukup cepat untuk dapat digunakan pengguna secara nyaman. __(Node di Maps : > 1000000)__
 
-#### Greedy Best First Search Algorithm
+#### Greedy Best First Search
 Algoritma ini merupakan algoritma yang memakai pendekatan *heuristik* dalam penyelesaiannya, parameter pemilihannya hanya estimasi jarak ke tujuan saja. Estimasi ini dihitung berdasarkan jarak garis lurus antara titik sekarang ke titik tujuan. Kompleksitas ini sama seperti Dijkstra's Algorithm, yaitu __O(E + V log V)__, akan tetapi tidak selalu menghasilkan jalur yang optimal, karena hanya mengandalkan jarak estimasi saja, dan algoritma ini tidak pernah dipakai di Maps yang sebenarnya.
  
-#### A-Star Algorithm
+#### A Star
 Algoritma ini merupakan algoritma yang menggabungkan Algoritma Dijkstra dan Greedy Best First Search, dimana parameter pembandingnya adalah Jarak antara titik awal - sekarang ditambah dengan jarak estimasi antara titik sekarang - titik tujuan. Algoritma ini bertujuan untuk mempersempit ruas pencarian yang dihasilkan oleh algoritma Dijkstra. Pada algoritma Dijkstra, yang penting yang jarak terkecil dari titik awal terlebih dahulu yang diprioritaskan, sedangkan untuk A-Star, yang terpenting adalah jarak total estimasinya. Estimasinya harus merupakan suatu heuristik yang *admissible*, yang berarti jarak estimasinya tidak boleh melebihi jarak terdekatnya. Dalam kasus ini, estimasinya dihitung berdasarkan garis lurus antara dua titik.
 
 Algoritma ini memiliki kompleksitas __O(E)__ atau banyaknya jalan yang ada pada kasus terburuk, dan sudah cukup optimal dan lebih cepat dibandingkan Dijsktra, dan sudah cukup nyaman digunakan oleh pengguna dalam jarak cukup dekat (<= 100 km)(tidak banyak node yang diekspan sehingga bisa jauh lebih cepat). 
 
 Akan tetapi, algoritma ini bukanlah yang tercepat untuk dipakai pada Google Maps, karena apabila jarak lebih dari 100 km (jarak jauh) maka akan performansinya akan berkurang (masih tetap lambat, node yang diekspan bisa lebih besar dari 1 juta).
 
-#### Precompute + A-Star
+#### Precompute + A Star
 Pada algoritma-algoritma sebelumnya, selalu pencarian dan perhitungan seluruh graf dilakukan ketika ada query yang masuk. Sekarang kita pikirkan sebagai berikut: mungkinkah ada banyak orang yang mencari jalur yang relatif sama untuk beberapa bagiannya? Bisakah kita mengoptimasinya? Jawabannya adalah bisa. Jika pencarian dilakukan setiap kali orang melakukan query, maka jika ada jalur yang relatif sama, perhitungan tersebut akan menjadi mubazir. 
 
 Karena itu biasanya hasil query-query tersebut dipecah-pecah menjadi beberapa bagian dan dimasukkan ke database Google Maps sendiri. Jadi jika ada bagian yang sama, tinggal langsung memanggil bagian tersebut dan tidak perlu menghitung ulang jarak dan jalur yang dipakai. Jika belum ada query yang pernah dicari pada bagian tersebut, maka akan menghitung menggunakan A-star search algorithm, dengan maksimum node yang diekspan adalah 100.000 untuk tetap tidak harus menghitung terlalu lama. 
