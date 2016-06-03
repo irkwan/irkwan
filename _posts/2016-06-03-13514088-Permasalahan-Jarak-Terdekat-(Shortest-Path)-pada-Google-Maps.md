@@ -25,7 +25,12 @@ categories: tugas
 * [Referensi](#referensi)
 
 ## Latar Belakang Masalah
-Google Maps atau biasa disingkat *Maps* adalah sesuatu yang sangat tidak asing lagi bagi manusia. Maps merupakan aplikasi yang digunakan oleh milyaran orang di dunia ini untuk mencari jalan ke suatu tempat tertentu. Akibatnya, aplikasi ini sudah dapat dianggap tidak dapat dipisahkan dari kehidupan manusia. Dari perspektif pengguna, mereka berharap dapat menemukan jalan menuju suatu tempat, tanpa tersesat, dan dalam waktu yang singkat. Intinya mereka dapat mendapatkan jalur yang diharapkan dengan cepat. Akan tetapi, tidak semudah itu kelihatannya bagi sang developer. Bagi sang developer, permasalahan penemuan jalan terdekat merupakan suatu masalah besar sendiri, karena dibutuhkan algoritma yang optimal dan sangat cepat untuk mendapatkan jalur dan alternatif jalurnya secara cepat dan tepat (tanpa melalui jalan yang sebenarnya tidak ada).
+Google Maps atau biasa disingkat *Maps* adalah sesuatu yang sangat tidak asing lagi bagi manusia. Maps merupakan aplikasi yang digunakan oleh milyaran orang di dunia ini untuk mencari jalan ke suatu tempat tertentu. Akibatnya, aplikasi ini sudah dapat dianggap tidak dapat dipisahkan dari kehidupan manusia. 
+![Image of Google Maps](https://raw.githubusercontent.com/raditya1710/aradityaa/master/Maps.png)
+
+[Gambar 1. Google Maps](https://raw.githubusercontent.com/raditya1710/aradityaa/master/Maps.png)
+
+Dari perspektif pengguna, mereka berharap dapat menemukan jalan menuju suatu tempat, tanpa tersesat, dan dalam waktu yang singkat. Intinya mereka dapat mendapatkan jalur yang diharapkan dengan cepat. Akan tetapi, tidak semudah itu kelihatannya bagi sang developer. Bagi sang developer, permasalahan penemuan jalan terdekat merupakan suatu masalah besar sendiri, karena dibutuhkan algoritma yang optimal dan sangat cepat untuk mendapatkan jalur dan alternatif jalurnya secara cepat dan tepat (tanpa melalui jalan yang sebenarnya tidak ada).
 
 Berikut ini akan dijelaskan pemakaian dan efektifitas algoritma-algoritma yang dapat digunakan terhadap aplikasi Google Maps.
 
@@ -75,7 +80,7 @@ Ada sangat banyak algoritma *shortest path* yang dapat digunakan untuk *Google M
 
 ![Image of Jakarta](https://raw.githubusercontent.com/raditya1710/aradityaa/master/JakartaEdited.png)
 
-[Gambar 1. Kota Jakarta](https://raw.githubusercontent.com/raditya1710/aradityaa/master/JakartaEdited.png)
+[Gambar 2. Kota Jakarta](https://raw.githubusercontent.com/raditya1710/aradityaa/master/JakartaEdited.png)
 
 Dapat dilihat bahwa pada gambar itu saja (kota besar di Indonesia), terdapat sangat banyak persimpangan / node didalamnya. 
 
@@ -84,6 +89,6 @@ Tentunya untuk solusi yang saya berikan __(Precompute + A-Star)__, sudah cukup l
 ## Referensi
 
 * https://groups.google.com/forum/#!topic/Google-Maps-API/QMHKn-oaB24
-* https://guides.github.com/features/mastering-markdown/
+* https://www.quora.com/What-algorithms-are-used-by-map-services-to-find-directions
+* https://www.quora.com/What-algorithm-is-used-by-Google-Maps
 * Sumber Pribadi
-* Sumber Gambar : Sumber Pribadi
