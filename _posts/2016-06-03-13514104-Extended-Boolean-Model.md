@@ -104,21 +104,24 @@ With all of these changes, the **query processing** process must be changed as w
 The P-Norm model change this into a formula that resulted in an arbitrary number, which portray the document **likeliness** to the query. The value of this number vary largely between system depend on the weighting method used on the document and query; but it doesn't matter since all we need to do is sort the result according to this value. A high likeliness value document should be put above a low one, this way we can **rank the result** according to how well it fullfill the query. The followings are the formula used in the P-Norm model:
 
 <br>
+The formula used to count the similarity of the query **q-and** ( "a-1 AND a-2 AND ... AND a-t" where **a-n** is the **nth** term ) and the document **d-j** where the weight of term **a-n** is **w-n** (if the term doesn't exist then the weight is 0) is :
+
 ![](https://upload.wikimedia.org/math/1/8/5/1857c3ae9fa7b748b4e5a9061c1fe058.png)
 
-The picture above is the formula to calculate the similarity of the query **q-and** ( "a-1 AND a-2 AND ... AND a-t" where **a-n** is the **nth** term ) and the document **d-j** where the weight of term **a-n** is **w-n** (if the term doesn't exist then the weight is 0). The formula will yield the highest result when the weight of the terms desired is highest (for example w-n = 1), and will decrease as the weight of terms desired get lower.
+It will yield the highest result when the weight of the terms desired is highest (for example w-n = 1), and will decrease as the weight of terms desired get lower.
 
 <br>
+The formula used to calculate the similarity of the query **q-or** ("a-1 OR a-2 OR ... OR a-t") and the document **d-j** is :
+
 ![](https://upload.wikimedia.org/math/0/8/e/08eda2e93607ee59eb7b77dc60e63cf3.png)
 
-The picture above is the formula used to calculate the similarity of the query **q-or** ("a-1 OR a-2 OR ... OR a-t") and the document **d-j**. The formula will yield the lowest result when the weight of the terms desired is lowest (for example w-n = 0), and will increase as the weight of terms desired get higher.
+It will yield the lowest result when the weight of the terms desired is lowest (for example w-n = 0), and will increase as the weight of terms desired get higher.
 
 <br>
-**SIM(q-not,dj) = 1 - SIM(q,dj)**
+The formula used to calculate the similarity of the query **q-not** ("not **q**" where **q** is a subquery) and the document **d-j** is :
 
-Notes : 
-- The p used in the formulas above is called the **degree of strictness**, usually implemented as a system defined constant like 2. At p-value of 1, both **q-or** and **q-and** will yield the same result. 
-- When t=1 (a query with only one term), both q-and and q-or provide in the same result, **SIM(q,dj) = w1**
+***SIM(q-not,dj) = 1 - SIM(q,dj)***
+
 
 <br>
 With the three basic formulas above, we can easily count the similarity of more complex query; for example, The similarity formula between q = "(a-1 AND a-2) OR a-3" is:
@@ -133,7 +136,11 @@ As briefly mentioned above, the P-Norm method also enable term weighting in quer
 
 ![](http://orion.lcg.ufrj.br/Dr.Dobbs/books/book5/398_a.gif)
 
-And with that, we can now easily calculate the similarities between any boolean query and a documents model. 
+And with that, we can now easily calculate the similarities between any boolean query and a documents model. Additional notes:
+
+- The p used in the formulas above is called the **degree of strictness**, usually implemented as a system defined constant like 2. At p-value of 1, both **q-or** and **q-and** will yield the same result. 
+- When t=1 (a query with only one term), both q-and and q-or provide in the same result, **SIM(q,dj) = w1**
+
 
 <br>
 # Chapter 4, Implementation
