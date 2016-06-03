@@ -14,7 +14,7 @@ Information Retrieval is a broad term that can be summarized as "taking  **thing
 
 The most visible aplication for this field can be seen at Web Search Engine such as Bing, Yahoo, Baidu, AOL, Ask,  and Lycos. 
 
->![](http://1.bp.blogspot.com/-3WZ9sDYsdQs/T6Dw1jDl2cI/AAAAAAAAARg/Efimh6W5MDU/s1600/Lycos-580x321.jpg)
+![](http://1.bp.blogspot.com/-3WZ9sDYsdQs/T6Dw1jDl2cI/AAAAAAAAARg/Efimh6W5MDU/s1600/Lycos-580x321.jpg)
 
 The way this sites work is fairly simple to understand yet hard to implements:
 
@@ -27,6 +27,7 @@ Due to the unstructured nature of a webpage / documents in general, it would be 
 There are all sort of model already developed for IR system, each whith its own query format, advantages, and disadvantages. One of such model which we will elaborate later is **The Extended Boolean Model**.
 
 <br>
+
 # Chapter 2, The Standard Boolean Model
 
 As the name would imply, Extended Boolean Model is an **Extended** version of the **Standard Boolean Model**. So it might be good to try to understand the basic of Boolean Model first before going ahead (still, there're not that much similarities between them, so feel free to skip this chapter if you wish). Basically this particular IR model works by storing the information of a document content in form of a **list** containing **words/terms** that exist in said document. For example, consider the following picture:
@@ -47,14 +48,12 @@ Certain words like "is", "and", and "not" not important when trying to figure ou
 On to the next topic; **Query** of a boolean model is expressed in form of a **boolean expression** (using operator AND ,OR, and NOT) about terms that's required to be present(or not) at the results. During query processing, there are only 2 posible **relevance point** for this model: satisfy the query and not satisfy the query. Naturally, only 
 the satisfying one will be shown at the final result. 
 
->starting from now, writer will assume that reader have basic set and boolean operation knowledge
-
 For example, using the picture above, query "voyage AND trip" would return the intersection of voyage array and trip array, resulting in array 000100, which mean that only the 4th document met that query criteria. The query ((NOT voyage) OR ocean) would return the union of ocean array and the complement of voyage array, resulting in 000000, which mean that none of the documents match the query. Simple.
 
 <br>
 ![](http://flylib.com/books/3/55/1/html/2/images/03fig17.gif)
 
-> In the implementation of the Boolean Model, it is common practice to have an **indexed lists** containing terms/words in the vocabullary, and on each one have a **list of documents ID** that contains such terms. So processing a query can be summarized as:
+In the implementation of the Boolean Model, it is common practice to have an **indexed lists** containing terms/words in the vocabullary, and on each one have a **list of documents ID** that contains such terms. So processing a query can be summarized as:
 
 > 1. X AND Y, return document IDs that occur in both X list and Y list
 2. X OR Y, return document IDs that occur in either X list or Y list
@@ -76,6 +75,7 @@ Which is why **several models had been proposed** to improve upon this basic mod
 
 
 <br>
+
 # Chapter 3, The Extended Boolean Model
 
 The **Extended Boolean Model** is really just a general term that refer to all IR model that **improve upon** the **Standard Boolean Model**. There had been proposed many such model, such as the **MMM** model, the **Paice** model and **P-norm** model. This article will mainly focus its discussion around the **P-Norm** model (the more feature complete out of the three), and if interested, the explanation of the other model (as well as this article source) can be found here: 
@@ -90,7 +90,7 @@ For example, in this article, the term "Query" should receive a higher score tha
 2. **How long** is the document.
 3. **How many** other document use the same term.
 
-> And transform these idea into a simple yet effective term weighting formula:
+And transform these idea into a simple yet effective term weighting formula:
 
 > - **TF(t)**     = (Number of Times Term t Appears) / (Total Number of Terms)
 > - **IDF(t)**    = log_e(Total Number of Documents / Number of Documents with Term t in it)
@@ -103,33 +103,33 @@ With all of these changes, the **query processing** process must be changed as w
 
 The P-Norm model change this into a formula that resulted in an arbitrary number, which portray the document **likeliness** to the query. The value of this number vary largely between system depend on the weighting method used on the document and query; but it doesn't matter since all we need to do is sort the result according to this value. A high likeliness value document should be put above a low one, this way we can **rank the result** according to how well it fullfill the query. The followings are the formula used in the P-Norm model:
 
+<br>
 ![](https://upload.wikimedia.org/math/1/8/5/1857c3ae9fa7b748b4e5a9061c1fe058.png)
 
-> The picture above is the formula to calculate the similarity of the query **q-and** ( "a-1 AND a-2 AND ... AND a-t" where **a-n** is the **nth** term ) and the document **d-j** where the weight of term **a-n** is **w-n** (if the term doesn't exist then the weight is 0). The formula will yield the highest result when the weight of the terms desired is highest (for example w-n = 1), and will decrease as the weight of terms desired get lower.
+The picture above is the formula to calculate the similarity of the query **q-and** ( "a-1 AND a-2 AND ... AND a-t" where **a-n** is the **nth** term ) and the document **d-j** where the weight of term **a-n** is **w-n** (if the term doesn't exist then the weight is 0). The formula will yield the highest result when the weight of the terms desired is highest (for example w-n = 1), and will decrease as the weight of terms desired get lower.
 
-
+<br>
 ![](https://upload.wikimedia.org/math/0/8/e/08eda2e93607ee59eb7b77dc60e63cf3.png)
 
-> The picture above is the formula used to calculate the similarity of the query **q-or** ("a-1 OR a-2 OR ... OR a-t") and the document **d-j**. The formula will yield the lowest result when the weight of the terms desired is lowest (for example w-n = 0), and will increase as the weight of terms desired get higher.
+The picture above is the formula used to calculate the similarity of the query **q-or** ("a-1 OR a-2 OR ... OR a-t") and the document **d-j**. The formula will yield the lowest result when the weight of the terms desired is lowest (for example w-n = 0), and will increase as the weight of terms desired get higher.
 
+<br>
 **SIM(q-not,dj) = 1 - SIM(q,dj)**
 
->Notes : 
-
-> The p used in the formulas above is called the **degree of strictness**, usually implemented as a system defined constant like 2. At p-value of 1, both **q-or** and **q-and** will yield the same result. 
-
-> When t=1 (a query with only one term), both q-and and q-or provide in the same result, **SIM(q,dj) = w1**
+Notes : 
+- The p used in the formulas above is called the **degree of strictness**, usually implemented as a system defined constant like 2. At p-value of 1, both **q-or** and **q-and** will yield the same result. 
+- When t=1 (a query with only one term), both q-and and q-or provide in the same result, **SIM(q,dj) = w1**
 
 <br>
 With the three basic formulas above, we can easily count the similarity of more complex query; for example, The similarity formula between q = "(a-1 AND a-2) OR a-3" is:
 
 ![](https://upload.wikimedia.org/math/0/b/1/0b113f74dd86c03eca1d317ff7a727b5.png)
 
-> Observe that the sub-query "a1 AND a2" is treated as a term weight, this concept will prove usefull during implementation
+Observe that the sub-query "a1 AND a2" is treated as a term weight, this concept will prove usefull during implementation
 
 
 <br>
-> As briefly mentioned above, the P-Norm method also enable term weighting in query. This can be achieved by slightly alter the formula above to consider the query term weight. To calculate the similarity of the query **q** = "a-1 k-1 AND/OR a-2 k-2 AND/OR ... a-n k-n" (**k-n** is the n-th term and **a-n** is the weight of term k-n) and the document **D** where the weight of term k-n is da-n, are as such:
+As briefly mentioned above, the P-Norm method also enable term weighting in query. This can be achieved by slightly alter the formula above to consider the query term weight. To calculate the similarity of the query **q** = "a-1 k-1 AND/OR a-2 k-2 AND/OR ... a-n k-n" (**k-n** is the n-th term and **a-n** is the weight of term k-n) and the document **D** where the weight of term k-n is da-n, are as such:
 
 ![](http://orion.lcg.ufrj.br/Dr.Dobbs/books/book5/398_a.gif)
 
@@ -141,29 +141,30 @@ And with that, we can now easily calculate the similarities between any boolean 
 **Implementation** of the **Extended Boolean Model** can be done in many different ways. Below is one of the common way of doing things:
 
 - **Document Model Implementation**:
- -  Rather than imitate the Standard Boolean model and have a list of terms each containing document id of all the documents that contains such term, it is better to do the opposite.
- -  Because query processing will be done per-document it will make more sense to create a **list of document** each containing **list of term** ids of terms that contained within. 
- -  This way, we can **process query sequentially** down the **document list** and see the terms contained within and its weight relative to the document.
+   -  Rather than imitate the Standard Boolean model and have a list of terms each containing document id of all the documents that contains such term, it is better to do the opposite.
+   -  Because query processing will be done per-document it will make more sense to create a **list of document** each containing **list of term** ids of terms that contained within. 
+   - This way, we can **process query sequentially** down the **document list** and see the terms contained within and its weight relative to the document.
 - **Query Implementation**:
- - One the best way to implement a boolean query is to store them in form of an **n-ary Tree**
- - **Each leaf is a term** (and it's weight), and **each internal node is the operator** linking it's children together
- - For example, the query ((A OR B OR C) AND (D OR E)) will be represented as:
- - ![](http://orion.lcg.ufrj.br/Dr.Dobbs/books/book5/399_a.gif)
- - To read the query from a tree do so by using the **Inorder Tree Transversal** method
+   - One the best way to implement a boolean query is to store them in form of an **n-ary Tree**
+   - **Each leaf is a term** (and it's weight), and **each internal node is the operator** linking it's children together
+   - For example, the query ((A OR B OR C) AND (D OR E)) will be represented as:
+   - ![](http://orion.lcg.ufrj.br/Dr.Dobbs/books/book5/399_a.gif)
+   - To read the query from a tree do so by using the **Inorder Tree Transversal** method
 - **Query Processing**:
- - Query processing can be done **recursively by self-call** (let's just call the method Query(Node) for now)
- - **Basis**, If the node is a **leaf** node, return the node weight
- - **Recurrent**:
-    - Identify which kind of query this is (AND/OR/NOT), 
-    - Calculate the weight of **every sub-tree below** this node by **calling Query(Node-i)**
-    - Return the value of this query tree by using the **appropriate formula**
- - For example, using the picture above:
-    - The process for node **AND** will call the Query method for both node **OR** 
-    - Each node OR will call the Query method for each of their sons, and return the similarity between its  subquery and the document
-    - The method called to the AND node will return the result of using the **qand** formula with t=2 where **w1** is the result of  **subquery OR1** and **w2** is the result of **subquery OR2**.
- - This way, document ranking can be done sequentially down the document list by assigning similarity value to each of the document then sorting it from highest similarity to the lowest one.
+   - Query processing can be done **recursively by self-call** (let's just call the method Query(Node) for now)
+   - **Basis**, If the node is a **leaf** node, return the node weight
+   - **Recurrent**:
+      - Identify which kind of query this is (AND/OR/NOT), 
+      - Calculate the weight of **every sub-tree below** this node by **calling Query(Node-i)**
+      - Return the value of this query tree by using the **appropriate formula**
+   - For example, using the picture above:
+      - The process for node **AND** will call the Query method for both node **OR** 
+      - Each node OR will call the Query method for each of their sons, and return the similarity between its  subquery and the document
+      - The method called to the AND node will return the result of using the **qand** formula with t=2 where **w1** is the result of  **subquery OR1** and **w2** is the result of **subquery OR2**.
+   - This way, document ranking can be done sequentially down the document list by assigning similarity value to each of the document then sorting it from highest similarity to the lowest one.
 
 <br>
+
 # References
 [Extended Boolean Model by E. Fox, S. Betrabet, M. Koushik and W. Lee](http://orion.lcg.ufrj.br/Dr.Dobbs/books/book5/chap15.htm "Extended Boolean Model by E. Fox, S. Betrabet, M. Koushik and W. Lee")
 
