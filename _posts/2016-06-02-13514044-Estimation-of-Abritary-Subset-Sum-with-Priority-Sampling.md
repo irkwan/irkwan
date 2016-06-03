@@ -2,7 +2,7 @@
 layout:     post
 title:      Estimation of Abritary Subset Sum with Priority Sampling
 date:       2016-06-02
-summary:    Click thw title!
+summary:    Click the title!
 categories: tugas
 ---
 
@@ -21,10 +21,10 @@ _This article is base on Duffield, Lund and Thorup paper "Priority Sampling for 
 1. [Introduction](#introduction)
 2. [Finding a Subset](#finding-a-subset)
 3. [Priority Sampling](#priority-sampling)
-  1. Lemma 1
-  2. Lemma 2
-  3. Lemma 3
-  4. Lemma 4
+  1. [Lemma 1](#lemma-1)
+  2. [Lemma 2](#lemma-1)
+  3. [Lemma 3](#lemma-1)
+  4. [Lemma 4](#lemma-1)
 4. [References](#references)
 
 ---
@@ -68,6 +68,10 @@ The priority sampling scheme as can seen bellow :
 * Take the top k elements (with respect to priority), and let the priority of the (k+1)<sup>th</sup> element be t. If k >= n set t = 0.
 * If i is subset of S, set w<sup>'</sup><sub>i</sub> = max(w<sub>i</sub>, t), else set w<sup>'</sup><sub>i</sub> = 0.
 
+### Lemma 1
+### Lemma 2
+### Lemma 3
+### Lemma 4
 
 ## References
 
