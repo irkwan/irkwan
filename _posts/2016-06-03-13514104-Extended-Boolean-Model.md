@@ -69,11 +69,11 @@ For example, using the picture above, query "voyage AND trip" would return the i
 And that is the basic of the standard Boolean Model, it is fairly easy to implement and understand but not without its **weaknesses**:
 
 -  With only 2 possible relevance point, there are **no way to rank documents** in order of relevance. 
-	-  The model only concern itself with wether or not a term exist, not it's frequency of use and relevance in the document. 
-	-  A user might find the term he/she wants only mentioned once in one of the query result and not that relevant in said document
+ -  The model only concern itself with wether or not a term exist, not it's frequency of use and relevance in the document. 
+ -  A user might find the term he/she wants only mentioned once in one of the query result and not that relevant in said document
 - There are some results which might be **counterintuitive to user** due to this model strict use of boolean operator.
-	- For example the query W AND X AND Y AND Z, will not result in a document which contain the term W, X, and Y; even though the user might be interested in this document if no others fullfill this query. 
-	- Also, in the query A OR B OR C, a document which mention only A is considered as important as a document mentioning all  terms.
+ - For example the query W AND X AND Y AND Z, will not result in a document which contain the term W, X, and Y; even though the user might be interested in this document if no others fullfill this query. 
+ - Also, in the query A OR B OR C, a document which mention only A is considered as important as a document mentioning all  terms.
 - There are **no way to assign importance factor to parts of query**, which my be desired by advanced user.
 
 Which is why **several models had been proposed** to improve upon this basic model, with an attempt to address the issues above...
@@ -145,29 +145,27 @@ And with that, we can now easily calculate the similarities between any boolean 
 **Implementation** of the **Extended Boolean Model** can be done in many different ways. Below is one of the common way of doing things:
 
 - **Document Model Implementation**:
-	-  Rather than imitate the Standard Boolean model and have a list of terms each containing document id of all the documents that contains such term, it is better to do the opposite.
-	-  Because query processing will be done per-document it will make more sense to create a **list of document** each containing **list of term** ids of terms that contained within. 
-	-  This way, we can **process query sequentially** down the **document list** and see the terms contained within and its weight relative to the document.
+ -  Rather than imitate the Standard Boolean model and have a list of terms each containing document id of all the documents that contains such term, it is better to do the opposite.
+ -  Because query processing will be done per-document it will make more sense to create a **list of document** each containing **list of term** ids of terms that contained within. 
+ -  This way, we can **process query sequentially** down the **document list** and see the terms contained within and its weight relative to the document.
 - **Query Implementation**:
-	- One the best way to implement a boolean query is to store them in form of an **n-ary Tree**
-	- **Each leaf is a term** (and it's weight), and **each internal node is the operator** linking it's children together
-	- For example, the query ((A OR B OR C) AND (D OR E)) will be represented as:
-	- ![](http://orion.lcg.ufrj.br/Dr.Dobbs/books/book5/399_a.gif)
-	- To read the query from a tree do so by using the **Inorder Tree Transversal** method
+ - One the best way to implement a boolean query is to store them in form of an **n-ary Tree**
+ - **Each leaf is a term** (and it's weight), and **each internal node is the operator** linking it's children together
+ - For example, the query ((A OR B OR C) AND (D OR E)) will be represented as:
+ - ![](http://orion.lcg.ufrj.br/Dr.Dobbs/books/book5/399_a.gif)
+ - To read the query from a tree do so by using the **Inorder Tree Transversal** method
 - **Query Processing**:
-	- Query processing can be done **recursively by self-call** (let's just call the method Query(Node) for now)
-	- **Basis**, If the node is a **leaf** node, return the node weight
-	- **Recurrent**:
-		- Identify which kind of query this is (AND/OR/NOT), 
-		- Calculate the weight of **every sub-tree below** this node by **calling Query(Node-i)**
-		- Return the value of this query tree by using the **appropriate formula**
-	- For example, using the picture above:
-		- The process for node **AND** will call the Query method for both node **OR** 
-		- Each node OR will call the Query method for each of their sons, and return the similarity between its  subquery and the document
-		- The method called to the AND node will return the result of using the **qand** formula with t=2 where **w1** is the result of **subquery OR1** and **w2** is the result of **subquery OR2**.
-	- This way, document ranking can be done sequentially down the document list by assigning similarity value to each of the document then sorting it from highest similarity to the lowest one.
-
-	***The End*** 
+ - Query processing can be done **recursively by self-call** (let's just call the method Query(Node) for now)
+ - **Basis**, If the node is a **leaf** node, return the node weight
+ - **Recurrent**:
+     - Identify which kind of query this is (AND/OR/NOT), 
+     - Calculate the weight of **every sub-tree below** this node by **calling Query(Node-i)**
+     - Return the value of this query tree by using the **appropriate formula**
+ - For example, using the picture above:
+     - The process for node **AND** will call the Query method for both node **OR** 
+     - Each node OR will call the Query method for each of their sons, and return the similarity between its  subquery and the document
+     - The method called to the AND node will return the result of using the **qand** formula with t=2 where **w1** is the result of **subquery OR1** and **w2** is the result of **subquery OR2**.
+ - This way, document ranking can be done sequentially down the document list by assigning similarity value to each of the document then sorting it from highest similarity to the lowest one.
 
 <br>
 ## Reference ##
