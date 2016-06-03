@@ -19,6 +19,7 @@ Speech Recognition (SR) adalah salah satu bidang keilmuan yang mempelajari metod
 Sistem SR dibagi menjadi 2; sistem yang menganalisa ucapan 1 individu yang spesifik disebut *speech dependent*  dan sistem yang menganalisa ucapan berbagai individu adalah *speech independent*. Pembuatan sistem speech independent lebih sulit dari speech dependent karena harus menganalisa ucapan yang berbeda-beda dari banyak orang. Contoh aplikasi *speech recognition* adalah aplikasi Siri pada perangkat smartphone Apple maupun Cortana pada sistem operasi Windows 10.
 
 ![](http://cdn.redmondpie.com/wp-content/uploads/2012/01/SiriToggles.png)
+
 Contoh aplikasi Siri yang dapat menganalisa dan memahami ucapan manusia
 
 Penelitian pada *speech recognition* dimulai sejak tahun 1932 pada perusahaan Bell Labs. Perusahaan ini membuat sistem SR *single-speaker dependent* yang berkerja dengan mendeteksi komponen frekuensi pada ucapan manusia. Selanjutnya, Defense Advanced Research Projects Agency (DARPA) melanjutkan pengenmbangan sistem SR dan menghasilkan Effective Affordable Reusable Speech-to-Text (EARS) serta Global Autonomous Language Exploitation (GALE). Google mulai mengembangkan *speech recognition* pada tahun 2007 dan menghasilkan GOOG-411, sebuah sistem direktori berbasis telepon.
