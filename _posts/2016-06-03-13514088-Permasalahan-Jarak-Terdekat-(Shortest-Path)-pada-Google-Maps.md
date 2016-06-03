@@ -66,7 +66,7 @@ Akan tetapi, algoritma ini bukanlah yang tercepat untuk dipakai pada Google Maps
 #### Precompute + A Star
 Pada algoritma-algoritma sebelumnya, selalu pencarian dan perhitungan seluruh graf dilakukan ketika ada query yang masuk. Sekarang kita pikirkan sebagai berikut: mungkinkah ada banyak orang yang mencari jalur yang relatif sama untuk beberapa bagiannya? Bisakah kita mengoptimasinya? Jawabannya adalah bisa. Jika pencarian dilakukan setiap kali orang melakukan query, maka jika ada jalur yang relatif sama, perhitungan tersebut akan menjadi mubazir. 
 
-Karena itu biasanya hasil query-query tersebut dipecah-pecah menjadi beberapa bagian dan dimasukkan ke database Google Maps sendiri. Jadi jika ada bagian yang sama, tinggal langsung memanggil bagian tersebut dan tidak perlu menghitung ulang jarak dan jalur yang dipakai. Jika belum ada query yang pernah dicari pada bagian tersebut, maka akan menghitung menggunakan A-star search algorithm, dengan maksimum node yang diekspan adalah 100.000 untuk tetap tidak harus menghitung terlalu lama. 
+Karena itu biasanya hasil query-query tersebut dipecah-pecah menjadi beberapa bagian dan dimasukkan ke database Google Maps sendiri. Jadi jika ada bagian yang sama, tinggal langsung memanggil bagian tersebut dan tidak perlu menghitung ulang jarak dan jalur yang dipakai. Jika belum ada query yang pernah dicari pada bagian tersebut, maka akan menghitung menggunakan A-star search algorithm, dengan maksimum node yang diekspan adalah __100.000__ untuk tetap tidak harus menghitung terlalu lama. 
 
 Pendekatan ini sudah cukup optimal dan dapat digunakan pada Google Maps karena diharapkan dapat mencari jalur terdekat untuk jarak jauh, tanpa harus menghitung simpul-simpul yang tidak diperlukan, dan bisa diterapkan dalam waktu yang cepat. Algoritma ini memiliki kompleksitas maksimum __O(E)__ dengan E adalah jumlah jalan yang diekspan (jika diperlukan).
 
@@ -86,3 +86,4 @@ Tentunya untuk solusi yang saya berikan __(Precompute + A-Star)__, sudah cukup l
 * https://groups.google.com/forum/#!topic/Google-Maps-API/QMHKn-oaB24
 * https://guides.github.com/features/mastering-markdown/
 * Sumber Pribadi
+* Sumber Gambar : Sumber Pribadi
