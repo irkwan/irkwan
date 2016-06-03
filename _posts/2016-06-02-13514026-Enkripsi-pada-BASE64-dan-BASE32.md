@@ -34,11 +34,9 @@ Istilah Base64 berasal dari konten pengkodean MIME tertentu.
 
 Base64 disusun oleh 64 karakter yang dimana karakternya berdasarkan RFC 1421 yang terdiri dari (A-Z, a-z, 0-9, +, /) Sehingga totalnya 64. Ditambah satu karakter khusus untuk padding byte yaitu “=”. Bila dalam kelompok 3-byte itu, satu byte terakhir hanya berisi padding bit, maka satu karakter “=” ditambahkan. Bila dua, maka dua karaker “=” (menjadi “==”)
 
-<div align="center">
-![](https://raw.githubusercontent.com/Johansentosa/IRK-img/master/tabel%20base64.PNG)
-<br>
-tabel indeks BASE 64
-</div> 
+
+![Alt text](https://raw.githubusercontent.com/Johansentosa/IRK-img/master/tabel%20base64.PNG "tabel indeks BASE64")
+
 <br><br>
 
 contoh penggunaan base64 dalam melakukan encoding karakter
@@ -46,7 +44,7 @@ contoh penggunaan base64 dalam melakukan encoding karakter
 > _Plaintext_ = "ilmu rekayasa komputasi"
 > Hasil yang didapatkan = "aWxtdSByZWtheWFzYSBrb21wdXRhc2k="
 
-<img src = "https://raw.githubusercontent.com/Johansentosa/IRK-img/master/Capture.PNG">
+![](img src = "https://raw.githubusercontent.com/Johansentosa/IRK-img/master/Capture.PNG")
 
 Pada contoh diatas dibagi per 3 karakter menjadi ilm, u r, eka, ….dst. Kata “ilm” diganti menjadi “aWxt”. Pada tabel ASCII, huruf i, l, m disimpan sebagai 105, 108, dan 109, atau dengan kata lain 01101001, 01101100, 01101101 pada binary atau bilangan berbasis 2. Apabila ketiga byte tersebut digabungkan, maka akan dihasilkan 24 bit buffer yaitu 011010010110110001101101. Angka tersebut dikonversi sehingga berbasis 64, dengan membagi 24bit tersebut menjadi masing-masing 6bit. Maka dihasilkan 4 bagian. Kemudian masing-masing bagian tersebut dikonversi ke nilai yang ada di Base64.
 Jika pada terakhir terdapat sekelompok karakter yang dimiliki tidak bernilai 3Byte (24 bit) maka akan dilakukan padding. Pading dilakukan dengan menambahkan karakter ‘=’
@@ -90,6 +88,7 @@ Base64 dan Base32 memiliki kelebihan dan kelemahannya masing-masing. Base64 memi
 |:--------:|:-------:|:------:|
 | 8-bit    |   133%  | 160%   |
 | 7-bit    | 117%    | 140%   |
+
 Panjang notasi Base64 dan Base32 sebagai persentase dari data biner
 
 Tetapi di lain hal, Base32 lebih menguntungkan. Karakter yang dihasilkan Base32 semuanya satu kasus, yang seringkali bermanfaat saat menggunakan file sistem yang bersifat *case-insensitive*, bahasa lisan, atau memori manusia. Hasil dari Base32 tidak mengandung karakter '/' sehingga bisa digunakan dalam penamaan sebuah file dan dapat dimasukkan dalam sebuah link tanpa pengkodean karakter apapun.
