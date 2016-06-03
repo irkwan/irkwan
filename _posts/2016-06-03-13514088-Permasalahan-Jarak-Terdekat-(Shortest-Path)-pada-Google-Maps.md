@@ -2,7 +2,7 @@
 layout:     post
 title:      Permasalahan Jarak Terdekat (Shortest Path) pada Google Maps
 date:       2016-06-03
-summary:    Silakan klik pada judul untuk penjelasan tugas
+summary:    Penggunaan Beberapa Algoritma untuk Pendekatan Shortest Path
 categories: tugas
 ---
 
