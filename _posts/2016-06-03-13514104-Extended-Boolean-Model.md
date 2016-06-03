@@ -120,7 +120,7 @@ It will yield the lowest result when the weight of the terms desired is lowest (
 <br>
 The formula used to calculate the similarity of the query **q-not** ("not **q**" where **q** is a subquery) and the document **d-j** is :
 
-***SIM(q-not,dj) = 1 - SIM(q,dj)***
+***sim(q-not,dj) = 1 - SIM(q,dj)***
 
 
 <br>
@@ -143,6 +143,7 @@ And with that, we can now easily calculate the similarities between any boolean 
 
 
 <br>
+
 # Chapter 4, Implementation
 
 **Implementation** of the **Extended Boolean Model** can be done in many different ways. Below is one of the common way of doing things:
@@ -173,6 +174,7 @@ And with that, we can now easily calculate the similarities between any boolean 
 <br>
 
 # References
+
 [Extended Boolean Model by E. Fox, S. Betrabet, M. Koushik and W. Lee](http://orion.lcg.ufrj.br/Dr.Dobbs/books/book5/chap15.htm "Extended Boolean Model by E. Fox, S. Betrabet, M. Koushik and W. Lee")
 
 [Term frequency and weighting from Cambridge University Press](http://nlp.stanford.edu/IR-book/html/htmledition/term-frequency-and-weighting-1.html "Term frequency and weighting from Cambridge University Press")
