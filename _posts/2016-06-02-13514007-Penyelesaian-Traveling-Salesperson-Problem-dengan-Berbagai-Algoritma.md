@@ -1,3 +1,12 @@
+---
+layout:     post
+title:      Penyelesaian *Traveling Salesperson Problem* dengan Berbagai Algoritma
+date:       2016-06-02
+summary:    Silakan klik pada judul untuk melihat isi artikel
+categories: tugas
+---
+
+
 # Penyelesaian *Traveling Salesperson Problem* dengan Berbagai Algoritma  
 #### Oleh Sri Umay N.S. / 13514007
 
@@ -129,6 +138,21 @@ Berikut adalah tahapan untuk menyelesaikan persoalan TSP dengan algoritma *branc
 <br>
 
 ### <a name="alg_dprog"></a>4. *Dynamic Programming*
+Algoritma terakhir yang akan dibahas pada artikel kali ini adalah *Dynamic Programming*. Penyelesaian persoalan menggunakan *dynamic programming memiliki dua karakteristik.
+
+1. Penyelesaian persoalan dipecah menjadi tahap-tahap (*stage*).
+
+2. Solusi dari persoalan merupakan serangkaian keputusan yang saling berkaitan.
+
+Berdasarkan karakteristik diatas, pengelesaian persoalan dengan *dynamic programming* dilakukan secara rekursif pada per tahapnya. sekilas penyelesaian dengan *dynamic programming* ini mirip dengan penyelesaian dengan algoritma *greedy*, namun kedua cara penyelesaian ini sesungguhnya berbeda. Pada algoritma *greedy* rangkaian keputusan yang dihasilkan sebagai penyelesaian persoalan hanya ada satu dan solusi yang dihasilkan belum tentu optimal, sementara pada *dynamic programming* ada banyak sehingga mempertimbangkan lebih banyak solusi untuk dipilih yang paling optimal. 
+
+Berikut adalah cara untuk menyelesaikan permasalah TSP dengan *dynamic programming*.
+
+1. Tentukan fungsi rekursif, yaitu yang terdiri dari basis dan rekurens. Basis berisi jarak kota awal, dalam persoalan ini dalah kota A ke, ke seluruh kota disebelahnya. Sementara rekurens adalah jalur yang memiliki bobot total terkecil dari semua jalur yang mungkin dilewati dari awal ke simpul tersebut.
+
+2. Lakukan penyelesaian per tahap hingga semua simpul telah diperiksa dan hasil dari persoalan telah diketahui.
+
+3. Telusuri jalur yang yang menjadikan hasil optimal tersebut.
 
 
 
