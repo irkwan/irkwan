@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Statistik untuk Analisis Data
+title:      Statistika untuk Analisis Data
 date:       2016-06-03
 summary:    Micky Yudi Utama/13514011
 categories: tugas
@@ -9,22 +9,22 @@ categories: tugas
 ## Daftar Isi
 * [Pendahuluan](#pendahuluan)
 * [Statistika Parametrik](#statistika-parametrik)
-  * [ANOVA](#anova)
-  * [Korelasi Pearson](#korelasi-pearson)
-  * [Uji-T](#uji-t)
-  * [Uji-F](#uji-f)
+   * [ANOVA](#anova)
+   * [Korelasi Pearson](#korelasi-pearson)
+   * [Uji-T](#uji-t)
+   * [Uji-F](#uji-f)
 * [Statistika Non-Parametrik](#statistika-non-parametrik)
-  * [Uji Ranking Bertanda Wilcoxon](#uji-ranking-bertanda-wilcoxon)
-  * [Uji Mann Whitney](#uji-mann-whitney)
-  * [Uji Kruskal Wallis](#uji-kruskal-wallis)
-  * [Uji Kesamaan Variansi](#uji-kesamaan-variansi)
-    * [Uji Hartley](#uji-hartley)
-    * [Uji Bartlett](#uji-bartlett)
-    * [Uji Levene](#uji-levene)
-  * [Uji Cochran C](#uji-cochran-c)
-  * [Uji Komparansi Berganda](#uji-komparansi-berganda)
-    * [Uji Tukey](#uji-tukey)
-    * [Uji Duncan](#uji-duncan)
+   * [Uji Ranking Bertanda Wilcoxon](#uji-ranking-bertanda-wilcoxon)
+   * [Uji Mann Whitney](#uji-mann-whitney)
+   * [Uji Kruskal Wallis](#uji-kruskal-wallis)
+   * [Uji Kesamaan Variansi](#uji-kesamaan-variansi)
+      * [Uji Hartley](#uji-hartley)
+      * [Uji Bartlett](#uji-bartlett)
+      * [Uji Levene](#uji-levene)
+   * [Uji Cochran C](#uji-cochran-c)
+   * [Uji Komparansi Berganda](#uji-komparansi-berganda)
+      * [Uji Tukey](#uji-tukey)
+      * [Uji Duncan](#uji-duncan)
     * [Uji Dunnett](#uji-dunnett)
   * [Uji Ukuran Kebergantungan](#uji-ukuran-kebergantungan)
     * [Korelasi Spearman](#korelasi-spearman)
