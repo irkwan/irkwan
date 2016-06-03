@@ -2,10 +2,9 @@
 layout:     post
 title:      Penyalahgunaan Kriptografi: Kriptovirologi dan Penanganannya
 date:       2016-05-30
-summary:    Silakan klik pada judul untuk detailnya
+summary:    Silakan klik pada judul untuk penjelasan tugas
 categories: tugas
 ---
-
 
 # Penyalahgunaan Kriptografi: Kriptovirologi dan Penanganannya
 Kriptografi merupakan suatu ilmu yang digunakan untuk menjaga kerahasiaan suatu informasi. Kriptografi biasanya digunakan untuk mengenskripsi suatu informasi sehingga tidak mudah diketahui oleh pihak yang tidak diinginkan. Contoh dari penggunaan kriptografi adalah pengiriman pesan rahasia pada badan intelijen dan militer. Dilihat dari kegunaannya, bisa dikatakan bahwa kriptografi dibuat dengan tujuan untuk melindungi. Namun, kriptografi bisa disalahgunakan untuk hal sebaliknya. Kriptografi justru bisa disalahgunakan untuk menghilangkan akses seseorang terhadap informasi, menghilangkan kerahasiaan informasi, dan menyebabkan kebocoran informasi, hal-hal yang biasanya justru dicegah dengan kriptografi. Hal-hal tersebut bisa terjadi jika ilmu kriptografi digabungkan dengan virus komputer yang menghasilkan ilmu baru bernama kriptovirologi.
@@ -63,6 +62,7 @@ Virus ini juga melakukan enkripsi terhadap sistem inang. Tujuan utama dari virus
 ### Penanganan
 Ada beberapa cara penanganan terhadap serangan kriptografi, yaitu :
 * Melakukan pengawasan terhadap memori.<br> Hal ini berguna untuk menangkap kriptovirus yang _self encrypting_ dan _polymorphic_. _Polymorphic_ berarti virus bisa membuat salinan dirinya sendiri yang berbeda-beda untuk mengelabui pengguna.
+
 * Menggunakan dua bentuk otentikasi. Kata sandi (_password_) saja merupakan otentikasi yang lemah. Dua bentuk otentikasi, dengan kata sandi dan entitas biometrik pengguna seperti sidik jari bisa digunakan.
 * Menggunakan aplikasi anti-virus yang _up-to-date_. Anti-virus juga bisa digunakan untuk menangani kriptovirus dikarenakan kriptovirus menggunakan cara penyebaran yang sama dengan virus biasa.
 * Menggunakan _tools_ kriptografi dan API kriptografi. Hal ini bisa membantu admin sistem untuk mengidentifikasi penggunaan kriptografi yang mencurigakan.
