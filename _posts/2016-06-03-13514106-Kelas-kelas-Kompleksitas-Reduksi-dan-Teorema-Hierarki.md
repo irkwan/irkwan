@@ -48,7 +48,7 @@ Reduksi adalah algoritma untuk mengubah suatu permasalahan ke permasalahan yang 
 1. Kita ingin memecahkan suatu permasalahan yang serupa dengan permasalahan lain yang sudah terselesaikan.
 2. Kita memiliki permasalahan yang sudah terbukti sulit untuk diselesaikan, kemudian kita memiliki permasalahan baru yang serupa dengan permasalahan tersebut.
 
-Reduksi yang biasanya digunakan adalah reduksi waktu-polinom, yaitu reduksi yang prosesnya membutuhkan waktu polinomial. Misalnya permasalahan penguadratan suatu bilangan bulat dapat direduksi ke dalam permasalahan mengalikan dua bilangan bulat. Artinya, algoritma perkalian dua buah bilangan bulat dapat digunakan untuk menguadratkan bilangan bulat, dengan cara memberikan masukan dua buah bilangan yang sama pada algoritma perkalian. Maka dapat dilihat bahwa penguadratan tidak lebih sulit dari perkalian, karena permasalahan penguadratan dapat direduksi permasalahan perkalian.
+Reduksi yang biasanya digunakan adalah reduksi waktu-polinom, yaitu reduksi yang prosesnya membutuhkan waktu polinomial. Misalnya permasalahan penguadratan suatu bilangan bulat dapat direduksi ke dalam permasalahan mengalikan dua bilangan bulat. Artinya, algoritma perkalian dua buah bilangan bulat dapat digunakan untuk menguadratkan bilangan bulat, dengan cara memberikan masukan dua buah bilangan yang sama pada algoritma perkalian. Maka dapat dilihat bahwa penguadratan tidak lebih sulit dari perkalian, karena permasalahan penguadratan dapat direduksi ke permasalahan perkalian.
 
 ## Teorema Hierarki
 
