@@ -2,7 +2,7 @@
 layout:     post
 title:      Penyalahgunaan Kriptografi: Kriptovirologi dan Penanganannya
 date:       2016-05-30
-summary:    Silakan klik pada judul untuk penjelasan tugas
+summary:    Silakan klik pada judul untuk melihat isinya
 categories: tugas
 ---
 
