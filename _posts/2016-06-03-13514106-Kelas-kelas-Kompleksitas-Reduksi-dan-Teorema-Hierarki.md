@@ -53,5 +53,11 @@ Reduksi yang biasanya digunakan adalah reduksi waktu-polinom, yaitu reduksi yang
 ## Teorema Hierarki
 
 ### Teorema Hierarki Waktu
+Teorema hierarki waktu dibedakan menjadi teorema hierarki waktu deterministik dan non-deterministik, dengan bunyi berikut ini (berurutan):
+
+> Jika *f(n)* adalah fungsi *time-constructible* maka terdapat permasalahan keputusan yang tidak dapat dipecahkan dalam waktu deterministik *worst-case* *f(n)* tetapi dapat dipecahkan dalam waktu deterministik *worst-case* *f(n)<sup>2</sup>*.
+
+> Jika *g(n)* adalah fungsi *time-constructible* dan *f(n+1)*=o(*g(n)*), maka terdapat permasalahan keputusan yang tidak dapat dipecahkan dalam waktu non-deterministik *f(n)* tetapi dapat dipecahkan dalam waktu non-deterministik *g(n)*.
+
 
 ### Teorema Hierarki Ruang
