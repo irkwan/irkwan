@@ -133,7 +133,7 @@ Ada dua operasi utama pada algoritma ini, **_push_** dan **_relabel_**, sesuai d
 1. Menginisialisasi jumlah aliran dari sumber S ke penampungan T pada setiap sisi dengan 0. *Height* pada setiap simpul juga diinisialisasi menjadi nol, kecuali pada simpul sumber. *Height* pada simpul sumber dinyatakan sebagai *n*. Kemudian, semua jumlah aliram pada sisi yang keluar dari simpul sumber dibuat penuh (jumlah aliran sisi sama dengan jumlah kapasitas maksimum). Aliran tersebut disebut *pre-flow*
 2. **_Push_**. Operasi ini dijalankan ketika terdapat sisi memiliki jumlah aliran sisi *f(u,v)* tidak sama dengan jumlah kapasitas maksimum sisi *c(u,v)*, *excess flow* sisi awal *e(u)* lebih besar dari nol, dan tinggi simpul awal *h(u)* lebih besar dari tinggi simpul akhir *h(v)*. Jumlah aliran kemudian didorong (*push*) ke simpul akhir adalah nilai paling kecil dari jumlah sisa kapasitas sisi *cf(u),v* (pengurangan dari jumlah kapasitas maksismum sisi dengan jumlah aliran sisi) dan *excess flow* simpul awal. 
 3. **_Relabel_**. Operasi ini dijalankan ketika suatu tangki atau simpul memiliki *excess flow* lebih besar dari nol, namum tidak ada tangki tujuan yang memiliki *height* yang lebih rendah dari dirinya sehingga tangki tersebut tidak dapat mengalirkan aliran ke tangki lain. *Height* simpul ini kemudian dinaikkan menjadi satu kali lebih besar dari simpul akhir manapun yang dihubungkan oleh satu sisi yang sama. Oleh karena operasi *relabel* ini, operasi *push* mungkin untuk dijalankan.
-4. Melakukan kedua operasi *push* dan *relabel* sampai operasi tersebut tidak dijalankan kembali. Menghitung jumlah total aliran maksimum pada sistem.
+4. Melakukan kedua operasi *push* dan *relabel* sampai operasi tersebut tidak dapat dijalankan kembali. Menghitung jumlah total aliran maksimum pada sistem.
 
 
 <br> 
@@ -179,7 +179,7 @@ Relabel(u)
 4     if cf(u,i) > 0 then
 5           if temp = -1 or temp > h(v)
 6                 temp = h(v)
-7  h(u) = temp +1
+7  h(u) = temp + 1
 ```
 
 ```sh
