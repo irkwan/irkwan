@@ -46,7 +46,7 @@ _Monoalphabetic Cipher_ :
 Mungkin kita sudah sering mendengar _cipher_ yang satu ini, karena _cipher_ yang satu ini sangat sederhana
 dan mudah dipelajari dan diaplikasikan. Huruf pada sebuah _plain text_ akan digantikan dengan huruf lain sesuai jumlah 
 pergeseran yang digunakan. Contoh : "Sample test" dengan jumlah pergeseran 3, akan di-enkripsi menjadi "Vdpsoh whvw".
-_Caesar Cipher_ merupakan _cipher_ yang paling sederhana dan paling mudah dipecahkan, salah satunya dengan cara _frequency analysis", pada 
+_Caesar Cipher_ merupakan _cipher_ yang paling sederhana dan paling mudah dipecahkan, salah satunya dengan cara _frequency analysis_, pada 
 Bahasa Indonesia huruf a frekuensi nya paling banyak digunakan sehingga _cipher text_ dengan huruf terbanyak kemungkinan adalah huruf A.
 Selain itu kita juga bisa melakukan _brute force_ dengan mencoba 25 kemungkinan pergeseran.
 Dengan x adalah huruf yang ingin kita enkripsi (a = 0, b = 1, etc) dan k adalah jumlah pergeseran maka algoritma _Caesar Cipher_ 
