@@ -33,8 +33,11 @@ Oleh karena itu, dibuatlah algoritma-algoritma yang dapat memecahkan permasalaha
 ---
 
 ####1. [Algoritma Ford-Fulkerson] (#algoritma-ford-fulkerson)
+
 ####2. [Algoritmma Edmonds-Karp] (#algoritma-edmonds-karp)
+
 ####3. [Algoritma Dinic] (#algoritma-dinic)
+
 ####4. [Algoritma *Push-Relabel*] (#algoritma-push-relabel)
 
 ---
@@ -201,7 +204,11 @@ Demikian algoritma-algoritma pemecahan *maximum-flow problem*, yakni algoritma F
 
 #### Referensi
 * [*Network-Flow Problems* by Stanford University](https://web.stanford.edu/class/cs97si/08-network-flow-problems.pdf)
+
 * [*Ford-Fulkerson Algorithm for Maximum Problem* by GeeksforGeeks.org] (http://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/)
+
 * [*The Edmonds-Karp Max-Flow Algorithm* by Cornell University] (http://www.cs.cornell.edu/courses/cs4820/2012sp/handouts/edmondskarp.pdf)
+
 * [*Algoritma Dinic untuk Masalah Arus Maksimum* by Agung Yudhianto of Institut Pertanian Bogor](http://repository.ipb.ac.id/bitstream/handle/123456789/33525/G03ayu2.pdf?sequence=1&isAllowed=y)
+
 * [*Push-Relabel Approach to the Maximum Flow Problem* by Nilay Vaish of topcoder] (https://www.topcoder.com/community/data-science/data-science-tutorials/push-relabel-approach-to-the-maximum-flow-problem/)
