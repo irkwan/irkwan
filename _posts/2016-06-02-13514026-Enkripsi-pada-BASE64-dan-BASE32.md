@@ -28,9 +28,9 @@ Biasanya enkripsi dan dekripsi ini banyak dipakai dalam pengiriman pesan. Enkrip
 Istilah Base64 berasal dari konten pengkodean MIME tertentu.
 
 > **Cara kerja BASE 64**
-> *	Kelompokkan pesan setiap 3 karakter (3byte = 24 bit). Bila terdapat sisa di akhir, tambahkan (padding) bit 0 sehingga panjangnya genap 24 bit.
-> * Pecah 24 bit tadi menjadi 4 kelompok yang masing-masing beranggotakan 6 bit.
-> * Setiap kelompok sekarang punya 2^6 kemungkinan susunan bit, berarti ada 2^6 = 64 karakter yang tersedia untuk merepresentasikan 6 bit ini. Petakan setiap kelompok dengan karakter yang terdapat dalam tabel base64.
+> -	Kelompokkan pesan setiap 3 karakter (3byte = 24 bit). Bila terdapat sisa di akhir, tambahkan (padding) bit 0 sehingga panjangnya genap 24 bit.
+- Pecah 24 bit tadi menjadi 4 kelompok yang masing-masing beranggotakan 6 bit.
+- Setiap kelompok sekarang punya 2^6 kemungkinan susunan bit, berarti ada 2^6 = 64 karakter yang tersedia untuk merepresentasikan 6 bit ini. Petakan setiap kelompok dengan karakter yang terdapat dalam tabel base64.
 
 Base64 disusun oleh 64 karakter yang dimana karakternya berdasarkan RFC 1421 yang terdiri dari (A-Z, a-z, 0-9, +, /) Sehingga totalnya 64. Ditambah satu karakter khusus untuk padding byte yaitu “=”. Bila dalam kelompok 3-byte itu, satu byte terakhir hanya berisi padding bit, maka satu karakter “=” ditambahkan. Bila dua, maka dua karaker “=” (menjadi “==”)
 
@@ -61,25 +61,21 @@ Jika pada terakhir terdapat sekelompok karakter yang dimiliki tidak bernilai 3By
 Base 32 pada dasarnya sama seperti base 64. Hanya saja pada base 32 menggunakan susunan 32 karakter yang terdiri dari (A-Z, 2-7) ditambah 1 karakter khusus untuk padding byte yaitu “=”. Ini merupakan standar yang sudah didefinisikan dari RFC 4648. 0 dan 1 dilewati karena adanya kemiripan dengan huruf O dan l.
 
 > **Cara kerja BASE 32**
-
 > -	Kelompokkan pesan setiap 5 karakter (5byte = 40 bit). Bila terdapat sisa di akhir, tambahkan (padding) bit 0 sehingga panjangnya genap 40 bit.
  - Pecah 40 bit tadi menjadi 8 kelompok yang masing-masing beranggotakan 5 bit.
  - Setiap kelompok sekarang punya 2^5 kemungkinan susunan bit, berarti ada 2^5 = 32 karakter yang tersedia untuk merepresentasikan 5 bit ini. Petakan setiap kelompok dengan karakter yang terdapat dalam tabel base32.
 
 <img src="https://raw.githubusercontent.com/Johansentosa/IRK-img/master/contohB32.PNG">
 
-<p>
-<div align="center">
 ![Alt text](https://raw.githubusercontent.com/Johansentosa/IRK-img/master/tabel%20base32.PNG "tabel indeks BASE32")
-<br>
-</div></p>
+
 <br>
 Untuk penggunaan padding juga sama seperti pada BASE 64. Contohnya bisa dilihat di bawah ini
 <p>
 <div align="center">
 <img src="https://raw.githubusercontent.com/Johansentosa/IRK-img/master/paddingB32.PNG">
 </div></p>
-
+<br>
 ### BASE 64 vs BASE 32
 
 Base64 dan Base32 memiliki kelebihan dan kelemahannya masing-masing. Base64 memiliki jumlah karakter yang dapat dipakai yang lebih banyak. Sehingga kemungkinan bisa dikatakan akan lebih aman jika diencode menggunakan Base64. Selain itu representasi Base32 akan memakan 20% lebih banyak memory dibandingkan dengan Base64. Hal ini karena Base32 mengkodekan 5 bytes menjadi 8 karakter, Base64 mengkodekan 3 bytes menjadi 4 karakter.
