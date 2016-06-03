@@ -14,6 +14,7 @@ categories: tugas
 
 In a simple form, to commit this attack we must inject a Trojan Horse that can modify the compiler binary so that whatever program is compiled by the compiler (including and especially important things such as login web page and password check software) it will inject the attacker's backdoor code in the executable.
 Usually, as a normal programmer that may notice something strange in his/her program, we will get this around with just recompiling the compiler (desperate need calls for desperate measure. Honestly, i've never done it at all. This is just what the scenario says). And so it ended. The compiler is now clean and ready to use. The bad guy's plan now falls horribly and now we can laugh and teach him an aesop or two about a power of friendship and we can safely take him to the good side. Nope. This will not go this easy.
+
 How's this for a little twist; [Whenever the compiler is itself compiled, it emits the code to insert malicious code into various programs, including itself] (https://www.schneier.com/blog/archives/2006/01/countering_trus.html). 
 
 # How do repel this attack ?
