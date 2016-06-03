@@ -7,7 +7,8 @@ categories: tugas
 ---
 
 
-# Penyelesaian *Traveling Salesperson Problem* dengan Berbagai Algoritma  
+# Penyelesaian *Traveling Salesperson Problem* dengan Berbagai Algoritma
+
 #### Oleh Sri Umay N.S. / 13514007
 
 <br>
@@ -27,8 +28,11 @@ TSP merupakan salah satu permasalah yang dikategoritan dalam permasalahan NP dan
 Untuk menyelesaikan TSP ada berbagai algoritma yang dapat digunakan, antara lain :
 
 * [Algoritma *Brute Force*] (#alg_bruteforce)
+
 * [Algoritma *Greedy*] (#alg_greedy)
+
 * [Algoritma *Branch and Bound*] (#alg_bnb)
+
 * [*Dynamic Programming*] (#alg_dprog)
 
 
@@ -56,7 +60,7 @@ Algoritma *brute force* adalah algoritma dengan implementasi paling sederhana. P
 Penyelesaian denga cara ini sangatlah mahal karena harus mengenumerasi semua kemungkinan yang bahkan kemungkinan terburuk sekalipun, sehingga untuk n buah simpul (kota), kemungkinan jalur yang dienumerasi bisa mencapai n! jalur, sehingga kompleksitas untuk menyelesaikan TSP dengan algoritma *brute force* ini bernilai faktorial atau O(n!). Tentu penyelesaian persoalan TSP dengan algoritma *brute force* bukanlah ide yang baik karena kompleksitasnya sangat besar. Misal untuk menyelesaikan permasalan TSP dengan n buah kabupaten/kota di Jawa Timur saja, yaitu 29 kabupaten dan 9 kota, kompleksitas programnya menjadi luar biasa besar dan sangat tidak efisien. Namun untuk menyelesaikan permasalahan sederhana seperti contoh persoalan diatas yang hanya terdiri dari 4 kota, penyelesaian dengan algortima brute force masih sangat mungkin untuk dilakukan. 
 
 Berikut adalah langkah penyelesaiannya.
-* ###### Enumerasi seluruh kemungkinan jalur
+* #### Enumerasi seluruh kemungkinan jalur
   Langkah pertama yang dari penyelesaian dengan cara *brute force* adalah mengenumerasi semuan kemungkinan jalur pada graf yang dimulai dari simpul A, melewati seluruh kota selain A tepat sekali, dan kembali ke A. Selain mengenumerasi setiap jalur, jarak total dari jalur tersebut juga dihitung untuk menentukan jalur mana yang paling optimal, jarak total seluruh jalur akan dibandingkan.
 
   Jalur yang mungkin | Perhitungan Jarak | Jarak total
@@ -68,7 +72,7 @@ Berikut adalah langkah penyelesaiannya.
   A > D > B > C > A|35 + 34 + 30 + 42|151
   A > D > C > B > A|35 + 12 + 30 + 20|97
 
-* ###### Cari jalur dengan jarak total terkecil
+* #### Cari jalur dengan jarak total terkecil
   Setelah diketahui seluruh jalur yang mungkin beserta jaraknya, maka tinggal mencari jalur mana yang memiliki jarak paling kecil diantara semua jalur. Setelah ditemukan jalur dengan jarak terkecil, maka jalur tersebut adalah jalur yang merupakan solusi persoalan TSP di atas.
 
   Untuk persoalan di atas, dari tabel dapat dilihat bahwa jalur dengan jarak terkecil adalah jalur A>B>C>D>A dan A>D>C>B>A, maka kedua jalur tersebut adalah solusi dari persoalan.
@@ -99,14 +103,14 @@ Maka solusi dari persoalan dengan algortima *greedy* tersebut adalah jalur A>B>C
 
 ### <a name="alg_bnb"></a>3. Algoritma *Branch and Bound*
 Selain dengan kedua algoritma yang telah dijelaskan diatas, penyelesaian TSP juga dapat dilakukan dengan algoritma *branch and bound*.
-Algoritma *branch and bound* adalah algoritma yang merupakan perpaduan antara algoritma *greedy* dengan algoritma *Breadth First Search*(BFS). Proses penyelesaian dengan algoritma *branch and bound* biasanya dimodelkan dengan menggunakan pohon. Dengan simpul pohon menyimpan nilai sementara dan sisi pohon menunjukkan rute yang dipilih untuk dilewati dalam pencarian. Karakteristik dari penyelesaian dengan algoritma *branch and bound* ini adalah adanya *bound* yang menjadi pembatas antara solusi yang mungkin dengan solusi yang tidak mungkin. Jadi dalam perjalanan pencarian, jiaka suatu nilai sementara melebihi *bound* (bisa lebih kecil atau lebih besar, tergantung persoalan), maka pencarian pada rute itu akan dihentikan karena dpata dipastika tidak akan menuju ke solusi. Dengan metode ini, kompleksitas algoritma untuk mnyelesaikna TSP ini dapat jauh diefienkan dibandingkan dengan penyelesaian menggunakan algoritma *brute force*. selain itu hasil yang didapat juga pasti optimal, sebab algortima *branch and bound* ini dapat mencari semua kemungkinan solusi. Jika suatu solusi ditemukan, solusi tersebut akan menjadi nilai *bound* yang baru dan pencarian solusi akan dialnutkan hingga semua kemungkinan yang mengarah ke solusi sudah diperiksa seluruhnya. Dan apabila ditemukan solusi baru dengan nilai yang lebih optimal, solusi sebelumnya akan dibatalkan (dalam pemodelan dengan pohon, simpul solusi yang tidak optimal akan 'dibunuh'). Diakhir pencarian, simpul daun dari pohon yang masih 'hidup' merupakan solusi dari persoalan.
+Algoritma *branch and bound* adalah algoritma yang merupakan perpaduan antara algoritma *greedy* dengan algoritma *Breadth First Search*(BFS). Proses penyelesaian dengan algoritma *branch and bound* biasanya dimodelkan dengan menggunakan pohon. Dengan simpul pohon menyimpan nilai sementara dan sisi pohon menunjukkan rute yang dipilih untuk dilewati dalam pencarian. Karakteristik dari penyelesaian dengan algoritma *branch and bound* ini adalah adanya *bound* yang menjadi pembatas antara solusi yang mungkin dengan solusi yang tidak mungkin. Jadi dalam perjalanan pencarian, jiaka suatu nilai sementara melebihi *bound* (bisa lebih kecil atau lebih besar, tergantung persoalan), maka pencarian pada rute itu akan dihentikan karena dpata dipastikan tidak akan menuju ke solusi. Dengan metode ini, kompleksitas algoritma untuk mnyelesaikna TSP ini dapat jauh diefisienkan dibandingkan dengan penyelesaian menggunakan algoritma *brute force*. selain itu hasil yang didapat juga pasti optimal, sebab algortima *branch and bound* ini dapat mencari semua kemungkinan solusi. Jika suatu solusi ditemukan, solusi tersebut akan menjadi nilai *bound* yang baru dan pencarian solusi akan dialnutkan hingga semua kemungkinan yang mengarah ke solusi sudah diperiksa seluruhnya. Dan apabila ditemukan solusi baru dengan nilai yang lebih optimal, solusi sebelumnya akan dibatalkan (dalam pemodelan dengan pohon, simpul solusi yang tidak optimal akan 'dibunuh'). Diakhir pencarian, simpul daun dari pohon yang masih 'hidup' merupakan solusi dari persoalan.
 
-Berikut adalah tahapan untuk menyelesaikan persoalan TSP dengan algoritma *branch and bound*. Untuk lebih mudahnya, akan digunakan conto soal seperti pada penjelasan algoritma-algoritma sebelumnya.
+Berikut adalah tahapan untuk menyelesaikan persoalan TSP dengan algoritma *branch and bound*. Untuk lebih mudahnya, akan digunakan contoh soal seperti pada penjelasan algoritma-algoritma sebelumnya.
 
-* ###### Menentukan *bound* dan fungsi pembatas untuk *bound*
-  Fungsi pembatas adalah fungsi untuk menghitung apakah bobot sementara sudah melebihi *bound* atau belum. Dengan fungsi pembatas ini proses pencarian yang terindikasi tidak akan menemui solusi akan langsung dihentikan dan mencari alternatif solusis lain.
+* #### Menentukan *bound* dan fungsi pembatas untuk *bound*
+  Fungsi pembatas adalah fungsi untuk menghitung apakah bobot sementara sudah melebihi *bound* atau belum. Dengan fungsi pembatas ini proses pencarian yang terindikasi tidak akan menemui solusi akan langsung dihentikan dan mencari alternatif solusi lain.
 
-  Untuk contoh persoalan TSP diatas, fungsi pembtas yang bisa digunakan adalah dengan menggunakan bobot tur lengkap. Pertama, menentukan *bound*. Nilai *bound* merupakan nilai terkecil dari seluruh kemungkinan sisi dari graf. Untuk menghubungkan setiap simpul, maka setiap simpul harus bersisian dengan 2 sisi. Maka untuk mnehitung bobot tur lengkap, unutk setia simpul, cari 2 sisi dengan bobot paling kecil, kemudian jumlahkan 2 sisi-sisi terkecil dari setiap simpul lalu hasilnya dibagi 2.
+  Untuk contoh persoalan TSP diatas, fungsi pembtas yang bisa digunakan adalah dengan menggunakan bobot tur lengkap. Pertama, menentukan *bound*. Nilai *bound* merupakan nilai terkecil dari seluruh kemungkinan sisi dari graf. Untuk menghubungkan setiap simpul, maka setiap simpul harus bersisian dengan 2 sisi. Maka untuk menghitung bobot tur lengkap, untuk setiap simpul, cari 2 sisi dengan bobot paling kecil, kemudian jumlahkan 2 sisi-sisi terkecil dari setiap simpul lalu hasilnya dibagi 2.
   
   Simpul | Dua sisi terkecil yang bersisian dengan simpul
   :---:|:---:
@@ -115,13 +119,13 @@ Berikut adalah tahapan untuk menyelesaikan persoalan TSP dengan algoritma *branc
   C | BC dan CD
   D | AD dan CD
   
-  Maka nilai bobot tur lengkapnya adalah (AB+AD+AB+BC+BC+CD+AD+CD)/2 atau sama dengan 97. Nilai tersebut juga merupakan nilai *bound*.
+  Maka nilai bobot tur lengkapnya adalah (AB+AD+AB+BC+BC+CD+AD+CD)/2 atau sama dengan 96,5. Nilai tersebut juga merupakan nilai *bound*.
  
   Selanjutnya, untuk menghitung fungsi pembatas setiap memilih satu jalur baru, jalur tersebut harus diiikutkan dalam perhitungan meskipun bukan salah satu dari 2 sisi terkecil yang bersisian dengan simpul. Misal simpul sekarang adalah simpul A, dan jalur AC telah dipilih, makan simpul yang bersisian dengan simpul A unutk dihitung pada fungsi pembatas buakan AB dan AD, melainkan AB dan AC.
   
-* ##### Bentuk pohon pencarian 
+* #### Bentuk pohon pencarian 
 
-  Untuk membentuk pohon pencarian, akar dari pohon merupakan awal perjalanan yaitu dari simpul A dengan *cost* sama dengan bound yaitu 97. Selanjutnya, 
+  Untuk membentuk pohon pencarian, akar dari pohon merupakan awal perjalanan yaitu dari simpul A dengan *cost* sama dengan bound yaitu 96,5. Selanjutnya, 
   
     1. Bangkitkan simpul dengan memilih setiap sisi yang bersisian dengan simpul akar, unutk setiap simpul yang dibangkitkan pada pohon keputusan, hitung kembali nilai fungsi pembatas dengan jalur yang telah dipilih sebagai cost dari simpul.
     
@@ -133,7 +137,7 @@ Berikut adalah tahapan untuk menyelesaikan persoalan TSP dengan algoritma *branc
 
   <img src="https://raw.githubusercontent.com/sriumayns/assestArtikel/master/pohonbnb.png" alt="Pohon pencarian solusi" heigth="300" width="400">
   
-  Dari gambar tersebut dapat dilihat bahwa jalur solusinya adalah jalur yang melewati simpul B>C>D dan D>C>B, maka jalur solusi dari persoalan diatas adalah A>B>C>D>A dan A>D>C>B>A
+  Dari gambar tersebut dapat dilihat bahwa jalur solusinya adalah jalur yang melewati simpul B>C>D dan D>C>B, maka jalur solusi dari persoalan diatas adalah A>B>C>D>A dan A>D>C>B>A dengan bobot total 97.
   
 <br>
 
