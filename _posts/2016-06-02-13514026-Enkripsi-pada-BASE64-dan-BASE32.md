@@ -9,7 +9,7 @@ categories: tugas
 
 ---
 
-By:  Johan 13514026
+By:  Johan 13514026 v3.0
 
 ---
 
@@ -25,7 +25,7 @@ Biasanya enkripsi dan dekripsi ini banyak dipakai dalam pengiriman pesan. Enkrip
 
 Istilah Base64 berasal dari konten pengkodean MIME tertentu.
 
-> **Cara kerja BASE 64**
+
 > -	Kelompokkan pesan setiap 3 karakter (3byte = 24 bit). Bila terdapat sisa di akhir, tambahkan (padding) bit 0 sehingga panjangnya genap 24 bit.
 > - Pecah 24 bit tadi menjadi 4 kelompok yang masing-masing beranggotakan 6 bit.
 > - Setiap kelompok sekarang punya 2^6 kemungkinan susunan bit, berarti ada 2^6 = 64 karakter yang tersedia untuk merepresentasikan 6 bit ini. Petakan setiap kelompok dengan karakter yang terdapat dalam tabel base64.
@@ -40,6 +40,7 @@ Base64 disusun oleh 64 karakter yang dimana karakternya berdasarkan RFC 1421 yan
 contoh penggunaan base64 dalam melakukan encoding karakter
 
 > _Plaintext_ = "ilmu rekayasa komputasi"
+>
 > Hasil yang didapatkan = "aWxtdSByZWtheWFzYSBrb21wdXRhc2k="
 
 ![](https://raw.githubusercontent.com/Johansentosa/IRK-img/master/Capture.PNG)
