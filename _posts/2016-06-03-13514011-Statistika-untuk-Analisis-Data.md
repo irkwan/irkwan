@@ -33,16 +33,16 @@ categories: tugas
 * [Referensi](#referensi)
 
 ## Pendahuluan
-Statistika merupakan ilmu pengetahuan yang mempelajari bagaimana merencanakan, mengumpulkan, menganalisis, menginterpretasi, dan mempresentasikan data. Berdasarkan kegiatannya, statistika dibagi menjadi dua bagian, yaitu statistika deskriptif (statistika deduktif) dan statistika inferensi (statistika induktif). Statistika deskriptif adalah kegiatan statistika tentang pengumpulan, penyajian, penyderhanaan, dan penentuan ukuran-ukuran khusus dari suatu data tanpa penarikan kesimpulan. Statistika inferensi adalah kegiatan statistika tentang penarikan kesimpulan dan pengambilan keputusan dari suatu data yang ada. 
+Statistika merupakan ilmu pengetahuan yang mempelajari bagaimana merencanakan, mengumpulkan, menganalisis, menginterpretasi, dan mempresentasikan data. Berdasarkan kegiatannya, statistika dibagi menjadi dua bagian, yaitu statistika deskriptif (statistika deduktif) dan statistika inferensi (statistika induktif). Statistika deskriptif adalah kegiatan statistika tentang pengumpulan, penyajian, penyederhanaan, dan penentuan ukuran-ukuran khusus dari suatu data tanpa penarikan kesimpulan. Statistika inferensi adalah kegiatan statistika tentang penarikan kesimpulan dan pengambilan keputusan dari suatu data yang ada. 
 
 Salah satu kegunaan dari mempelajari statistika adalah untuk analisis data. Dengan menganalisis data, kita mampu menyimpulkan/memperoleh suatu informasi dari suatu data. Misalnya, jika kita ingin mengetahui manakah algoritma yang lebih cepat dalam melakukan pengurutan antara algoritma insertion dan selection. Seperti yang kita ketahui algoritma insertion dan selection memiliki kompleksitas waktu yang sama yaitu O(n<sup>2</sup>). Dengan memperoleh data waktu eksekusi untuk masing-masing algoritma untuk beberapa jumlah data yang ingin diurutkan, kita dapat mengetahui sebenarnya algoritma mana yang lebih cepat dengan beberapa metode dan uji dalam statistika. Pada artikel ini akan dibahas mengenai beberapa metode yang umumnya digunakan dalam melakukan analisis data.
 
 ## Statistika Parametrik
 Uji parametrik digunakan ketika data yang ada memenuhi beberapa asumsi. Jika asumsi ada yang tidak terpenuhi, tetapi tetap digunakan uji parametrik maka hasil yang didapat tidak akurat atau bias. Berikut beberapa asumsi pada uji parametrik:
-- Data berdistribusi normal
-- Data memiliki varian yang homogen
-- Jenis data rasio atau interval
-- Hubungan antar data independent
+<br>1. Data berdistribusi normal
+<br>2. Data memiliki varian yang homogen
+<br>3. Jenis data rasio atau interval
+<br>4. Hubungan antar data independent
 
 ### ANOVA
 Metode ANOVA (Analysis of Variance) digunakan untuk mengetahui kesamaan rataan dari beberapa populasi. Metode ANOVA dapat diterapkan ketika data yang ada berdistribusi normal, memiliki variansi yang sama, dan sampel tidak berhubungan satu dengan yang lainnya. Prosedurnya dapat dilihat pada slide [ANOVA](https://core.ac.uk/download/files/379/11707013.pdf) halaman 3-8.
@@ -58,9 +58,9 @@ Uji-F digunakan untuk menguji pengaruh semua variabel bebas secara bersama-sama 
 
 ## Statistika Non-Parametrik
 Uji parametrik digunakan ketika data yang ingin diuji tidak memenuhi asumsi pada uji parametrik. Uji non-parametrik hanya memiliki sedikit batasan, beberapa diantaranya adalah:
-- Data bersifat independent, kecuali data berpasangan
-- Jenis data dapat ordinal atau nominal
-- Jumlah sampel yang digunakan sedikit, tidak sebanyak pada uji parametrik
+<br>1. Data bersifat independent, kecuali data berpasangan
+<br>2. Jenis data dapat ordinal atau nominal
+<br>3. Jumlah sampel yang digunakan sedikit, tidak sebanyak pada uji parametrik
 
 ### Uji Ranking Bertanda Wilcoxon
 Uji Ranking Bertanda Wilcoxon digunakan untuk menguji kondisi (variabel) pada sampel yang berpasangan. Uji ini menggunakan median. Prosedurnya dapat dilihat pada buku [Catatan Kuliah Statistika Non-Parametrik](https://www.dropbox.com/sh/6a0th27cft94cp5/AAAKLrf9A2ZhQy-Nx6v3qrhja/Catatan%20Kuliah%20Statistika%20Non%20Parametrik.pdf?dl=0) halaman 7-8.
