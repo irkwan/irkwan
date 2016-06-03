@@ -70,9 +70,8 @@ Base 32 pada dasarnya sama seperti base 64. Hanya saja pada base 32 menggunakan 
 
 <p>
 <div align="center">
-![](https://raw.githubusercontent.com/Johansentosa/IRK-img/master/tabel%20base32.PNG "tabel indeks BASE32")
+![Alt text](https://raw.githubusercontent.com/Johansentosa/IRK-img/master/tabel%20base32.PNG "tabel indeks BASE32")
 <br>
-tabel indeks BASE32
 </div></p>
 <br>
 Untuk penggunaan padding juga sama seperti pada BASE 64. Contohnya bisa dilihat di bawah ini
