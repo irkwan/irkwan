@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Penyelesaian *Traveling Salesperson Problem* dengan Berbagai Algoritma
+title:      Penyelesaian Traveling Salesperson Problem dengan Berbagai Algoritma
 date:       2016-06-02
 summary:    Silakan klik pada judul untuk melihat isi artikel
 categories: tugas
