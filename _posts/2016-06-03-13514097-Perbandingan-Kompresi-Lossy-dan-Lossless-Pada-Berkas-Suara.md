@@ -1,3 +1,11 @@
+---
+layout:     post
+title:      Perbandingan Kompresi Lossy dan Lossless pada Berkas Suara
+date:       2016-06-03
+summary:    Silakan klik pada judul untuk penjelasan tugas
+categories: tugas
+---
+
 ___
 # Perbandingan Kompresi Lossy dan Lossless pada Berkas Suara #
 ___
