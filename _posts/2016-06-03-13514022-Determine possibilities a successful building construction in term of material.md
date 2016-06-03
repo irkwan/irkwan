@@ -64,7 +64,7 @@ The transition:
 - δ(q, w, c) = δ(q, e)
 - δ(q, e, Zo) = δ(p, e) -> acceptable state.
 
-![PDA](https://photos-6.dropbox.com/t/2/AABku9bQtoxxfQGU1UCQNNlGAsbryXEKXzwI2cG2zq51oQ/12/308616387/jpeg/256x256/1/_/1/2/DFA.jpg/EIPtn68CGLEFIAIoAg/MUJWnCuOHLBNPFqYk8yDAVv9MU3nRNm_T_NgRYFKiRE?size_mode=3&size=2048x1536)
+![PDA](https://www.dropbox.com/s/lwtaadhuw2npifo/DFA.jpg?dl=0)
 
 
 ## Conclusion
