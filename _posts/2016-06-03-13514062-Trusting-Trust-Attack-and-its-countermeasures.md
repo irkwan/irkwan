@@ -17,7 +17,7 @@ Usually, as a normal programmer that may notice something strange in his/her pro
 
 How's this for a little twist; [Whenever the compiler is itself compiled, it emits the code to insert malicious code into various programs, including itself](https://www.schneier.com/blog/archives/2006/01/countering_trus.html). 
 
-## How do repel this attack ?
+## How can we repel this attack ?
 
 One solution for this is published by David A. Wheeler which explains a technique named [Diverse Double-Compiling](http://www.dwheeler.com/trusting-trust/). Here's Wheeler's trick.
 
