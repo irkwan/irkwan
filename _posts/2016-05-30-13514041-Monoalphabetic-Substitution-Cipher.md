@@ -37,11 +37,11 @@ teks hingga akhir , huruf A akan selalu diganti dengan huruf D.
 Berikut ini adalah berbagai algoritma _cipher_ sederhana yang dipakai dan termasuk dalam 
 _Monoalphabetic Cipher_ :
 
-* Caesar Cipher
-* Atbash Cipher
-* Baconian Cipher
-* Polybius Square
-* Keyword Cipher
+* [Caesar Cipher](#caesar-cipher)
+* [Atbash Cipher](#atbash-cipher)
+* [Baconian Cipher](#baconian-cipher)
+* [Polybius Square](#polybius-square)
+* [Keyword Cipher](#keyword-cipher)
 
 ### Caesar Cipher
 
