@@ -14,9 +14,15 @@ categories: tugas
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Max_flow.svg/330px-Max_flow.svg.png">
 
-Gambar 1. Graf Berarah dan Berbobot
+[Gambar 1. Graf Berarah dan Berbobot](https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Max_flow.svg/330px-Max_flow.svg.png)
 
-<br>
+
+
+
+
+
+
+
 
 Graf di atas menunjukan aliran yang berasal dari suatu sumber (*source*) **s** ke penampungan (*sink*) **t** dengan melewati keempat simpul, yaitu **o**, **p**, **q**, dan **r**. Anggap sisi-sisi pada graf sebagai pipa. Setiap pipa memiliki bobot. Bobot tersebut menunjukan jumlah aliran (*flow*) yang telah melewati pipa dari sumber menuju penampungan, serta kapasitas maksimum aliran (*capacity*) yang dilewati oleh sebuah pipa. Kedua bobot tersebut dituliskan dengan cara jumlah aliran di sebelah kiri dan kapasitas dituliskan sebelah kanan, keduanya dibatasi dengan garis miring ‘/’ atau garis lurus ‘|’.
 
@@ -36,13 +42,13 @@ Oleh karena itu, dibuatlah algoritma-algoritma yang dapat memecahkan permasalaha
 
 ---
 
-####1. [Algoritma Ford-Fulkerson] (#algoritma-ford-fulkerson)
+####1. [Algoritma Ford-Fulkerson](#algoritma-ford-fulkerson)
 
-####2. [Algoritmma Edmonds-Karp] (#algoritma-edmonds-karp)
+####2. [Algoritmma Edmonds-Karp](#algoritma-edmonds-karp)
 
-####3. [Algoritma Dinic] (#algoritma-dinic)
+####3. [Algoritma Dinic](#algoritma-dinic)
 
-####4. [Algoritma *Push-Relabel*] (#algoritma-push-relabel)
+####4. [Algoritma *Push-Relabel*](#algoritma-push-relabel)
 
 ---
 
@@ -64,13 +70,13 @@ Langkah algoritma tesebut pada pseucode dituliskan sebagai berikut:
 
 <img src="http://courses.ics.hawaii.edu/ReviewICS311/morea/200.maximum-flow/fig/code-Ford-Fulkerson.jpg">
 
-Gambar 2. *Pseudocode* Algoritma Ford-Fulkerson
+[Gambar 2. *Pseudocode* Algoritma Ford-Fulkerson](http://courses.ics.hawaii.edu/ReviewICS311/morea/200.maximum-flow/fig/code-Ford-Fulkerson.jpg)
 
 Contoh pengimplementasian Algoritma Ford-Fulkerson pada pemecahan *maximum-flow problem* digambarkan pada ilustrasi di bawah ini.
 
 <img src="http://staff.ustc.edu.cn/~csli/graduate/algorithms/book6/595_a.gif">
 
-Gambar 3. Contoh pengimplementasian Algoritma Ford-Fulkerson pada pemecahan *maximum-flow problem*
+[Gambar 3. Contoh pengimplementasian Algoritma Ford-Fulkerson pada pemecahan *maximum-flow problem*](http://staff.ustc.edu.cn/~csli/graduate/algorithms/book6/595_a.gif)
 
 <br>
 
@@ -209,10 +215,10 @@ Demikian algoritma-algoritma pemecahan *maximum-flow problem*, yakni algoritma F
 #### Referensi
 * [*Network-Flow Problems* by Stanford University](https://web.stanford.edu/class/cs97si/08-network-flow-problems.pdf)
 
-* [*Ford-Fulkerson Algorithm for Maximum Problem* by GeeksforGeeks.org] (http://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/)
+* [*Ford-Fulkerson Algorithm for Maximum Problem* by GeeksforGeeks.org](http://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/)
 
-* [*The Edmonds-Karp Max-Flow Algorithm* by Cornell University] (http://www.cs.cornell.edu/courses/cs4820/2012sp/handouts/edmondskarp.pdf)
+* [*The Edmonds-Karp Max-Flow Algorithm* by Cornell University](http://www.cs.cornell.edu/courses/cs4820/2012sp/handouts/edmondskarp.pdf)
 
 * [*Algoritma Dinic untuk Masalah Arus Maksimum* by Agung Yudhianto of Institut Pertanian Bogor](http://repository.ipb.ac.id/bitstream/handle/123456789/33525/G03ayu2.pdf?sequence=1&isAllowed=y)
 
-* [*Push-Relabel Approach to the Maximum Flow Problem* by Nilay Vaish of topcoder] (https://www.topcoder.com/community/data-science/data-science-tutorials/push-relabel-approach-to-the-maximum-flow-problem/)
+* [*Push-Relabel Approach to the Maximum Flow Problem* by Nilay Vaish of topcoder](https://www.topcoder.com/community/data-science/data-science-tutorials/push-relabel-approach-to-the-maximum-flow-problem/)
