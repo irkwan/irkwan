@@ -12,16 +12,14 @@ categories: tugas
 
 ## Daftar Isi
 
-1. [Definisi](#definisi)
-2. [Algoritma Cipher yang digunakan](#algoritma-cipher-yang-digunakan)
-
-  1. [Caesar Cipher](#caesar-cipher)
-  2. [Atbash Cipher](#atbash-cipher)
-  3. [Baconian Cipher](#baconian-cipher)
-  4. [Polybius Square](#polybius-square)
-  5. [Keyword Cipher](#keyword-cipher)
-  
-3. [Referensi](#referensi)
+* [Definisi](#definisi)
+* [Algoritma Cipher yang digunakan](#algoritma-cipher-yang-digunakan)
+  * [Caesar Cipher](#caesar-cipher)
+  * [Atbash Cipher](#atbash-cipher)
+  * [Baconian Cipher](#baconian-cipher)
+  * [Polybius Square](#polybius-square)
+  * [Keyword Cipher](#keyword-cipher) 
+* [Referensi](#referensi)
 
 ---
 
@@ -70,6 +68,7 @@ _Atbash Cipher_ juga mudah sekali dipecahkan dan membutuhkan usaha yang lebih se
 
 Nama _Baconian Cipher_ diambil dari nama penemunya yaitu Sir Francis Bacon. Pada _Baconian Cipher_, setiap alfabet digantikan dengan 5 karakter berurutan.
 Pada algoritma aslinya, 5 karakter ini terdiri dari A dan B. Berikut ini adalah contoh tabel Baconian dan contoh bagaimana cara kerja _cipher_ ini :
+
 Tabel Baconian Cipher :
 
 ![BaconianTable](https://raw.githubusercontent.com/varian97/assets/master/images/baconian_table.PNG)
@@ -84,6 +83,7 @@ Untuk memecahkan _Baconian Cipher_ dibutuhkan usaha lebih dibandingkan 2 Cipher 
 
 _Polybius Square_ adalah sebuah algoritma penyandian dengan menggunakan matriks untuk men-enkripsi sebuah alfabet menjadi 2 _cipher text_ bisa berupa angka maupun
 alfabet lain. Dalam pembahasan ini, penulis akan menggunakan penyandian dengan angka.
+
 Perhatikan matriks contoh berikut :
 
 ![polybiustable](https://raw.githubusercontent.com/varian97/assets/master/images/Polybius_table.PNG)
