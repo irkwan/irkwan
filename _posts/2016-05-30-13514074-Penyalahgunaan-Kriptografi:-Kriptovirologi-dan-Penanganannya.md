@@ -37,13 +37,13 @@ Berikut adalah ilustrasi kriptografi simetris :
 
 Pada pengiriman informasi antar dua pihak, ada suatu kunci yang digunakan bersama. Kunci tersebut digunakan untuk menjaga kerahasiaan informasi. Hal ini menyebabkan kedua pihak harus memiliki akses terhadap kunci rahasia tersebut. Contoh dari algoritma kriptografi simetris adalah Twofish, Serpent, AES, dan IDEA. 
 
-#### Kriptografi dengan public-key
-Kriptografi simetris memiliki kelemahan karena kunci enkripsi dan dekripsi yang sama. Hal ini menyebabkan kunci mudah diketahui oleh pihak lain sehingga mengurangi kerahasiaan informasi. Kelemahan ini diatasi pada kriptografi dengan public-key. Pada kriptogafi dengan public-key, digunakan dua kunci, yaitu public-key dan private-key. Public-key merupakan kunci yang digunakan untuk melakukan enkripsi, sementara private-key merupakan kunci yang digunakan untuk melakukan dekripsi. Jadi, semua orang bisa melakuka enkriipsi menggunakan public-key penerima, namun pesan tersebut hanya bisa didekripsi dengan private-key milik penerima. Public-key bisa diketahui oleh semua orang, sementara private-key hanya diketahui oleh penerima. Sementara pada kriptografi simetris, kunci harus diketahui oleh pengirim dan penerima. <br><br>
+#### Kriptografi dengan _public-key_
+Kriptografi simetris memiliki kelemahan karena kunci enkripsi dan dekripsi yang sama. Hal ini menyebabkan kunci mudah diketahui oleh pihak lain sehingga mengurangi kerahasiaan informasi. Kelemahan ini diatasi pada kriptografi dengan _public-key_. Pada kriptogafi dengan _public-key_, digunakan dua kunci, yaitu _public-key_ dan _private-key_. _Public-key_ merupakan kunci yang digunakan untuk melakukan enkripsi, sementara _private-key_ merupakan kunci yang digunakan untuk melakukan dekripsi. Jadi, semua orang bisa melakuka enkripsi menggunakan _public-key penerima_, namun pesan tersebut hanya bisa didekripsi dengan _private-key_ milik penerima. _Public-key_ bisa diketahui oleh semua orang, sementara _private-key_ hanya diketahui oleh penerima. Sementara pada kriptografi simetris, kunci harus diketahui oleh pengirim dan penerima. <br><br>
 
-Berikut adalah ilustrasi kriptografi dengan public-key :
+Berikut adalah ilustrasi kriptografi dengan _public-key_ :
 
 <img src="http://www.ooshutup.com/wp-content/uploads/2014/11/public_key_encryption.jpg"><br>
-Contoh dari algoritma kriptografi dengan public-key adalah RSA.
+Contoh dari algoritma kriptografi dengan _public-key_ adalah RSA.
 
 ### Virus Komputer
 Ada 3 jenis virus komputer yang sering menyebabkan gangguan, yaitu virus biasa, trojan, dan worms. **Virus biasa** adalah kode yang bisa menggandakan dirinya dan menginfeksi komputer tanpa sepengetahuan penggunanya. **Trojan** adalah program yang merupakan bagian dari program lain yang mengeksekusi perintah tanpa sepengetahuan pemilik program. **Worms** adalah komputer program yang bisa memperbanyak diri sendiri dan menggunakan suatu jaringan untuk mengirimkan salinan dirinya ke tempat lain. Untuk selanjutnya, virus mengacu pada ketiga hal ini. Virus yang mengandung dan menggunakan public-key adalah **kriptovirus**.
