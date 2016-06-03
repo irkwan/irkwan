@@ -5,7 +5,6 @@ date:       2016-06-03
 summary:    Membandingkan kelas kompleksitas.
 categories: tugas
 ---
-<br>
 ## Pendahuluan
 Artikel ini akan membahas kompleksitas dari beberapa permainan, yang umumnya merupakan permainan papan (board game) seperti tic-tac-toe, checkers, dan catur. Selain itu juga membahas kompleksitas komputasinya jika permainan tersebut digeneralisasi.
 <br>
