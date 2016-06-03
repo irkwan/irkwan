@@ -36,8 +36,6 @@ Non-deterministik Turing machine :
 | NP            | Time poly(n)        | Polinomial    |
 | NEXPTIME      | Time 2^(poly(n))    | Eksponensial  |
 
-<br>
-
 #### Kompleksitas Ruang
 Kompleksitas ruang menunjukan jumlah total memori yang dibutuhkan suatu komputer untuk menyelesaikan masalah komputasi dengan menggunakan algoritma tertentu.
 
@@ -91,7 +89,7 @@ Berdasarkan asumsi rata-rata branching factor sebesar 35 dan lama permainan sebe
 
 ## Permainan yang digeneralisasi
 Permainan yang digeneralisasi adalah permainan yang ukuran papan permainannya digeneralisasi sehingga mungkin berukuran berapapun.
-<br>
+
 1. Untuk permainan yang jumlah move nya sejumlah polinomial berdasarkan ukuran papan permainannya, menentukan kemungkinan menang untuk pemain pertama pada suatu posisi membutuhkan kompleksitas PSPACE-complete. Permainan yang termasuk PSPACE-complete misalnya tic-tac-toe.
 <br>
 <br>
