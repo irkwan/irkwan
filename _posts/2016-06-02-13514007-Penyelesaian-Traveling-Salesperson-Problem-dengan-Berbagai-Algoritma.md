@@ -131,7 +131,7 @@ Berikut adalah tahapan untuk menyelesaikan persoalan TSP dengan algoritma *branc
   
   Berikut adalah contoh pohon pencarian solusi yang dibentuk dari persoalan diatas.
 
-  <img src="https://github.com/sriumayns/assestArtikel/blob/master/pohonbnb.png" alt="Pohon pencarian solusi" heigth="300" width="400">
+  <img src="https://raw.githubusercontent.com/sriumayns/assestArtikel/master/pohonbnb.png" alt="Pohon pencarian solusi" heigth="300" width="400">
   
   Dari gambar tersebut dapat dilihat bahwa jalur solusinya adalah jalur yang melewati simpul B>C>D dan D>C>B, maka jalur solusi dari persoalan diatas adalah A>B>C>D>A dan A>D>C>B>A
   
