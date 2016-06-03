@@ -72,11 +72,11 @@ Nama _Baconian Cipher_ diambil dari nama penemunya yaitu Sir Francis Bacon. Pada
 Pada algoritma aslinya, 5 karakter ini terdiri dari A dan B. Berikut ini adalah contoh tabel Baconian dan contoh bagaimana cara kerja _cipher_ ini :
 Tabel Baconian Cipher :
 
-![BaconianTable](https://github.com/varian97/assets/blob/master/images/baconian_table.PNG)
+![BaconianTable](https://raw.githubusercontent.com/varian97/assets/master/images/baconian_table.PNG)
 
 dan berikut ini merupakan contoh penyandian kata "STRIKE NOW" dengan algoritma _Baconian Cipher_ :
 
-![BaconianExample](https://github.com/varian97/assets/blob/master/images/baconian_example.PNG)
+![BaconianExample](https://raw.githubusercontent.com/varian97/assets/master/images/baconian_example.PNG)
 
 Untuk memecahkan _Baconian Cipher_ dibutuhkan usaha lebih dibandingkan 2 Cipher sebelumnya, namun dengan _Cryptanalysis_ biasa _cipher_ ini dapat dipecahkan.
 
@@ -86,7 +86,7 @@ _Polybius Square_ adalah sebuah algoritma penyandian dengan menggunakan matriks 
 alfabet lain. Dalam pembahasan ini, penulis akan menggunakan penyandian dengan angka.
 Perhatikan matriks contoh berikut :
 
-![polybiustable](https://github.com/varian97/assets/blob/master/images/Polybius_table.PNG)
+![polybiustable](https://raw.githubusercontent.com/varian97/assets/master/images/Polybius_table.PNG)
 
 Sebagai contoh, huruf D akan dienkripsi menjadi 14 dsb. Sehingga penggunaannya :
 
