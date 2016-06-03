@@ -7,9 +7,6 @@ categories: tugas
 ---
 
 <br>
-## The Extended Boolean Model ##
-
-<br>
 ## Chapter 1, An Introduction to Information Retrieval ##
 
 Information Retrieval is a broad term that can be summarized as "taking  **thing**(s) that fullfill **criteria**(s) from **collection**". Even deciding which cereal box your cousin will like most for his 6th birthday party breakfast can be considered as a form of IR; however as an actual academic field of study its more formal definition is:
