@@ -6,15 +6,11 @@ summary: Silakan klik pada judul untuk detailnya
 categories: tugas
 ---
 
------
 
------
 
 **Oleh: Albertus Kelvin / 13514100**
 
------
-
------
+---------------
 
 ### Daftar isi
 
@@ -28,7 +24,7 @@ categories: tugas
 > * [Kesimpulan](#kesimpulan)
 > * [Referensi](#referensi)
 
------
+---------------
 
 Pernahkah Anda mengalami kesulitan saat ingin mengirim file? 
 
@@ -36,7 +32,6 @@ Kesulitan seperti apakah itu?
 
 Umumnya, bentuk masalah yang sering dihadapi adalah ukuran file yang melebihi batas ukuran yang diperbolehkan oleh suatu sistem. Salah satu contoh kasusnya adalah saat Anda ingin mengirim sebuah file gambar untuk dijadikan pengganti foto profil dari suatu media sosial, namun proses tersebut tidak berhasil dikarenakan sistem hanya mengijinkan file gambar dengan suatu ukuran maksimal tertentu. 
 
------
 
 ### <a name="bagaimana_solusi"></a> **Lalu, bagaimana solusinya?**
 
@@ -60,6 +55,8 @@ Menjawab persoalan tersebut, terdapat 2 jenis kompresi (pemampatan) data, yaitu 
 
 > * Teknik pemampatan dimana kasus kehilangan data yang kecil masih dapat diterima. Teknik ini juga dapat menggunakan algoritma tertentu untuk memangkasdetil data yang kurang penting agar ukurannya dapat dikecilkan.
 
+---------------
+
 #### <a name="apa_itu_jpeg"></a> **_Apa itu kompresi JPEG?_**
 
 JPEG yang merupakan kependekan dari **_Joint Photographic Experts Group_** adalah sebuah algoritma kompresi untuk file gambar yang berjenis _lossy data compression_. 
@@ -71,7 +68,7 @@ Berdasarkan jenis teknik kompresi yang diaplikasikan, algoritma kompresi JPEG in
 > * Algoritma ini memanfaatkan fakta bahwa manusia tidak dapat melihat warna pada frekuensi tinggi.
 > * Semua ruang lingkup warna dengan frekuensi tinggi tersebut akan dijadikan detil data yang dihilangkan selama proses pemampatan (tidak menjadi masalah dikarenakan adanya fakta pada poin pertama).
 
------
+---------------
 
 ### <a name="algoritma_jpeg"></a> **Algoritma JPEG**
 
@@ -95,7 +92,6 @@ Contoh pembagian gambar menjadi beberapa blok berukuran 8x8 pixels:
 
 Berikut beberapa metode yang digunakan di dalam algoritma JPEG:
 
-
 ####<a name="dct"></a> **_Discrete Cosine Transform (DCT)_**
 
 DCT merupakan sebuah metode untuk memisahkan file gambar menjadi bagian-bagian frekuensi yang berbeda dimana frekuensi kurang penting akan dibuang melalui kuantisasi dan frekuensi penting digunakan untuk mengambil gambar selama dekompresi. 
@@ -113,7 +109,7 @@ Transformasi DCT dalam bentuk dua dimensi direpresentasikan dalam persamaan seba
 </div>
 </p>
 
-_Dimana u,v=0,1,2,3,……………,N-1_
+_Dimana u,v=0,1,2,3,...,(N-1)_
 
  Inverse 2D-DCT tranformasi diberikan persamaan sebagai berikut :
 
@@ -125,7 +121,9 @@ _Dimana u,v=0,1,2,3,……………,N-1_
 
 _Dimana :_
 _D(u)=(1/N) ^1/2 untuk u=0_
-_D(u)=2(/N)^1/2 untuk u=1,2,3…….,(N-1)_
+_D(u)=2(/N)^1/2 untuk u=1,2,3,...,(N-1)_
+
+---------------
 
 #### <a name="kuantisasi"></a> **_Kuantisasi_**
 
@@ -138,6 +136,8 @@ Metode utama yang diimplementasikan dalam kuantisasi adalah semua langkah terten
 Oleh karena itu, dapat ditentukan suatu _range_ yang menunjukkan tingkat kualitas gambar, misalnya dari 1 sampai 100. Dalam asumsi batasan ini, dapat ditentukan suatu batasan lagi dimana nilai 1 memberikan kualitas gambar terendah dan kompresi tertinggi, sementara nilai 100 memberikan kualitas terbaik dan kompresi terendah. 
 
 Untuk mendapatkan matriks kuantisasi dengan tingkat kualitas yang lain, perkalian skalar matriks kuantisasi standar digunakan. Kuantisasi dicapai dengan membagi matriks citra ditransformasi oleh matriks kuantisasi yang digunakan. Nilai dari matriks yang dihasilkan kemudian dibulatkan. Dalam matriks, koefisien resultan terletak di dekat sudut kiri atas memiliki frekuensi yang lebih rendah, dimana mata manusia lebih sensitif terhadap frekuensi yang lebih rendah. Untuk frekuensi yang lebih tinggi akan dieliminasi. Hasil akhirnya adalah menggunakan nilai frekuensi yang lebih rendah untuk merekonstruksi gambar.
+
+---------------
 
 #### <a name="entropi_encoding"></a> **_Entropi Encoding_**
 
@@ -159,7 +159,7 @@ Prosedur _zig-zag scan_ yang diimplementasikan dapat berbentuk seperti di bawah 
 
 Akhir dari algoritma JPEG ini adalah menempatkan unsur-unsur kotak kecil koefisien dalam urutan yang wajar dari frekuensi yang terurut membesar. Karena frekuensi yang lebih tinggi lebih cenderung bernilai nol setelah proses kuantisasi, kelompok frekuensi tinggi ini lebih cenderung masuk ke dalam kelompok frekuensi dengan nilai nol pada hasil akhir dari vektor.
 
------
+---------------
 
 ### <a name="kesimpulan"></a> **Kesimpulan**
 
@@ -167,7 +167,7 @@ Akhir dari algoritma JPEG ini adalah menempatkan unsur-unsur kotak kecil koefisi
 
 > Selain itu, berdasarkan prosedur utama dalam algoritma JPEG yang mengimplementasikan teknik matriks DCT, kuantisasi, dan _Entropy Encoding_ dapat dilihat bahwa dengan membuat beberapa variasi nilai yang dijadikan sebagai pengali matriks, dapat mengubah kualitas dan ukuran file gambar.
 
------
+---------------
 
 ### <a name="referensi"></a> **Referensi**
 
