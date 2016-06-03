@@ -2,35 +2,35 @@
 layout:     post
 title:      Statistik untuk Analisis Data
 date:       2016-06-03
-summary:    13514011
+summary:    Micky Yudi Utama/13514011
 categories: tugas
 ---
 
 ## Daftar Isi
-1. [Pendahuluan](#pendahuluan)<br>
-2. [Statistika Parametrik](#statistika-parametrik)<br>
-  1. [ANOVA](#anova)<br>
-  2. [Korelasi Pearson](#korelasi-pearson)<br>
-  3. [Uji-T](#uji-t)<br>
-  4. [Uji-F](#uji-f)<br>
-3. [Statistika Non-Parametrik](#statistika-non-parametrik)<br>
-  1. [Uji Ranking Bertanda Wilcoxon](#uji-ranking-bertanda-wilcoxon)<br>
-  2. [Uji Mann Whitney](#uji-mann-whitney)<br>
-  3. [Uji Kruskal Wallis](#uji-kruskal-wallis)<br>
-  4. [Uji Kesamaan Variansi](#uji-kesamaan-variansi)<br>
-    1. [Uji Hartley](#uji-hartley)<br>
-    2. [Uji Bartlett](#uji-bartlett)<br>
-    3. [Uji Levene](#uji-levene)<br>
-  5. [Uji Cochran C](#uji-cochran-c)<br>
-  6. [Uji Komparansi Berganda](#uji-komparansi-berganda)<br>
-    1. [Uji Tukey](#uji-tukey)<br>
-    2. [Uji Duncan](#uji-duncan)<br>
-    3. [Uji Dunnett](#uji-dunnett)<br>
-  7. [Uji Ukuran Kebergantungan](#uji-ukuran-kebergantungan)<br>
-    1. [Korelasi Spearman](#korelasi-spearman)<br>
-    2. [Korelasi Kendall Tau](#korelasi-kendall-tau)<br>
-4. [Kesimpulan](#kesimpulan)<br>
-4. [Referensi](#referensi)<br>
+* [Pendahuluan](#pendahuluan)
+* [Statistika Parametrik](#statistika-parametrik)
+  * [ANOVA](#anova)
+  * [Korelasi Pearson](#korelasi-pearson)
+  * [Uji-T](#uji-t)
+  * [Uji-F](#uji-f)
+* [Statistika Non-Parametrik](#statistika-non-parametrik)
+  * [Uji Ranking Bertanda Wilcoxon](#uji-ranking-bertanda-wilcoxon)
+  * [Uji Mann Whitney](#uji-mann-whitney)
+  * [Uji Kruskal Wallis](#uji-kruskal-wallis)
+  * [Uji Kesamaan Variansi](#uji-kesamaan-variansi)
+    * [Uji Hartley](#uji-hartley)
+    * [Uji Bartlett](#uji-bartlett)
+    * [Uji Levene](#uji-levene)
+  * [Uji Cochran C](#uji-cochran-c)
+  * [Uji Komparansi Berganda](#uji-komparansi-berganda)
+    * [Uji Tukey](#uji-tukey)
+    * [Uji Duncan](#uji-duncan)
+    * [Uji Dunnett](#uji-dunnett)
+  * [Uji Ukuran Kebergantungan](#uji-ukuran-kebergantungan)
+    * [Korelasi Spearman](#korelasi-spearman)
+    * [Korelasi Kendall Tau](#korelasi-kendall-tau)
+* [Kesimpulan](#kesimpulan)
+* [Referensi](#referensi)
 
 ## Pendahuluan
 Statistika merupakan ilmu pengetahuan yang mempelajari bagaimana merencanakan, mengumpulkan, menganalisis, menginterpretasi, dan mempresentasikan data. Berdasarkan kegiatannya, statistika dibagi menjadi dua bagian, yaitu statistika deskriptif (statistika deduktif) dan statistika inferensi (statistika induktif). Statistika deskriptif adalah kegiatan statistika tentang pengumpulan, penyajian, penyderhanaan, dan penentuan ukuran-ukuran khusus dari suatu data tanpa penarikan kesimpulan. Statistika inferensi adalah kegiatan statistika tentang penarikan kesimpulan dan pengambilan keputusan dari suatu data yang ada. 
