@@ -18,14 +18,6 @@ categories: tugas
 
 
 
-
-
-
-
-
-
-Graf di atas menunjukan aliran yang berasal dari suatu sumber (*source*) **s** ke penampungan (*sink*) **t** dengan melewati keempat simpul, yaitu **o**, **p**, **q**, dan **r**. Anggap sisi-sisi pada graf sebagai pipa. Setiap pipa memiliki bobot. Bobot tersebut menunjukan jumlah aliran (*flow*) yang telah melewati pipa dari sumber menuju penampungan, serta kapasitas maksimum aliran (*capacity*) yang dilewati oleh sebuah pipa. Kedua bobot tersebut dituliskan dengan cara jumlah aliran di sebelah kiri dan kapasitas dituliskan sebelah kanan, keduanya dibatasi dengan garis miring ‘/’ atau garis lurus ‘|’.
-
 Dari graf tersebut di atas, akan dicari aliram maksimum yang mungkin dari sumber S ke penampungan T dengan syarat sebagai berikut:
 
 ```sh
@@ -40,7 +32,6 @@ Untuk mencari aliran maksimum pada graf tersebut bukanlah hal mudah. Harus diper
 
 Oleh karena itu, dibuatlah algoritma-algoritma yang dapat memecahkan permasalahan *maximum-flow* ini. Pada tulisan ini, akan dijelaskan lebih lanjut mengenai algoritma pemecahan *maximum-flow problem*. Algoritma yang akan dijabarkan pada tulisan kali ini adalah:
 
----
 
 ####1. [Algoritma Ford-Fulkerson](#algoritma-ford-fulkerson)
 
@@ -50,7 +41,6 @@ Oleh karena itu, dibuatlah algoritma-algoritma yang dapat memecahkan permasalaha
 
 ####4. [Algoritma *Push-Relabel*](#algoritma-push-relabel)
 
----
 
 <br>
 
