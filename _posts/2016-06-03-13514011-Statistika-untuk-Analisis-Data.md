@@ -2,7 +2,7 @@
 layout:     post
 title:      Statistika untuk Analisis Data
 date:       2016-06-03
-summary:    Micky Yudi Utama/13514011
+summary:    Silahkan klik judul untuk melihat isi artikel
 categories: tugas
 ---
 
