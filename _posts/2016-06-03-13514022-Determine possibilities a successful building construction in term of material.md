@@ -38,7 +38,7 @@ DFA can be represented by graphical diagram called state diagram.
 ### Non-Deterministic Finite Automata (NFA)
 NFA has the same tuple with DFA which is Q, ∑, δ, qo, F and has the same way to draw state diagram. Then what the different between NFA and DFA. NFA can have 2 or more arrows pointing different states with the same input but DFA cannot. 
 
-### Pushdown Automata (PDA)
+## Pushdown Automata (PDA)
 PDA has the same way of designing context-free grammar. PDA has the same function with memory stack that can remember infinite amount of number. A PDA has three components:
 - an input tape
 - a control unit
