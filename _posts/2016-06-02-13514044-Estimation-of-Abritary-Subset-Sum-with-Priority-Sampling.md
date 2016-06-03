@@ -16,6 +16,7 @@ A good way to solve that problem is use a cheme proposed by Duffield, Lund, and 
 _This article is base on Duffield, Lund and Thorup paper "Priority Sampling for Estimation of Arbitary Subset Sums"._
 
 ---
+
 ## Index
 
 1. [Introduction](#introduction)
@@ -55,12 +56,14 @@ Suppose we are give n items with weight w. The goal is to compute all the subset
 <br><br>
 There's many techniques to take a sample; from *randomly picked up sample* - missed item with high weight to *weighted sample* - always give high weight items. Each of the schemes show a vulnarablity but there is an elegant scheme proposed by Duffield, Lund, and Thorup which called priority sampling.
 <br><br>
+
 > ![Image1](https://github.com/MalvinJu/MalvinJu.github.io/blob/MalvinJu-patch-1/1.PNG)
 
 <br>
+
 > Image1. Priority sampling of size 3 from a set of 10 weighted item
 
-<br><br>
+<br>
 The priority sampling scheme as can seen bellow :
 
 * For each item, generate a random number a<sub>i</sub> between 0 and 1. Assign a priority  <sub>i</sub> to i of value w<sub>i</sub>/a<sub>i</sub> where q<sub>i</sub> is unique from others.
@@ -69,9 +72,20 @@ The priority sampling scheme as can seen bellow :
 * If i is subset of S, set w<sup>'</sup><sub>i</sub> = max(w<sub>i</sub>, t), else set w<sup>'</sup><sub>i</sub> = 0.
 
 ### Lemma 1
+
+![lemma1](https://github.com/MalvinJu/MalvinJu.github.io/blob/MalvinJu-patch-1/lemma1.PNG)
+
 ### Lemma 2
+
+![lemma2](https://github.com/MalvinJu/MalvinJu.github.io/blob/MalvinJu-patch-1/lemma2.PNG)
+
 ### Lemma 3
+
+![lemma3](https://github.com/MalvinJu/MalvinJu.github.io/blob/MalvinJu-patch-1/lemma3.PNG)
+
 ### Lemma 4
+
+![lemma4](https://github.com/MalvinJu/MalvinJu.github.io/blob/MalvinJu-patch-1/lemma4.PNG)
 
 ## References
 
