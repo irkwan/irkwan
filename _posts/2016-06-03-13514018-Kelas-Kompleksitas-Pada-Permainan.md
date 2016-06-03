@@ -62,7 +62,7 @@ Kompleksitas dari sebuah permainan dapat diukur dengan beberapa cara :
 
 1. State-space complexity
 <br>
-State-space complexity adalah jumlah posisi legal yang mungkin dicapai dari posisi awal permainan. Meskipun sulit untuk dihitung secara akurat, upper bound masih dapat dihitung dengan mengikutsertakan posisi ilegal.
+State-space complexity adalah jumlah posisi legal yang mungkin dicapai dari posisi awal permainan. Meskipun sulit untuk dihitung secara akurat, upper bound masih dapat dihitung dengan mengikutsertakan posisi ilegal. Kompleksitas ini menggambarkan jumlah kombinasi kondisi papan permainan yang mungkin terjadi.
 
 2. Game-tree complexity
 <br>
@@ -81,9 +81,9 @@ Ukuran pohon permainan (game-tree) yaitu 9! = 362880 (ada 9 tempat yang mungkin 
 Checkers diperkirakan mempunyai state-space dengan jumlah 10^20 dan game-tree dengan jumlah 10^40.
 <br>
 <br>
-3. Catur.
-Claude Shannon memperkirakan ada 10^43 posisi yang mungkin dalam catur (Shannon number). Perhitungan yang lebih baik menunjukan hasil yang lebih akurat sejumlah 10^46.7.
+3. Catur
 <br>
+Claude Shannon memperkirakan ada 10^43 posisi yang mungkin dalam catur (Shannon number). Perhitungan yang lebih baik menunjukan hasil yang lebih akurat sejumlah 10^46.7.
 Berdasarkan asumsi rata-rata branching factor sebesar 35 dan lama permainan sebesar 80 turn, didapatkan 35^80 = 3 x 10^123 (Victor Allis).
 <br>
 
