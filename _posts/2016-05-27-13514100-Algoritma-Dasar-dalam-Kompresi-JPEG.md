@@ -1,20 +1,20 @@
 ---
-layout:     post
-title:      Algoritma Dasar dalam Kompresi JPEG
-date:       2016-05-27
-summary:    Silakan klik pada judul untuk detailnya
+layout: post
+title: Algoritma Dasar dalam Kompresi JPEG
+date: 2016-05-27
+summary: Silakan klik pada judul untuk detailnya
 categories: tugas
 ---
 
----
+-----
 
----
+-----
 
 **Oleh: Albertus Kelvin / 13514100**
 
----
+-----
 
----
+-----
 
 ### Daftar isi
 
@@ -28,7 +28,7 @@ categories: tugas
 > * [Kesimpulan](#kesimpulan)
 > * [Referensi](#referensi)
 
----
+-----
 
 Pernahkah Anda mengalami kesulitan saat ingin mengirim file? 
 
@@ -36,7 +36,7 @@ Kesulitan seperti apakah itu?
 
 Umumnya, bentuk masalah yang sering dihadapi adalah ukuran file yang melebihi batas ukuran yang diperbolehkan oleh suatu sistem. Salah satu contoh kasusnya adalah saat Anda ingin mengirim sebuah file gambar untuk dijadikan pengganti foto profil dari suatu media sosial, namun proses tersebut tidak berhasil dikarenakan sistem hanya mengijinkan file gambar dengan suatu ukuran maksimal tertentu. 
 
----
+-----
 
 ### <a name="bagaimana_solusi"></a> **Lalu, bagaimana solusinya?**
 
@@ -71,7 +71,7 @@ Berdasarkan jenis teknik kompresi yang diaplikasikan, algoritma kompresi JPEG in
 > * Algoritma ini memanfaatkan fakta bahwa manusia tidak dapat melihat warna pada frekuensi tinggi.
 > * Semua ruang lingkup warna dengan frekuensi tinggi tersebut akan dijadikan detil data yang dihilangkan selama proses pemampatan (tidak menjadi masalah dikarenakan adanya fakta pada poin pertama).
 
----
+-----
 
 ### <a name="algoritma_jpeg"></a> **Algoritma JPEG**
 
@@ -159,7 +159,7 @@ Prosedur _zig-zag scan_ yang diimplementasikan dapat berbentuk seperti di bawah 
 
 Akhir dari algoritma JPEG ini adalah menempatkan unsur-unsur kotak kecil koefisien dalam urutan yang wajar dari frekuensi yang terurut membesar. Karena frekuensi yang lebih tinggi lebih cenderung bernilai nol setelah proses kuantisasi, kelompok frekuensi tinggi ini lebih cenderung masuk ke dalam kelompok frekuensi dengan nilai nol pada hasil akhir dari vektor.
 
----
+-----
 
 ### <a name="kesimpulan"></a> **Kesimpulan**
 
@@ -167,7 +167,7 @@ Akhir dari algoritma JPEG ini adalah menempatkan unsur-unsur kotak kecil koefisi
 
 > Selain itu, berdasarkan prosedur utama dalam algoritma JPEG yang mengimplementasikan teknik matriks DCT, kuantisasi, dan _Entropy Encoding_ dapat dilihat bahwa dengan membuat beberapa variasi nilai yang dijadikan sebagai pengali matriks, dapat mengubah kualitas dan ukuran file gambar.
 
----
+-----
 
 ### <a name="referensi"></a> **Referensi**
 
