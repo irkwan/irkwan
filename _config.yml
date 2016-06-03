@@ -6,6 +6,7 @@ description: "Tugas 2 Ca-IRK 2014"
 baseurl:     "/irkwan"
 url:         "http://irkwan.github.io"
 date_format: "%b %-d, %Y"
+encoding:    "utf-8"
 
 # Google analytics
 # Google services
