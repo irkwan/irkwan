@@ -6,11 +6,8 @@ summary:    A short explanation of the extended boolean model
 categories: tugas
 ---
 
-----------
-
-# The Extended Boolean Model #
-
-----------
+<br>
+## The Extended Boolean Model ##
 
 <br>
 ## Chapter 1, An Introduction to Information Retrieval ##
