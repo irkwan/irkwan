@@ -1,3 +1,11 @@
+---
+layout:     post
+title:      The Extended Boolean Model
+date:       2016-06-03
+summary:    A short explanation of the extended boolean model
+categories: tugas
+---
+
 ----------
 
 # The Extended Boolean Model #
