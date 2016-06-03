@@ -5,17 +5,14 @@ date:       2016-06-03
 summary:    Silakan klik pada judul untuk penjelasan tugas
 categories: tugas
 ---
----
----
 **Oleh: Alfonsus Raditya Arsadjaja / 13514088**
----
 ---
 
 # Permasalahan Jarak Terdekat (Shortest Path) pada Google Maps
 
 ## Daftar Isi
 * [Latar Belakang Masalah](#latar-belakang-masalah)
-* [Algoritma yang Digunakan](#algoritma-yang-digunakan)
+* [Algoritma Yang Digunakan](#algoritma-yang-digunakan)
   * [Pencarian Node](#pencarian-node)
   * [Pencarian Shortest Path](#pencarian-shortest-path)
     * [Brute Force](#brute-force)
@@ -23,7 +20,7 @@ categories: tugas
     * [BFS](#bfs)
     * [Greedy Best First Search](#greedy-best-first-search)
     * [A Star](#a-star)
-    * [Precompute + A Star](#precompute-a-star)
+    * [Precompute + A Star](#precompute--a-star)
 * [Kesimpulan](#kesimpulan)
 * [Referensi](#referensi)
 
@@ -31,7 +28,8 @@ categories: tugas
 Google Maps atau biasa disingkat *Maps* adalah sesuatu yang sangat tidak asing lagi bagi manusia. Maps merupakan aplikasi yang digunakan oleh milyaran orang di dunia ini untuk mencari jalan ke suatu tempat tertentu. Akibatnya, aplikasi ini sudah dapat dianggap tidak dapat dipisahkan dari kehidupan manusia. Dari perspektif pengguna, mereka berharap dapat menemukan jalan menuju suatu tempat, tanpa tersesat, dan dalam waktu yang singkat. Intinya mereka dapat mendapatkan jalur yang diharapkan dengan cepat. Akan tetapi, tidak semudah itu kelihatannya bagi sang developer. Bagi sang developer, permasalahan penemuan jalan terdekat merupakan suatu masalah besar sendiri, karena dibutuhkan algoritma yang optimal dan sangat cepat untuk mendapatkan jalur dan alternatif jalurnya secara cepat dan tepat (tanpa melalui jalan yang sebenarnya tidak ada).
 
 Berikut ini akan dijelaskan pemakaian dan efektifitas algoritma-algoritma yang dapat digunakan terhadap aplikasi Google Maps.
-## Algoritma yang Digunakan
+
+## Algoritma Yang Digunakan
 Ada beberapa tahap dalam pencarian jalan terdekat ini. Tahap pertama yaitu menentukan *node-node* pada *Maps*, lalu mendapatkan jarak terdekatnya.
 
 ### Pencarian Node
