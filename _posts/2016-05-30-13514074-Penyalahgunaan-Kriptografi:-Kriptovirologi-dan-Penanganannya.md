@@ -1,3 +1,12 @@
+---
+layout:     post
+title:      Penyalahgunaan Kriptografi: Kriptovirologi dan Penanganannya
+date:       2016-05-30
+summary:    Silakan klik pada judul untuk detailnya
+categories: tugas
+---
+
+
 # Penyalahgunaan Kriptografi: Kriptovirologi dan Penanganannya
 Kriptografi merupakan suatu ilmu yang digunakan untuk menjaga kerahasiaan suatu informasi. Kriptografi biasanya digunakan untuk mengenskripsi suatu informasi sehingga tidak mudah diketahui oleh pihak yang tidak diinginkan. Contoh dari penggunaan kriptografi adalah pengiriman pesan rahasia pada badan intelijen dan militer. Dilihat dari kegunaannya, bisa dikatakan bahwa kriptografi dibuat dengan tujuan untuk melindungi. Namun, kriptografi bisa disalahgunakan untuk hal sebaliknya. Kriptografi justru bisa disalahgunakan untuk menghilangkan akses seseorang terhadap informasi, menghilangkan kerahasiaan informasi, dan menyebabkan kebocoran informasi, hal-hal yang biasanya justru dicegah dengan kriptografi. Hal-hal tersebut bisa terjadi jika ilmu kriptografi digabungkan dengan virus komputer yang menghasilkan ilmu baru bernama kriptovirologi.
 
