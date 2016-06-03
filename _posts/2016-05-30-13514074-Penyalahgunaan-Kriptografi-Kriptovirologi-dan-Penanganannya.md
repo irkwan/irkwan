@@ -62,7 +62,6 @@ Virus ini juga melakukan enkripsi terhadap sistem inang. Tujuan utama dari virus
 ### Penanganan
 Ada beberapa cara penanganan terhadap serangan kriptografi, yaitu :
 * Melakukan pengawasan terhadap memori.<br> Hal ini berguna untuk menangkap kriptovirus yang _self encrypting_ dan _polymorphic_. _Polymorphic_ berarti virus bisa membuat salinan dirinya sendiri yang berbeda-beda untuk mengelabui pengguna.
-
 * Menggunakan dua bentuk otentikasi. Kata sandi (_password_) saja merupakan otentikasi yang lemah. Dua bentuk otentikasi, dengan kata sandi dan entitas biometrik pengguna seperti sidik jari bisa digunakan.
 * Menggunakan aplikasi anti-virus yang _up-to-date_. Anti-virus juga bisa digunakan untuk menangani kriptovirus dikarenakan kriptovirus menggunakan cara penyebaran yang sama dengan virus biasa.
 * Menggunakan _tools_ kriptografi dan API kriptografi. Hal ini bisa membantu admin sistem untuk mengidentifikasi penggunaan kriptografi yang mencurigakan.
