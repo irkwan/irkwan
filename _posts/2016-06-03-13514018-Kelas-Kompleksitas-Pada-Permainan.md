@@ -20,44 +20,44 @@ Teori kompleksitas komputasi adalah teori yang mengklasifikasikan permasalahan k
 #### Kompleksitas Waktu
 Kompleksitas waktu menunjukan jumlah waktu atau jumlah tahapan yang dibutuhkan suatu komputer untuk menyelesaikan masalah komputasi dengan menggunakan algoritma tertentu.
 
-Deterministik :
+Deterministik Turing machine :
 
-| Kelas         | Batasan             |
-| ------------- | ------------------- |
-| DTIME         | Waktu f(n)          |
-| P             | Waktu poly(n)       |
-| EXPTIME       | Waktu 2^(poly(n))   |
+| Kelas         | Batasan             | Keterangan    |
+| ------------- | ------------------- | ------------- |
+| DTIME         | Time f(n)           |               |
+| P             | Time poly(n)        | Polinomial    |
+| EXPTIME       | Time 2^(poly(n))    | Eksponensial  |
 
-Non-deterministik :
+Non-deterministik Turing machine :
 
-| Kelas         | Batasan             |
-| ------------- | ------------------- |
-| NTIME         | Waktu f(n)          |
-| NP            | Waktu poly(n)       |
-| NEXPTIME      | Waktu 2^(poly(n))   |
+| Kelas         | Batasan             | Keterangan    |
+| ------------- | ------------------- | ------------- |
+| NTIME         | Time f(n)           |               |
+| NP            | Time poly(n)        | Polinomial    |
+| NEXPTIME      | Time 2^(poly(n))    | Eksponensial  |
 
 <br>
 
 #### Kompleksitas Ruang
 Kompleksitas ruang menunjukan jumlah total memori yang dibutuhkan suatu komputer untuk menyelesaikan masalah komputasi dengan menggunakan algoritma tertentu.
 
-Deterministik :
+Deterministik Turing machine :
 
-| Kelas         | Batasan             |
-| ------------- | ------------------- |
-| DSPACE        | Ruang f(n)          |
-| L             | Ruang O(log n)      |
-| PSPACE        | Ruang poly(n)       |
-| EXPTIME       | Ruang 2^(poly(n))   |
+| Kelas         | Batasan             | Keterangan    |
+| ------------- | ------------------- | ------------- |
+| DSPACE        | Space f(n)          |               |
+| L             | Space O(log n)      | Logaritmik    |
+| PSPACE        | Space poly(n)       | Polinomial    |
+| EXPTIME       | Space 2^(poly(n))   | Eksponensial  |
 
-Non-deterministik :
+Non-deterministik Turing machine :
 
-| Kelas         | Batasan             |
-| ------------- | ------------------- |
-| NSPACE        | Ruang f(n)          |
-| NL            | Ruang O(log n)      |
-| NPSPACE       | Ruang poly(n)       |
-| NEXPSPACE     | Ruang 2^(poly(n))   |
+| Kelas         | Batasan             | Keterangan    |
+| ------------- | ------------------- | ------------- |
+| NSPACE        | Space f(n)          |               |
+| NL            | Space O(log n)      | Logaritmik    |
+| NPSPACE       | Space poly(n)       | Polinomial    |
+| NEXPSPACE     | Space 2^(poly(n))   | Eksponensial  |
 
 ### Kompleksitas Permainan
 Kompleksitas dari sebuah permainan dapat diukur dengan beberapa cara :
@@ -87,10 +87,16 @@ Claude Shannon memperkirakan ada 10^43 posisi yang mungkin dalam catur (Shannon 
 <br>
 Berdasarkan asumsi rata-rata branching factor sebesar 35 dan lama permainan sebesar 80 turn, didapatkan 35^80 = 3 x 10^123 (Victor Allis).
 <br>
+
 ## Permainan yang digeneralisasi
 Permainan yang digeneralisasi adalah permainan yang ukuran papan permainannya digeneralisasi sehingga mungkin berukuran berapapun.
-1. PSPACE-complete
+1. Untuk permainan yang jumlah move nya sejumlah polinomial berdasarkan ukuran papan permainannya, menentukan kemungkinan menang untuk pemain pertama pada suatu posisi membutuhkan kompleksitas PSPACE-complete. Permainan yang termasuk PSPACE-complete misalnya tic-tac-toe.
+
+2. Untuk permainan yang jumlah move nya sejumlah eksponensial berdasarkan ukuran papan permainannya, menentukan kemungkinan menang untuk pemain pertama pada suatu posisi membutuhkan kompleksitas EXPTIME-complete. Permainan yang termasuk EXPTIME-complete misalnya checkers dan catur.
 <br>
 
-2. EXPTIME-complete
-## Summary
+## Kesimpulan
+
+## Sumber
+- http://imagine.kicbak.com/blog/?p=249
+- http://www.sciencedirect.com/science/article/pii/0166218X7990012X
