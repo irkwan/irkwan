@@ -81,7 +81,7 @@ Contohnya, kata “sel” dapat dihubungkan dengan konteks biologi, tabel data, 
 
 <img src = "http://i.imgur.com/SzHh4T2.png">
 <br>
-Gambar 4. Screenshot *search engine* Yippy [sumber](http://new.yippy.com/search?query=cell&tb=sitesearch-all&v%3Aproject=clusty-new)
+Gambar 4. Screenshot *search engine* Yippy
 <br> <br>
 Pada gambar di atas, dapat dilihat dengan term "cell", pengguna dapat melihat hasil pencarian berdasarkan konteks tertentu. 
 Lain halnya dengan *search engine* konvensional, untuk memperoleh hasil pencarian dengan suatu konteks perlu ditelusuri hingga halaman 
