@@ -1,3 +1,11 @@
+---
+layout:     post
+title:      Kelas-kelas Komplesitas: Reduksi dan Teorema Hierarki
+date:       2016-06-03
+summary:    Penjelasan singkat mengenai kelas kompleksitas
+categories: tugas
+---
+
 # Kelas-kelas Kompleksitas: Reduksi dan Teorema Hierarki
 
 ## Kelas Kompleksitas
