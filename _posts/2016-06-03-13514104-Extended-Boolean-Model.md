@@ -154,13 +154,13 @@ And with that, we can now easily calculate the similarities between any boolean 
  - Query processing can be done **recursively by self-call** (let's just call the method Query(Node) for now)
  - **Basis**, If the node is a **leaf** node, return the node weight
  - **Recurrent**:
-     - Identify which kind of query this is (AND/OR/NOT), 
-     - Calculate the weight of **every sub-tree below** this node by **calling Query(Node-i)**
-     - Return the value of this query tree by using the **appropriate formula**
+    - Identify which kind of query this is (AND/OR/NOT), 
+    - Calculate the weight of **every sub-tree below** this node by **calling Query(Node-i)**
+    - Return the value of this query tree by using the **appropriate formula**
  - For example, using the picture above:
-     - The process for node **AND** will call the Query method for both node **OR** 
-     - Each node OR will call the Query method for each of their sons, and return the similarity between its  subquery and the document
-     - The method called to the AND node will return the result of using the **qand** formula with t=2 where **w1** is the result of **subquery OR1** and **w2** is the result of **subquery OR2**.
+    - The process for node **AND** will call the Query method for both node **OR** 
+    - Each node OR will call the Query method for each of their sons, and return the similarity between its  subquery and the document
+    - The method called to the AND node will return the result of using the **qand** formula with t=2 where **w1** is the result of  **subquery OR1** and **w2** is the result of **subquery OR2**.
  - This way, document ranking can be done sequentially down the document list by assigning similarity value to each of the document then sorting it from highest similarity to the lowest one.
 
 <br>
