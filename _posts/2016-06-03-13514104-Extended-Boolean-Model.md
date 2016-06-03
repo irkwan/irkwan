@@ -65,11 +65,11 @@ In the implementation of the Boolean Model, it is common practice to have an **i
 And that is the basic of the standard Boolean Model, it is fairly easy to implement and understand but not without its **weaknesses**:
 
 -  With only 2 possible relevance point, there are **no way to rank documents** in order of relevance. 
- -  The model only concern itself with wether or not a term exist, not it's frequency of use and relevance in the document. 
- -  A user might find the term he/she wants only mentioned once in one of the query result and not that relevant in said document
+   -  The model only concern itself with wether or not a term exist, not it's frequency of use and relevance in the document. 
+   -  A user might find the term he/she wants only mentioned once in one of the query result and not that relevant in said document
 - There are some results which might be **counterintuitive to user** due to this model strict use of boolean operator.
- - For example the query W AND X AND Y AND Z, will not result in a document which contain the term W, X, and Y; even though the user might be interested in this document if no others fullfill this query. 
- - Also, in the query A OR B OR C, a document which mention only A is considered as important as a document mentioning all  terms.
+   - For example the query W AND X AND Y AND Z, will not result in a document which contain the term W, X, and Y; even though the user might be interested in this document if no others fullfill this query. 
+   - Also, in the query A OR B OR C, a document which mention only A is considered as important as a document mentioning all  terms.
 - There are **no way to assign importance factor to parts of query**, which my be desired by advanced user.
 
 Which is why **several models had been proposed** to improve upon this basic model, with an attempt to address the issues above...
