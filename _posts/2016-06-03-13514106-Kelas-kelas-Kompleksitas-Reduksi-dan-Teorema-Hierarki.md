@@ -6,6 +6,8 @@ summary:    Penjelasan singkat mengenai kelas kompleksitas
 categories: tugas
 ---
 
+#### Oleh: Hasna Nur Karimah/13514106
+
 ## Kelas Kompleksitas
 
 ### Definisi
@@ -69,3 +71,10 @@ Teorema hierarki ruang dapat dibilang lebih kuat daripada teorema hierarki waktu
 - Hanya membutuhkan s(n) setidaknya log *n*, sedangkan teorema hierarki waktu membutuhkan setidaknya *n*.
 - Dapat memisahkan kelas dengan perbedaan asimtot apapun, sedangkan teorema hierarki waktu harus menggunakan faktor logaritma.
 - Hanya membutuhkan fungsi yang *space-constructible*, tidak harus *time-constructible*.
+
+
+## Referensi
+
+- Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest and Clifford Stein, Introduction to Algorithms, MIT Press, 2001, ISBN 978-0-262-03293-3
+- Michael Sipser (1997). Introduction to the Theory of Computation. PWS Publishing. ISBN 0-534-94728-X
+- Arora, Sanjeev; Barak, Boaz (2009). Computational complexity. A modern approach. Cambridge University Press. ISBN 978-0-521-42426-4
